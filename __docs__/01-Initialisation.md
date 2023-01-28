@@ -17,7 +17,7 @@ npm i @reduxjs/toolkit react-redux
 
 - Autres
 ```
-npm i --save-dev sass typescript
+npm i --save-dev sass typescript gh-pages
 ```
 
 [Accueil](../README.md)
