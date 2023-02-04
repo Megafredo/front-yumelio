@@ -1,0 +1,86 @@
+@use '../../Assets/sass/vars.scss';
+
+@mixin rods($top, $time) {
+  width: 2rem;
+  height: 0.25rem;
+  position: absolute;
+  border-radius: 2rem;
+  top: $top;
+  transition: all $time ease-in-out;
+}
+
+@mixin rodsAnim($width, $transform, $time) {
+  width: $width;
+  transform: $transform;
+  transition: all $time ease-in-out;
+}
+
+.menu {
+  display: flex;
+
+  &__burger {
+    z-index: 1;
+    cursor: pointer;
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+
+    &:hover ~ &__rods {
+      //~ Exemple 1
+      &:before,
+      &:after {
+        @include rodsAnim(1.2rem, (translate(0.4rem)), 0.25s);
+      }
+
+      //~ Exemple 2
+      // &:before { @include rodsAnim(2rem, -0.5rem, 0.3s); }
+      // &:after { @include rodsAnim(2rem, 0.5rem, 0.3s); }
+    }
+
+    &:checked + &__rods {
+      @include rodsAnim(0rem, (translateX(0.4rem)), 0.3s);
+
+      &:before {
+        @include rodsAnim(2rem, (rotate(45deg) translateY(0.7rem)), 0.3s);
+      }
+
+      &:after {
+        @include rodsAnim(2rem, (rotate(-45deg) translateY(-0.7rem)), 0.3s);
+      }
+    }
+
+    &__rods {
+      @include rods(1rem, 0.3s);
+      
+
+      &::before {
+        content: '';
+        @include rods(-0.5rem, 0.3s);
+      }
+
+      &::after {
+        content: '';
+        @include rods(0.5rem, 0.3s);
+      }
+    }
+  }
+}
+
+// .test {
+//   & input[type=checkbox]:checked {
+//     display: none;
+//   }
+// }
+
+// <div className='test'>
+// <input className="input__test" type="checkbox"></input>
+// <nav className="nav__test">
+//   <ul>
+//     <li>lien01</li>
+//     <li>lien02</li>
+//     <li>lien03</li>
+//   </ul>
+// </nav>
+
+// </div>

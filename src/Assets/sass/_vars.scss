@@ -1,0 +1,98 @@
+//~ ----------------- Fonts families
+
+@font-face {
+  font-family: 'Nunito';
+  src: local('Nunito-VariableFont_wght'), url('../fonts/Nunito-VariableFont_wght.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Nunito-Italic';
+  src: local('Nunito-Italic-VariableFont_wght'), url('../fonts/Nunito-Italic-VariableFont_wght.woff2') format('woff2');
+}
+
+$font-Nunito: 'Nunito', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$font-Nunito-Italic: 'Nunito-Italic', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+//~ ----------------- Colors charts
+
+$primary-color-01: #f8fbff;
+$primary-color-02: #8309ff;
+$primary-color-03: #242c3f;
+$primary-color-04: #bed62d;
+
+$secondary-color-01: #f92663;
+$secondary-color-02: #50d6ff;
+$secondary-color-03: #ff7733;
+$secondary-color-04: #989eaa;
+
+$logo-primary-color: #f4f4f4;
+$logo-secondary-color: #cad6dd;
+$logo-tertiary-color: #b0babf;
+
+//~ Box shadows
+
+//~ Drop shadow
+
+//& ----------------- Theme Global
+$themeSite: (
+  light: (
+    background: $primary-color-01,
+    title: $primary-color-03,
+    text: $primary-color-03,
+    // link: $secondary-color-01,
+    spinner: $primary-color-02,
+    background-footer: $primary-color-02,
+  ),
+  dark: (
+    background: $primary-color-03,
+    title: $primary-color-01,
+    text: $primary-color-01,
+    // link: $secondary-color-03,
+    spinner: $primary-color-04,
+    background-footer: $primary-color-02,
+  ),
+);
+
+//& ----------------- Theme Logo
+$themeLogo: (
+  light: (
+    core: $primary-color-04,
+    fragment-high: $logo-primary-color,
+    fragment-left: $logo-secondary-color,
+    fragment-right: $logo-tertiary-color,
+    background: $primary-color-03,
+  ),
+  dark: (
+    core: $primary-color-04,
+    fragment-high: $logo-primary-color,
+    fragment-left: $logo-secondary-color,
+    fragment-right: $logo-tertiary-color,
+    background: $primary-color-03,
+  ),
+);
+
+//& ----------------- Theme Buttons
+$themeBtn: (
+  light: (
+    burger-rods: $primary-color-03,
+    checked-rods: $primary-color-01,
+  ),
+  dark: (
+    burger-rods: $primary-color-01,
+    checked-rods: $primary-color-03,
+  ),
+);
+
+//& ----------------- Theme Navbar
+$themeNavbar: (
+  light: (
+    link: $secondary-color-04,
+    link-underline: $primary-color-04,
+    link-hover: $primary-color-03,
+  ),
+  dark: (
+    link: $secondary-color-04,
+    link-underline: $primary-color-04,
+    link-hover: $primary-color-01,
+  ),
+);

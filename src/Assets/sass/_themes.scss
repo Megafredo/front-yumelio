@@ -1,0 +1,98 @@
+@use './mixins.scss';
+@use './vars.scss';
+
+//! THEMIFY
+
+//~ ---------------------------------------------- Theme Site
+@include mixins.themify(vars.$themeSite) {
+  background-color: mixins.themed('background');
+
+  h1,
+  h2 {
+    color: mixins.themed('title');
+  }
+
+  a {
+    color: mixins.themed('link');
+  }
+
+  p {
+    color: mixins.themed('text');
+  }
+
+  label {
+    color: mixins.themed('text');
+  }
+
+  .header {
+    background-color: mixins.themed('background');
+  }
+
+  .footer {
+    background-color: mixins.themed('background');
+  }
+
+  .spinner {
+    stroke: mixins.themed('spinner');
+  }
+}
+
+//~ ---------------------------------------------- Theme Logo
+@include mixins.themify(vars.$themeLogo) {
+  //& Groupement de fragments en haut du logo
+  .cls-1 {
+    fill: mixins.themed('fragment-high');
+  }
+
+  //& Groupement de fragments à droite du logo
+  .cls-2 {
+    fill: mixins.themed('fragment-right');
+  }
+
+  //& Le fond du logo
+  .cls-3 {
+    fill: mixins.themed('background');
+  }
+
+  //& Groupement de fragments à gauche du logo
+  .cls-4 {
+    fill: mixins.themed('fragment-left');
+  }
+
+  //& Groupement de fragments central du logo
+  .cls-5 {
+    fill: mixins.themed('core');
+  }
+}
+
+//~ ---------------------------------------------- Theme Btn
+@include mixins.themify(vars.$themeBtn) {
+  .menu__burger {
+    &:checked + &__rods {
+      background-color: mixins.themed('checked-rods');
+    }
+
+    &__rods {
+      background-color: mixins.themed('burger-rods');
+      &::before,
+      &::after {
+        background-color: mixins.themed('burger-rods');
+      }
+    }
+  }
+}
+
+//~ ---------------------------------------------- Theme Navbar
+@include mixins.themify(vars.$themeNavbar) {
+  .navbar li a {
+    color: mixins.themed('link');
+
+    &::after {
+      background-color: mixins.themed('link-underline');
+    }
+
+    &:hover {
+      color: mixins.themed('link-hover');
+    }
+  }
+}

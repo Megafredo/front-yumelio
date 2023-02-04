@@ -1,0 +1,20 @@
+@use './vars.scss';
+
+//~ THEMIFY
+@mixin themify($themes) {
+  @each $name, $values in $themes {
+    .theme--#{$name} {
+      -webkit-transition: all 0.4s ease-out;
+      -moz-transition: all 0.4s ease-out;
+      -o-transition: all 0.4s ease-out;
+      transition: all 0.4s ease-in-out;
+      $data-map : $values !global;
+      @content;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($data-map, $key);
+}
+
