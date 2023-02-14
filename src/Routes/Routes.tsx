@@ -1,14 +1,19 @@
-import { NoPage, Home, Competences, Projects, Contact, Login } from '../Pages';
+import { NoPage, Home, Skills, Projects, Contact, Login } from '../Pages';
 //~ Import Module
 import { Route } from 'react-router-dom';
+import i18n from '../Assets/i18n';
+
+// import { useTranslation } from 'react-i18next';
+// const { t } = useTranslation();
+
 
 const Router = [
-  { id: 1, isNav : true, name: 'Accueil', mainPath: '/', mainElement: <Home /> },
+  { id: 1, isNav: true, name: i18n.t('route_name_home'), mainPath: '/', mainElement: <Home /> },
   { id: 2, isNav : false, name: 'NoPage', mainPath: '*', mainElement: <NoPage /> },
-  { id: 3, isNav : true, name: 'Compétences', mainPath: '/competences', mainElement: <Competences /> },
-  { id: 4, isNav : true, name: 'Projets', mainPath: '/projects', mainElement: <Projects /> },
-  { id: 5, isNav : true, name: 'Contact', mainPath: '/contact', mainElement: <Contact /> },
-  { id: 6, isNav : true, name: 'Connexion', mainPath: '/login', mainElement: <Login /> },
+  { id: 3, isNav : true, name: i18n.t('route_name_skills'), mainPath: '/skills', mainElement: <Skills /> },
+  { id: 4, isNav : true, name: i18n.t('route_name_projects'), mainPath: '/projects', mainElement: <Projects /> },
+  { id: 5, isNav : true, name: i18n.t('route_name_contact'), mainPath: '/contact', mainElement: <Contact /> },
+  { id: 6, isNav : true, name: i18n.t('route_name_login'), mainPath: '/login', mainElement: <Login /> },
 ];
 
 //& Router map

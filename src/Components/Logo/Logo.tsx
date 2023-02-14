@@ -3,16 +3,19 @@ import './Logo.scss';
 import { ReactComponent as LogoSVG } from './Logo.svg';
 
 //& Imports Modules
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Logo = () => {
+  const navigate = useNavigate();
+  const redirectHome = () => navigate('/');
+
   return (
     <>
       <div className="logo">
-        <NavLink to={'/'}>
+        <button className="logo__link" tabIndex={0} role="button" onClick={redirectHome}>
           <LogoSVG />
-        {/* <span className="logo__name">VisualKoding</span> */}
-        </NavLink>
+          <span className="logo__link__name">VisualKoding</span>
+        </button>
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 .layout main {
   // Little calculation that helps to have the footer at the bottom of the page
   // calc(100vh - Height Header - Height Footer)
-  min-height: calc(100vh - 10rem - 5rem );
+  min-height: calc(100vh - 12rem - 5rem );
 }

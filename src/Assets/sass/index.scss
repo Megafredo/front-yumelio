@@ -1,6 +1,7 @@
 @use './mixins.scss';
 @use './vars.scss';
 @use './themes.scss';
+@use './media-queries.scss';
 @use './reset.scss';
 
 :root {
@@ -20,11 +21,12 @@ h1 {
 }
 
 label {
-  width: 2rem;
+  width: 3rem;
   font-family: vars.$font-Nunito;
   font-weight: 900;
   user-select: none;
   height: 2.95rem;
   line-height: 2.35rem;
   margin-left: 1rem;
+  cursor: pointer;
 }

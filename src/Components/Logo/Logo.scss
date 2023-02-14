@@ -1,36 +1,42 @@
 @use '../../Assets/sass/vars';
 
-
-
 .logo {
-min-width: 3.8rem;
-cursor: pointer;
-// line-height: 9.35rem;
-// margin-right: 1rem;
-display: flex;
-animation: bounce-in-right 0.55s ease;
-transition: all 0.25s ease-in-out;
-
-&:hover{
+  min-width: 3.8rem;
+  display: flex;
+  animation: bounce-in-right 0.55s ease;
   transition: all 0.25s ease-in-out;
-  transform: scale(0.9) translateY(-10px);
- }
+  align-items: center;
 
- &:active{
-  transition: all 0s ease-in-out;
-  // transform: scale(0.8);
+  &__link {
+  
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 0.69rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 
- }
+    &__name {
+      position: relative;
+      top: 0.4rem;
+    }
+  }
 
+  &:hover {
+    transition: all 0.25s ease-in-out;
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    transition: all 0s ease-in-out;
+    opacity: 0.6;
+  }
 }
 
 //~ Groupes
-#logo-svg{
+#logo-svg {
   transition: all 0.4s ease-in-out;
-  width: 5rem;
-  display: block;
 }
-
 
 @keyframes bounce-in-right {
   0% {
@@ -41,9 +47,10 @@ transition: all 0.25s ease-in-out;
     opacity: 1;
     transform: translateX(10px);
   }
-  100% { transform: translateX(0px); }
+  100% {
+    transform: translateX(0px);
+  }
 }
-
 
 //& Groupement de fragments en haut du logo
 // .cls-1{
@@ -61,7 +68,6 @@ transition: all 0.25s ease-in-out;
 // #cls-1-3{
 // }
 
-
 //& Groupement de fragments à droite du logo
 // .cls-2{
 // }
@@ -74,12 +80,10 @@ transition: all 0.25s ease-in-out;
 // #cls-2-2{
 // }
 
-
 //& Le fond du logo
 // .cls-3{
 //   transition: all 0.4s ease-in-out;
 // }
-
 
 //& Groupement de fragments à gauche du logo
 // .cls-4{
@@ -92,7 +96,6 @@ transition: all 0.25s ease-in-out;
 // //? Fragment Interne
 // #cls-4-2{
 // }
-
 
 //& Groupement de fragments central du logo
 // .cls-5{
@@ -109,4 +112,3 @@ transition: all 0.25s ease-in-out;
 // //? Fragment Gauche
 // #cls-5-3{
 // }
-

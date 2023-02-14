@@ -3,17 +3,22 @@ import './MenuBurger.scss';
 
 //& Import Modules
 import { useSelector, useDispatch } from 'react-redux';
-
-// const dispatch = useDispatch();
+import { toggleMenuBurger } from '../../Store/Reducers/NavBar';
 
 const MenuBurger = () => {
+
+  const dispatch = useDispatch();
+  const { boolean, mode } = useSelector((state: any) => state.navBarSlice);
+
   return (
     <>
-        <div className="menu">
-          <input className="menu__burger" type="checkbox"></input>
-          <div className="menu__burger__rods"></div>
-          <label>Menu</label>
+      <div className="menu">
+        {/* <input className="menu__burger" type="checkbox" id="menu" role="checkbox" defaultChecked={checked} onChange={() => setChecked(!checked)}></input> */}
+        <input className="menu__burger" type="checkbox" id="menu" role="checkbox"  onClick={() => dispatch(toggleMenuBurger(boolean))}></input>
+        <div className="menu__burger__rods"></div>
+        <label htmlFor="menu">Menu</label>
       </div>
+ 
     </>
   );
 };

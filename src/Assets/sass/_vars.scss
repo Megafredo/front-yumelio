@@ -23,7 +23,7 @@ $primary-color-04: #bed62d;
 $secondary-color-01: #f92663;
 $secondary-color-02: #50d6ff;
 $secondary-color-03: #ff7733;
-$secondary-color-04: #989eaa;
+$secondary-color-04: #737373;
 
 $logo-primary-color: #f4f4f4;
 $logo-secondary-color: #cad6dd;
@@ -42,6 +42,8 @@ $themeSite: (
     // link: $secondary-color-01,
     spinner: $primary-color-02,
     background-footer: $primary-color-02,
+    available-background: $primary-color-02,
+    available-text: $primary-color-01,
   ),
   dark: (
     background: $primary-color-03,
@@ -50,6 +52,8 @@ $themeSite: (
     // link: $secondary-color-03,
     spinner: $primary-color-04,
     background-footer: $primary-color-02,
+    available-background: $primary-color-02,
+    available-text: $primary-color-01,
   ),
 );
 
@@ -61,6 +65,7 @@ $themeLogo: (
     fragment-left: $logo-secondary-color,
     fragment-right: $logo-tertiary-color,
     background: $primary-color-03,
+    name: $primary-color-03,
   ),
   dark: (
     core: $primary-color-04,
@@ -68,6 +73,7 @@ $themeLogo: (
     fragment-left: $logo-secondary-color,
     fragment-right: $logo-tertiary-color,
     background: $primary-color-03,
+    name: $primary-color-01,
   ),
 );
 
@@ -76,10 +82,14 @@ $themeBtn: (
   light: (
     burger-rods: $primary-color-03,
     checked-rods: $primary-color-01,
+    background: $primary-color-03,
+    border: $primary-color-03,
   ),
   dark: (
     burger-rods: $primary-color-01,
     checked-rods: $primary-color-03,
+    background: $primary-color-03,
+    border: $primary-color-03,
   ),
 );
 
@@ -91,8 +101,32 @@ $themeNavbar: (
     link-hover: $primary-color-03,
   ),
   dark: (
-    link: $secondary-color-04,
+    link: $logo-tertiary-color,
     link-underline: $primary-color-04,
     link-hover: $primary-color-01,
   ),
+);
+
+
+//? ----------------- Media Query
+
+$mediaHeader: (
+  desktop: (
+    test : $primary-color-04,
+
+    ul-font-size: 0.75rem,
+    ul-text-align: left,
+    ul-display: flex,
+  ),
+  tablet: (
+    test : $secondary-color-02,
+
+    ul-font-size: 0.75rem,
+    ul-text-align: right,
+  ),
+  mobile: (
+    test : $secondary-color-03,
+    ul-font-size: 0.75rem,
+    ul-text-align: right,
+  )
 );

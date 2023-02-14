@@ -26,6 +26,14 @@
 
   .header {
     background-color: mixins.themed('background');
+
+    &__available {
+      background-color: mixins.themed('available-background');
+    }
+    & p {
+      color: mixins.themed('available-text');
+      background-color: mixins.themed('available-background');
+    }
   }
 
   .footer {
@@ -63,6 +71,11 @@
   .cls-5 {
     fill: mixins.themed('core');
   }
+
+  .logo__link__name {
+    color: mixins.themed('name');
+  }
+
 }
 
 //~ ---------------------------------------------- Theme Btn
@@ -79,6 +92,11 @@
         background-color: mixins.themed('burger-rods');
       }
     }
+  }
+
+  .theme__button {
+    background-color: mixins.themed('background');
+    border: solid 0.3rem mixins.themed('border');
   }
 }
 

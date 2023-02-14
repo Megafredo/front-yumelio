@@ -1,19 +1,16 @@
 @use '../../Assets/sass/vars.scss';
 
 nav {
-  max-width: 700px;
-  font-size: 0.75rem;
-  // position: sticky;
   user-select: none;
+  display: grid;
 }
 
 ul {
-  display: flex;
-  line-height: 2.8rem;
+
 }
 
 .navbar li {
-  margin: 0 auto;
+  margin: 0.5rem auto;
 
   & a {
     position: relative;

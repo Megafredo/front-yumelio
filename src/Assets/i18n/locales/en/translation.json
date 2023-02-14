@@ -1,3 +1,10 @@
 {
-  "footer-copyright": "All rights reserved"
+  "route_name_home": "Home",
+  "route_name_skills": "Skills",
+  "route_name_projects": "Projects",
+  "route_name_contact": "Contact",
+  "route_name_login": "Login",
+
+  "available": "Open to work",
+  "footer_copyright": "All rights reserved"
 }

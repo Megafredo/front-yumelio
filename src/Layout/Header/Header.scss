@@ -1,45 +1,36 @@
 @use '../../Assets/sass/vars.scss';
 
 .header {
-  user-select: none;
-  height: 10rem;
+  // user-select: none;
+  // height: 10rem;
 
   &__available {
     height: 0.5rem;
-    background-color: vars.$primary-color-02;
   }
 
   & p {
     font-size: 0.7rem;
-    background-color: vars.$primary-color-02;
     text-align: center;
     margin: 0 auto;
-    width: 4.5rem;
+    width: 5.5rem;
     height: 1.4rem;
     line-height: 1.3rem;
-    color: vars.$logo-primary-color;
   }
 
   &__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 6rem;
+    height: 8rem;
     margin-top: 2rem;
 
     &__logo {
-      width: 8rem; 
-      display: flex;
-      align-items: center;
+      display: grid;
       justify-content: center;
     }
 
     &__nav {
-      width: 25rem;
+      width: auto;
     }
 
     &__menu {
-      width: 8rem;
       align-items: center;
       display: flex;
       flex-direction: column;

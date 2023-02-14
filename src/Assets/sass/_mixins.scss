@@ -1,6 +1,6 @@
 @use './vars.scss';
 
-//~ THEMIFY
+//~ ------------------------ THEMIFY
 @mixin themify($themes) {
   @each $name, $values in $themes {
     .theme--#{$name} {
@@ -8,7 +8,7 @@
       -moz-transition: all 0.4s ease-out;
       -o-transition: all 0.4s ease-out;
       transition: all 0.4s ease-in-out;
-      $data-map : $values !global;
+      $data-map: $values !global;
       @content;
     }
   }
@@ -18,3 +18,16 @@
   @return map-get($data-map, $key);
 }
 
+//? ------------------------ MEDIAFY
+@mixin querify($queries) {
+  @each $name, $values in $queries {
+    .media--#{$name} {
+      $data-map: $values !global;
+      @content;
+    }
+  }
+}
+
+@function mediaQuery($key) {
+  @return map-get($data-map, $key);
+}
