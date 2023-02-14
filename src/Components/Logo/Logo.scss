@@ -1,12 +1,12 @@
 @use '../../Assets/sass/vars';
 
 .logo {
-  min-width: 3.8rem;
-  display: flex;
-  animation: bounce-in-right 0.55s ease;
-  transition: all 0.25s ease-in-out;
-  align-items: center;
-
+  // min-width: 3.8rem;
+  // display: flex;
+  // // animation: bounce-in-right 0.55s ease;
+  transition: all 0.35s ease-in-out;
+  // align-items: center;
+  // transform: scale(0.7);
   &__link {
   
     text-decoration: none;
@@ -22,10 +22,10 @@
     }
   }
 
-  &:hover {
-    transition: all 0.25s ease-in-out;
-    transform: translateY(-3px);
-  }
+  // &:hover {
+  //   transition: all 0.25s ease-in-out;
+  //   transform: translateY(-3px);
+  // }
 
   &:active {
     transition: all 0s ease-in-out;
@@ -36,21 +36,22 @@
 //~ Groupes
 #logo-svg {
   transition: all 0.4s ease-in-out;
+  width: 4rem;
 }
 
-@keyframes bounce-in-right {
-  0% {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  50% {
-    opacity: 1;
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
+// @keyframes bounce-in-right {
+//   0% {
+//     opacity: 0;
+//     transform: translateX(-40px);
+//   }
+//   50% {
+//     opacity: 1;
+//     transform: translateX(10px);
+//   }
+//   100% {
+//     transform: translateX(0px);
+//   }
+// }
 
 //& Groupement de fragments en haut du logo
 // .cls-1{

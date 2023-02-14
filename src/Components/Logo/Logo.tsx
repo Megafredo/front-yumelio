@@ -14,7 +14,7 @@ const Logo = () => {
       <div className="logo">
         <button className="logo__link" tabIndex={0} role="button" onClick={redirectHome}>
           <LogoSVG />
-          <span className="logo__link__name">VisualKoding</span>
+          {/* <span className="logo__link__name">VisualKoding</span> */}
         </button>
       </div>
     </>

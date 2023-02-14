@@ -106,27 +106,3 @@ $themeNavbar: (
     link-hover: $primary-color-01,
   ),
 );
-
-
-//? ----------------- Media Query
-
-$mediaHeader: (
-  desktop: (
-    test : $primary-color-04,
-
-    ul-font-size: 0.75rem,
-    ul-text-align: left,
-    ul-display: flex,
-  ),
-  tablet: (
-    test : $secondary-color-02,
-
-    ul-font-size: 0.75rem,
-    ul-text-align: right,
-  ),
-  mobile: (
-    test : $secondary-color-03,
-    ul-font-size: 0.75rem,
-    ul-text-align: right,
-  )
-);

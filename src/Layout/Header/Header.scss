@@ -18,18 +18,16 @@
   }
 
   &__container {
-    height: 8rem;
-    margin-top: 2rem;
+    height: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
 
     &__logo {
       display: grid;
       justify-content: center;
     }
-
-    &__nav {
-      width: auto;
-    }
-
+    
     &__menu {
       align-items: center;
       display: flex;

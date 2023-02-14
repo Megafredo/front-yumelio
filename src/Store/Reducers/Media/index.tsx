@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// Size
+// Breakpoints
 /* 
   - Extra large screens, TV (XL): >= 1201px
   - Desktops, large screens (desktop): 1025px -  1200px
