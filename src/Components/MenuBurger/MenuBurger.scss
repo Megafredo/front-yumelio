@@ -66,3 +66,21 @@
     }
   }
 }
+
+.media {
+  &--mobile {
+   .menu{
+    margin-right: 1rem;
+    height: 2.5rem;
+    &__burger{
+      &__rods {
+        background-color: vars.$primary-color-01;
+        &::before,
+        &::after {
+          background-color: vars.$primary-color-01;
+        }
+      }
+    }
+   }
+  }
+  }

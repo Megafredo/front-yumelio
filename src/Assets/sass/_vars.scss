@@ -31,6 +31,57 @@ $logo-tertiary-color: #b0babf;
 
 //~ Box shadows
 
+//^ Base
+$box-shadow-v1: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+//^ MenuBurger
+$menu-burger-sun-shadow: inset 0 0 0 1rem $primary-color-01,
+0 0 0 0rem $primary-color-03,
+
+// VERTICAL ELEMENT => HAUT
+0rem -1.1rem 0rem var(--orthogonal) $primary-color-01,
+0rem -1.2rem 0rem var(--orthogonal) $primary-color-01,
+0rem -1.3rem 0rem var(--orthogonal) $primary-color-01,
+0rem -1.4rem 0rem var(--orthogonal) $primary-color-01,
+
+// VERTICAL ELEMENT => BAS
+0rem 1.1rem 0rem var(--orthogonal) $primary-color-01,
+0rem 1.2rem 0rem var(--orthogonal) $primary-color-01,
+0rem 1.3rem 0rem var(--orthogonal) $primary-color-01,
+0rem 1.4rem 0rem var(--orthogonal) $primary-color-01,
+
+// HORIZONTAL ELEMENT => GAUCHE
+-1.1rem 0rem 0rem var(--orthogonal) $primary-color-01,
+-1.2rem 0rem 0rem var(--orthogonal) $primary-color-01,
+-1.3rem 0rem 0rem var(--orthogonal) $primary-color-01,
+-1.4rem 0rem 0rem var(--orthogonal) $primary-color-01,
+
+// HORIZONTAL ELEMENT => DROITE
+1.1rem 0rem 0rem var(--orthogonal) $primary-color-01,
+1.2rem 0rem 0rem var(--orthogonal) $primary-color-01,
+1.3rem 0rem 0rem var(--orthogonal) $primary-color-01,
+1.4rem 0rem 0rem var(--orthogonal) $primary-color-01,
+
+// DIAGONAL ELEMENT => HAUT-GAUCHE
+-0.8rem -0.8rem 0rem var(--diagonal) $primary-color-01,  
+-0.85rem -0.85rem 0rem var(--diagonal) $primary-color-01,  
+-0.9rem -0.9rem 0rem var(--diagonal) $primary-color-01,  
+
+// DIAGONAL ELEMENT => BAS-GAUCHE
+-0.8rem 0.8rem 0rem var(--diagonal) $primary-color-01,  
+-0.85rem 0.85rem 0rem var(--diagonal) $primary-color-01,  
+-0.9rem 0.9rem 0rem var(--diagonal) $primary-color-01,  
+
+// DIAGONAL ELEMENT => HAUT-DROITE
+0.8rem -0.8rem 0rem var(--diagonal) $primary-color-01,  
+0.85rem -0.85rem 0rem var(--diagonal) $primary-color-01,  
+0.9rem -0.9rem 0rem var(--diagonal) $primary-color-01,  
+
+// DIAGONAL ELEMENT => BAS-DROITE
+0.8rem 0.8rem 0rem var(--diagonal) $primary-color-01,  
+0.85rem 0.85rem 0rem var(--diagonal) $primary-color-01,  
+0.9rem 0.9rem 0rem var(--diagonal) $primary-color-01; 
+
 //~ Drop shadow
 
 //& ----------------- Theme Global
@@ -44,6 +95,9 @@ $themeSite: (
     background-footer: $primary-color-02,
     available-background: $primary-color-02,
     available-text: $primary-color-01,
+
+    svg-gate-stroke: $primary-color-03,
+    svg-surface-fill: $primary-color-03,
   ),
   dark: (
     background: $primary-color-03,
@@ -54,6 +108,9 @@ $themeSite: (
     background-footer: $primary-color-02,
     available-background: $primary-color-02,
     available-text: $primary-color-01,
+
+    svg-gate-stroke: $primary-color-01,
+    svg-surface-fill: $primary-color-01,
   ),
 );
 
@@ -99,10 +156,22 @@ $themeNavbar: (
     link: $secondary-color-04,
     link-underline: $primary-color-04,
     link-hover: $primary-color-03,
+    link-active: $primary-color-03,
+    link-active-underline: $primary-color-04,
+
+    mobile-link: $secondary-color-04,
+    mobile-link-hover: $primary-color-03,
+    mobile-link-active: $primary-color-03,
   ),
   dark: (
     link: $logo-tertiary-color,
     link-underline: $primary-color-04,
     link-hover: $primary-color-01,
+    link-active: $primary-color-01,
+    link-active-underline: $primary-color-04,
+
+    mobile-link: $secondary-color-04,
+    mobile-link-hover: $primary-color-03,
+    mobile-link-active: $primary-color-03,
   ),
 );

@@ -1,16 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 
+const initialState = {
+  boolean: true,
+  mode: "light"
+}
+
 //~ Exports 
 export const themeSlice = createSlice({
   // Nom de l'état
   name: 'themeSlice',
 
   // Etat initial
-  initialState: {
-    boolean: true,
-    mode: "light"
-  },
+  initialState,
 
   // Les intéractions entre les états et les actions se trouve dans "reducers"
   reducers: {

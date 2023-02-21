@@ -1,12 +1,11 @@
-//& Import modules
+//& Import SCSS
+import './Footer.scss';
+
+//& Imports modules
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
-//& Imports SCSS
-import './Footer.scss';
-
 const Footer = () => {
-
   const { t } = useTranslation();
 
   const currentYear = new Date().getFullYear();
@@ -14,7 +13,9 @@ const Footer = () => {
 
   return (
     <footer className={`footer theme--${mode}`}>
-      <p className="footer__copyright">Copyright © {currentYear} - {t('footer_copyright')} - VisualKoding</p>
+      <p className="footer__copyright">
+        Copyright © {currentYear} - {t('footer_copyright')} - VisualKoding
+      </p>
     </footer>
   );
 };

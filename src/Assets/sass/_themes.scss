@@ -36,6 +36,15 @@
     }
   }
 
+  .gate-1 {
+    transition: all 0.25s ease-in-out;
+    stroke: mixins.themed('svg-gate-stroke');
+  }
+  .surface-1 {
+    transition: all 0.25s ease-in-out;
+    fill: mixins.themed('svg-surface-fill');
+  }
+
   .footer {
     background-color: mixins.themed('background');
   }
@@ -47,35 +56,36 @@
 
 //~ ---------------------------------------------- Theme Logo
 @include mixins.themify(vars.$themeLogo) {
-  //& Groupement de fragments en haut du logo
-  .cls-1 {
-    fill: mixins.themed('fragment-high');
-  }
+  .logo__link {
+    //& Groupement de fragments en haut du logo
+    .cls-1 {
+      fill: mixins.themed('fragment-high');
+    }
 
-  //& Groupement de fragments à droite du logo
-  .cls-2 {
-    fill: mixins.themed('fragment-right');
-  }
+    //& Groupement de fragments à droite du logo
+    .cls-2 {
+      fill: mixins.themed('fragment-right');
+    }
 
-  //& Le fond du logo
-  .cls-3 {
-    fill: mixins.themed('background');
-  }
+    //& Le fond du logo
+    .cls-3 {
+      fill: mixins.themed('background');
+    }
 
-  //& Groupement de fragments à gauche du logo
-  .cls-4 {
-    fill: mixins.themed('fragment-left');
-  }
+    //& Groupement de fragments à gauche du logo
+    .cls-4 {
+      fill: mixins.themed('fragment-left');
+    }
 
-  //& Groupement de fragments central du logo
-  .cls-5 {
-    fill: mixins.themed('core');
+    //& Groupement de fragments central du logo
+    .cls-5 {
+      fill: mixins.themed('core');
+    }
   }
 
   .logo__link__name {
     color: mixins.themed('name');
   }
-
 }
 
 //~ ---------------------------------------------- Theme Btn
@@ -102,15 +112,38 @@
 
 //~ ---------------------------------------------- Theme Navbar
 @include mixins.themify(vars.$themeNavbar) {
-  .navbar li a {
-    color: mixins.themed('link');
-
-    &::after {
-      background-color: mixins.themed('link-underline');
+  .navbar {
+    &__item {
+      color: mixins.themed('link');
+      &--active {
+        color: mixins.themed('link-active');
+      }
     }
 
-    &:hover {
-      color: mixins.themed('link-hover');
+    & li a {
+      &::after {
+        background-color: mixins.themed('link-underline');
+      }
+      &:hover {
+        color: mixins.themed('link-hover');
+      }
+    }
+  }
+
+  .media--mobile {
+    .navbar {
+      &__item {
+        color: mixins.themed('mobile-link');
+
+        &--active {
+          color: mixins.themed('mobile-link-active');
+        }
+      }
+      & li a {
+        &:hover {
+          color: mixins.themed('mobile-link-hover');
+        }
+      }
     }
   }
 }

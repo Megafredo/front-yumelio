@@ -14,6 +14,7 @@ import './Layout.scss';
 
 const Layout = () => {
   const { mode } = useSelector((state: any) => state.themeSlice);
+  const { mediaScreen } = useSelector((state: any) => state.mediaSlice);
 
   const dispatch = useDispatch();
 
@@ -29,7 +30,7 @@ const Layout = () => {
   return (
     <div className={`layout theme--${mode}`}>
       <Header />
-      <main>
+      <main className={`media--${mediaScreen}`}>
         {/* <Spinner /> */}
         <Spinner />
         <Outlet />

@@ -1,9 +1,17 @@
 //& Import SCSS
 import './Logo.scss';
-import { ReactComponent as LogoSVG } from './Logo.svg';
 
 //& Imports Modules
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+//& Imports Components
+import { animateTypeSpring } from '../../Utils/Animations';
+import { ReactComponent as LogoSVG } from './Logo_v2.svg';
+import { ReactComponent as VisualKodingSVG } from './VisualKoding.svg';
+
+// (nameKey, axis, valueAxisInitial, valueAxisAnimate)
+const logoOptions = animateTypeSpring('logo', 'x', 0, 0);
 
 const Logo = () => {
   const navigate = useNavigate();
@@ -12,10 +20,11 @@ const Logo = () => {
   return (
     <>
       <div className="logo">
-        <button className="logo__link" tabIndex={0} role="button" onClick={redirectHome}>
+        <motion.button className="logo__link" tabIndex={0} role="button" onClick={redirectHome} {...logoOptions}>
           <LogoSVG />
           {/* <span className="logo__link__name">VisualKoding</span> */}
-        </button>
+          {/* <VisualKodingSVG/> */}
+        </motion.button>
       </div>
     </>
   );

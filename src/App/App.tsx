@@ -8,15 +8,22 @@ import '../Assets/i18n';
 import { mainRoutes } from '../Routes/Routes';
 import Layout from '../Layout/Layout';
 
-import { Routes, Route } from 'react-router-dom';
+//~ Import Module
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 const App = () => {
+
+  const location = useLocation();
+
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        {mainRoutes}
-      </Route>
-    </Routes>
+    // <AnimatePresence>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          {mainRoutes}
+        </Route>
+      </Routes>
+    // </AnimatePresence>
   );
 };
 

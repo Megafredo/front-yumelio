@@ -17,17 +17,3 @@
 @function themed($key) {
   @return map-get($data-map, $key);
 }
-
-//? ------------------------ MEDIAFY
-@mixin querify($queries) {
-  @each $name, $values in $queries {
-    .media--#{$name} {
-      $data-map: $values !global;
-      @content;
-    }
-  }
-}
-
-@function mediaQuery($key) {
-  @return map-get($data-map, $key);
-}

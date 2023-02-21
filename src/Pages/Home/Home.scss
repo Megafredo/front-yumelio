@@ -1,0 +1,137 @@
+@use '../../Assets/sass/mixins.scss';
+@use '../../Assets/sass/vars.scss';
+
+.home {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  align-items: center;
+
+  & h1 {
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 1rem 2rem 1.8rem;
+
+    &::before {
+      content: '';
+      margin-left: -1.5rem;
+      margin-top: 0.2rem;
+      position: absolute;
+      width: 0.7rem;
+      background-color: vars.$primary-color-04;
+      height: 5.6rem;
+      border-radius: 6rem;
+    }
+  }
+
+  & p {
+    text-align: justify;
+    margin: 0 1.8rem;
+    line-height: initial;
+  }
+
+  &__contain__left {
+    margin: 0 auto;
+    max-width: 25.5rem;
+  }
+
+  &__contain__right {
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+    max-width: 35rem;
+
+    &__element {
+      & .element-svg {
+        & .surface-2 {
+          fill: vars.$primary-color-02;
+        }
+      }
+
+      margin: 0 auto;
+      position: relative;
+      width: 80%;
+
+      & :nth-child(0n + 2) {
+        position: absolute;
+        top: 12%;
+        bottom: 12%;
+        left: 12%;
+        right: 12%;
+        z-index: 2;
+      }
+
+      & :nth-child(0n + 3) {
+        position: absolute;
+        width: 50%;
+        top: 51%;
+        left: 89%;
+        z-index: 3;
+      }
+
+      & :nth-child(0n + 4) {
+        position: absolute;
+        width: 75%;
+        left: -55%;
+        top: 60%;
+        z-index: 4;
+      }
+
+      & :nth-child(0n + 5) {
+        position: absolute;
+        width: 55%;
+        left: -41%;
+        top: -9%;
+        z-index: 5;
+      }
+    }
+  }
+}
+
+.gate-2 {
+  opacity: 0.1;
+}
+
+.media {
+  &--mobile {
+    .home {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      & h1 {
+        margin: auto;
+      }
+
+      & p {
+        margin: 2rem 0;
+      }
+
+      &__contain__left {
+        margin: 2rem auto;
+        max-width: 18rem;
+      }
+      
+      &__contain__right {
+        width: 60%;
+      }
+    }
+  }
+
+  &--tablet {
+    .home {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      & p {
+        margin: 2rem 1.8rem;
+      }
+
+      &__contain__left {
+        margin: 0 auto;
+      }
+      &__contain__right {
+        width: 60%;
+      }
+    }
+  }
+}

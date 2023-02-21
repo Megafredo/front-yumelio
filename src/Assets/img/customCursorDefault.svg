@@ -1,0 +1,23 @@
+<svg id="custom-cursor-default" viewBox="0 0 38 46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f8fbff;
+        filter: url(#drop-shadow-1);
+        stroke: #242c3f;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="4"/>
+      <feGaussianBlur result="blur" stdDeviation="2"/>
+      <feFlood flood-color="#242c3f" flood-opacity=".28"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Calque_1-2">
+    <path class="cls-1" d="m16.89,26.89c-3.61,2.68-7.21,5.35-10.82,8.03l1.69-15.8,1.69-15.8,10.47,11.95,10.47,11.95c-4.51-.11-9.01-.22-13.52-.33Z"/>
+  </g>
+</svg>

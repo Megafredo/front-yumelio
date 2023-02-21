@@ -1,25 +1,15 @@
 @use '../../Assets/sass/vars';
 
 .logo {
-  // min-width: 3.8rem;
-  // display: flex;
-  // // animation: bounce-in-right 0.55s ease;
   transition: all 0.35s ease-in-out;
-  // align-items: center;
-  // transform: scale(0.7);
   &__link {
-  
+    width: 3.5rem;
     text-decoration: none;
     font-weight: 900;
     font-size: 0.69rem;
     border: none;
     background-color: transparent;
     cursor: pointer;
-
-    &__name {
-      position: relative;
-      top: 0.4rem;
-    }
   }
 
   // &:hover {
@@ -36,22 +26,7 @@
 //~ Groupes
 #logo-svg {
   transition: all 0.4s ease-in-out;
-  width: 4rem;
 }
-
-// @keyframes bounce-in-right {
-//   0% {
-//     opacity: 0;
-//     transform: translateX(-40px);
-//   }
-//   50% {
-//     opacity: 1;
-//     transform: translateX(10px);
-//   }
-//   100% {
-//     transform: translateX(0px);
-//   }
-// }
 
 //& Groupement de fragments en haut du logo
 // .cls-1{
@@ -113,3 +88,34 @@
 // //? Fragment Gauche
 // #cls-5-3{
 // }
+
+#visual-koding {
+  width: 8rem;
+  position: relative;
+  left: -1.7rem;
+  top: 1rem;
+
+  .cls-1 {
+    fill: #242c3f;
+  }
+
+  .cls-2 {
+    fill: #8309ff;
+  }
+}
+
+.media {
+  &--mobile {
+   .logo{
+    &__link{
+      width: 3.5rem;
+    }
+   }
+  }
+
+  // &--tablet {
+  // }
+
+  // &--desktop {
+  // }
+}

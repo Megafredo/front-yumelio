@@ -38,3 +38,18 @@
 
   }
 }
+
+.media {
+  &--mobile {
+    .header {
+      &__container {
+        background-color: vars.$primary-color-02;
+        height: 4.5rem;
+        &__menu{
+          flex-direction:row;
+        }
+
+      }
+    }
+  }
+}

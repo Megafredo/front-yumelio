@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+
 // Breakpoints
 /* 
   - Extra large screens, TV (XL): >= 1201px
@@ -12,6 +13,7 @@ import { createSlice } from '@reduxjs/toolkit';
 //* Default Variables
 const DESKTOP_MIN_SIZE = 769;
 const MOBILE_MAX_SIZE = 480;
+
 
 //* Initial state
 const initialMediaScreen = window.innerWidth >= DESKTOP_MIN_SIZE ? 'desktop' : window.innerWidth <= MOBILE_MAX_SIZE ? 'mobile' : 'tablet';
@@ -31,6 +33,7 @@ export const mediaSlice = createSlice({
       if (isDesktopMedia) state.mediaScreen = 'desktop';
       if (isTabletMedia) state.mediaScreen = 'tablet';
       if (isMobileMedia) state.mediaScreen = 'mobile';
+
     },
   },
 });
