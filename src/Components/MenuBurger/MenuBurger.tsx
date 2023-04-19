@@ -18,7 +18,7 @@ const MenuBurger = () => {
 
   return (
     <>
-      <motion.div className="menu" {...menuBurgerOptions}>
+      <motion.div className="menu" {...menuBurgerOptions} data-cursor-pointer="active">
         {/* <input className="menu__burger" type="checkbox" id="menu" role="checkbox" defaultChecked={checked} onChange={() => setChecked(!checked)}></input> */}
 
         <input className="menu__burger" type="checkbox" id="menu" role="checkbox" onClick={() => dispatch(toggleMenuBurger(boolean))} defaultChecked={mode === 'active' ? true : false}></input>

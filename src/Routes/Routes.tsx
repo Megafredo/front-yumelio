@@ -13,7 +13,7 @@ const Router = [
   { id: 3, isNav : true, name: i18n.t('route_name_skills'), mainPath: '/skills', mainElement: <Skills /> },
   { id: 4, isNav : true, name: i18n.t('route_name_projects'), mainPath: '/projects', mainElement: <Projects /> },
   { id: 5, isNav : true, name: i18n.t('route_name_contact'), mainPath: '/contact', mainElement: <Contact /> },
-  { id: 6, isNav : true, name: i18n.t('route_name_login'), mainPath: '/login', mainElement: <Login /> },
+  { id: 6, isNav : false, name: i18n.t('route_name_login'), mainPath: '/login', mainElement: <Login /> },
 ];
 
 //& Router map

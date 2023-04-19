@@ -8,9 +8,14 @@ import Header from './Header/Header';
 // import { Spinner } from '../Components';
 import { Spinner } from '../Components';
 import { setTargetScreen } from '../Store/Reducers/Media';
+import { setTargetScrollY } from '../Store/Reducers/Scroll';
+import { mousePosition, parallaxEffectOnMouseMove, customCursor } from '../Store/Reducers/Cursor';
 
+// import { setTargetScrollY } from '../Utils/Scroll';
+import Cursor from '../Components/Cursor/Cursor';
 //& Import SCSS
 import './Layout.scss';
+import { useEffect } from 'react';
 
 const Layout = () => {
   const { mode } = useSelector((state: any) => state.themeSlice);
@@ -18,17 +23,50 @@ const Layout = () => {
 
   const dispatch = useDispatch();
 
-  window.addEventListener('resize', () => {
-    dispatch(setTargetScreen());
-  });
+  //? ADDEVENTLISTENER RESIZE
+  useEffect(() => {
+    const handleResize = () => {
+      dispatch(setTargetScreen());
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
-  window.removeEventListener('resize', () => {
-    dispatch(setTargetScreen());
-  });
+  //? ADDEVENTLISTENER SCROLL
+  useEffect(() => {
+    const handleScroll = () => {
+      dispatch((setTargetScrollY()));
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
-  
+  //? ONMOUSEMOVE EFFECT
+  useEffect(() => {
+    const handleMove = (event: any) => {
+      let x = event.clientX;
+      let y = event.clientY;
+
+      dispatch(mousePosition({ x, y }));
+      // dispatch(magneticCursor());
+      dispatch(parallaxEffectOnMouseMove());
+      dispatch(customCursor());
+    };
+
+    window.addEventListener('mousemove', handleMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMove);
+    };
+  }, []);
+
   return (
+    
     <div className={`layout theme--${mode}`}>
+      <Cursor />
       <Header />
       <main className={`media--${mediaScreen}`}>
         {/* <Spinner /> */}
@@ -36,7 +74,8 @@ const Layout = () => {
         <Outlet />
       </main>
       <Footer />
-    </div>
+      </div>
+
   );
 };
 

@@ -2,6 +2,8 @@
 import themeSlice from './Theme';
 import navBarSlice from './NavBar';
 import mediaSlice from './Media';
+import cursorSlice from './Cursor';
+import scrollSlice from './Scroll';
 // import apiRentagence from '../Api';
 
 const reducers = {
@@ -9,6 +11,8 @@ const reducers = {
   themeSlice,
   navBarSlice,
   mediaSlice,
+  cursorSlice,
+  scrollSlice,
 };
 
 //export all combined reducers to use in the store

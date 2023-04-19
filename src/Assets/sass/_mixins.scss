@@ -17,3 +17,18 @@
 @function themed($key) {
   @return map-get($data-map, $key);
 }
+
+
+//~ ------------------------ ANIMATE SVG LINE
+@mixin line-animate($dasharray, $dashoffset, $anim-name, $anim-duration, $anim-delay, $anim-mode) {
+  stroke-dasharray: $dasharray;
+  stroke-dashoffset: $dashoffset;
+  fill: transparent;
+
+  animation-name: $anim-name;
+  animation-duration: $anim-duration;
+  animation-delay: $anim-delay;
+  animation-timing-function: linear;
+  animation-fill-mode: $anim-mode;
+}
+

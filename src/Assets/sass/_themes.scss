@@ -52,39 +52,64 @@
   .spinner {
     stroke: mixins.themed('spinner');
   }
+
+  .parallax {
+    & .scroller {
+      color: mixins.themed('parallax-scroller-text');
+    }
+  }
+
+  .skills__container__list {
+    &__item__align {
+      &--start, &--end {
+        color: mixins.themed('technologies-list');
+      }
+    }
+    & .reveal-bg {
+      background-color: mixins.themed('reveal-text-list');
+    }
+  }
+
+  .soft-skill__hexagon-background, .hobbies__hexagon-background{
+     fill: mixins.themed('skills-hexagon-fill');
+  }
+  .soft-skill__word, .hobbies__word{
+    fill: mixins.themed('skills-hexagon-title');
+  }
 }
 
 //~ ---------------------------------------------- Theme Logo
 @include mixins.themify(vars.$themeLogo) {
-  .logo__link {
-    //& Groupement de fragments en haut du logo
-    .cls-1 {
-      fill: mixins.themed('fragment-high');
-    }
-
-    //& Groupement de fragments à droite du logo
-    .cls-2 {
-      fill: mixins.themed('fragment-right');
-    }
-
-    //& Le fond du logo
-    .cls-3 {
+  .logo__svg {
+    &__background {
       fill: mixins.themed('background');
     }
 
-    //& Groupement de fragments à gauche du logo
-    .cls-4 {
-      fill: mixins.themed('fragment-left');
+    //& Groupement de fragments en haut du logo
+    &__zone__top {
+      fill: mixins.themed('fragment-high');
     }
 
-    //& Groupement de fragments central du logo
-    .cls-5 {
-      fill: mixins.themed('core');
+    &__zone__bottom {
+      &--right {
+        fill: mixins.themed('fragment-right');
+      }
+      &--left {
+        fill: mixins.themed('fragment-left');
+      }
     }
-  }
 
-  .logo__link__name {
-    color: mixins.themed('name');
+    &__zone__circle {
+      &--left,
+      &--right,
+      &--top {
+        fill: mixins.themed('core');
+      }
+    }
+
+    .logo__link__name {
+      color: mixins.themed('name');
+    }
   }
 }
 

@@ -8,10 +8,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 //& Imports Components
 import { Router } from '../../Routes/Routes';
-import { animateWithExit } from '../../Utils/Animations';
+import { animateWithExit, animateChildren, animateParent } from '../../Utils/Animations';
 
 // (nameKey, axis, valueAxisInitial, valueAxisAnimate, exitAxis, valueExitAxis)
-const navbarOptions = animateWithExit('navbar', 'x', 20, 0, 'x', -20);
+const navbarOptions = animateWithExit('navbar', 'y', 20, 0, 'y', -20);
+const navbarParentOptions = animateParent('navbar');
+const navBarChildrenOptions = animateChildren();
+
 
 const Navbar = () => {
   const { mode } = useSelector((state: any) => state.navBarSlice);
@@ -19,22 +22,20 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <AnimatePresence>
-        {(mode === 'active' || mediaScreen === 'desktop') && (
-          <motion.ul {...navbarOptions}>
-            {Router.map(
-              ({ id, isNav, name, mainPath }) =>
-                isNav && (
-                  <li key={id}>
-                    <NavLink className={({ isActive }) => (isActive ? 'navbar__item--active' : 'navbar__item')} to={mainPath} role="link">
-                      {name}
-                    </NavLink>
-                  </li>
-                )
-            )}
-          </motion.ul>
-        )}
-      </AnimatePresence>
+      {(mode === 'active' || mediaScreen === 'desktop') && (
+        <motion.ul variants={navbarParentOptions} initial="hidden" animate="visible" exit="exit">
+          {Router.map(
+            ({ id, isNav, name, mainPath }) =>
+              isNav && (
+                <motion.li key={id} variants={navBarChildrenOptions}>
+                  <NavLink className={({ isActive }) => (isActive ? 'navbar__item--active' : 'navbar__item')} to={mainPath} role="link" data-cursor-pointer="active">
+                    {name}
+                  </NavLink>
+                </motion.li>
+              )
+          )}
+        </motion.ul>
+      )}
     </nav>
   );
 };

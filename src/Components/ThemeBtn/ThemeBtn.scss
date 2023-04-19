@@ -5,8 +5,8 @@
   display: flex;
 
   &__button {
+    // cursor: none;
     cursor: pointer;
-
     width: 2rem;
     height: 2rem;
 
@@ -39,6 +39,7 @@
     }
   }
 }
+
 
 .media {
   &--mobile {

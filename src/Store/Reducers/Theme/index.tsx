@@ -1,24 +1,21 @@
+//~ Import Module
 import { createSlice } from '@reduxjs/toolkit';
 
-
+//~ Initial state
 const initialState = {
-  boolean: true,
-  mode: "light"
-}
+  // mode: window.matchMedia('(prefers-color-scheme: Light)').matches ? "light" : "dark",
+  mode: 'light',
+};
 
-//~ Exports 
+//~ Exports
 export const themeSlice = createSlice({
-  // Nom de l'état
   name: 'themeSlice',
 
-  // Etat initial
   initialState,
 
-  // Les intéractions entre les états et les actions se trouve dans "reducers"
   reducers: {
     toggleTheme: (state) => {
-      state.boolean = !state.boolean;
-      state.boolean === false ? state.mode = 'dark' : state.mode = 'light';
+      state.mode = state.mode === 'dark' ? 'light' : 'dark';
     },
   },
 });

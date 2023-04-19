@@ -1,23 +1,30 @@
 //~ Import style
 import './Skills.scss';
 
-import { motion } from 'framer-motion';
+//& Imports components
+import Skill from '../../Components/Skill/Skill';
 
-const test = {
-  initial: { x: -150,  opacity: 0 },
-  animate: { x: 0,  opacity: 1 },
-  exit: {
-    transition: { duration: 0.2 },
-    x: -150,
-    opacity: 0
-  },
+import skillData from '../../Data/Skill.json';
+
+interface SkillData {
+  id: number;
+  title: string;
+  titleBackground: string;
+  skills: Array<string>;
+  gap: Array<string>;
+  color: string;
 }
 
 const Skills = () => {
+  
   return (
+
     <section className="skills">
-      <motion.h1 {...test}>Compétences</motion.h1>
+      {skillData.map((data: SkillData) => (
+        <Skill key={data.id} {...data} />
+      ))}
     </section>
+
   );
 };
 

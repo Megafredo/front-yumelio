@@ -19,13 +19,13 @@ const Logo = () => {
 
   return (
     <>
-      <div className="logo">
+      <motion.div className="logo" data-cursor-pointer="active">
         <motion.button className="logo__link" tabIndex={0} role="button" onClick={redirectHome} {...logoOptions}>
           <LogoSVG />
           {/* <span className="logo__link__name">VisualKoding</span> */}
           {/* <VisualKodingSVG/> */}
         </motion.button>
-      </div>
+      </motion.div>
     </>
   );
 };

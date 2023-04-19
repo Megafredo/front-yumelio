@@ -1,5 +1,5 @@
+//~ Import Module
 import { createSlice } from '@reduxjs/toolkit';
-
 
 // Breakpoints
 /* 
@@ -10,19 +10,20 @@ import { createSlice } from '@reduxjs/toolkit';
   - Mobile devices (mobile): 320px  -  480px
 */
 
-//* Default Variables
+//~ Default Variables
 const DESKTOP_MIN_SIZE = 769;
-const MOBILE_MAX_SIZE = 480;
+const MOBILE_MAX_SIZE = 624;
 
-
-//* Initial state
-const initialMediaScreen = window.innerWidth >= DESKTOP_MIN_SIZE ? 'desktop' : window.innerWidth <= MOBILE_MAX_SIZE ? 'mobile' : 'tablet';
+//~ Initial state
+const initialState = {
+  mediaScreen: window.innerWidth >= DESKTOP_MIN_SIZE ? 'desktop' : window.innerWidth <= MOBILE_MAX_SIZE ? 'mobile' : 'tablet',
+};
 
 //~ Exports
 export const mediaSlice = createSlice({
   name: 'mediaSlice',
 
-  initialState: { mediaScreen: initialMediaScreen },
+  initialState,
 
   reducers: {
     setTargetScreen: (state) => {
@@ -33,7 +34,6 @@ export const mediaSlice = createSlice({
       if (isDesktopMedia) state.mediaScreen = 'desktop';
       if (isTabletMedia) state.mediaScreen = 'tablet';
       if (isMobileMedia) state.mediaScreen = 'mobile';
-
     },
   },
 });

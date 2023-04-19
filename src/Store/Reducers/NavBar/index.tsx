@@ -1,18 +1,20 @@
+//~ Import Module
 import { createSlice } from '@reduxjs/toolkit';
+
+
+//~ Initial state
+const initialState = {
+  boolean: false,
+  mode: "inactive"
+};
 
 
 //~ Exports 
 export const navBarSlice = createSlice({
-  // Nom de l'état
   name: 'navBarSlice',
 
-  // Etat initial
-  initialState: {
-    boolean: false,
-    mode: "inactive"
-  },
+  initialState,
 
-  // Les intéractions entre les états et les actions se trouve dans "reducers"
   reducers: {
     toggleMenuBurger: (state) => {
       state.boolean = !state.boolean;

@@ -15,6 +15,7 @@ $font-Nunito-Italic: 'Nunito-Italic', 'Gill Sans', 'Gill Sans MT', Calibri, 'Tre
 
 //~ ----------------- Colors charts
 
+// $primary-color-01: #f8fbff;
 $primary-color-01: #f8fbff;
 $primary-color-02: #8309ff;
 $primary-color-03: #242c3f;
@@ -24,6 +25,7 @@ $secondary-color-01: #f92663;
 $secondary-color-02: #50d6ff;
 $secondary-color-03: #ff7733;
 $secondary-color-04: #737373;
+$secondary-color-05: #222435;
 
 $logo-primary-color: #f4f4f4;
 $logo-secondary-color: #cad6dd;
@@ -98,6 +100,10 @@ $themeSite: (
 
     svg-gate-stroke: $primary-color-03,
     svg-surface-fill: $primary-color-03,
+    parallax-scroller-text: $primary-color-03,
+    technologies-list: $primary-color-03,
+    reveal-text-list: $primary-color-01,
+    skills-hexagon-fill: $primary-color-03,
   ),
   dark: (
     background: $primary-color-03,
@@ -111,6 +117,11 @@ $themeSite: (
 
     svg-gate-stroke: $primary-color-01,
     svg-surface-fill: $primary-color-01,
+    parallax-scroller-text: $primary-color-01,
+    technologies-list: $primary-color-01,
+    reveal-text-list: $primary-color-03,
+    skills-hexagon-fill: $secondary-color-05,
+    skills-hexagon-title: $primary-color-01,
   ),
 );
 
