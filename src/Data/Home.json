@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "FullStack",
+    "color": "#BED62D",
+    "description": ["Développeur full stack et graphiste expérimenté dans la conception, création de sites web et d’application mobiles.",
+
+    "Possède des compétences en développement front-end, back-end, ainsi qu’en design graphique et en UX/UI.",
+    
+    "Maîtrise des technologies telles que HTML/CSS, Javascript, React, NodeJS, postgreSQL et des outils graphique comme Photoshop et Illustrator.", 
+
+    "Passionné par l’innovation, ouvert et enthousiaste d'apprendre de nouveaux langages et technologies pour améliorer mes compétences en développement."]
+  },
+  {
+    "id": 2,
+    "title": "FrontEnd",
+    "color": "#3ECEC3",
+    "description": ["Développeur full stack et graphiste expérimenté dans la conception, création de sites web et d’application mobiles.",
+
+    "Possède des compétences en développement front-end, back-end, ainsi qu’en design graphique et en UX/UI.",
+    
+    "Maîtrise des technologies telles que HTML/CSS, Javascript, React, NodeJS, postgreSQL et des outils graphique comme Photoshop et Illustrator.", 
+
+    "Passionné par l’innovation, ouvert et enthousiaste d'apprendre de nouveaux langages et technologies pour améliorer mes compétences en développement."]
+  },
+  {
+    "id": 3,
+    "title": "BackEnd",
+    "color": "#4A63F4",
+    "description": ["Développeur full stack et graphiste expérimenté dans la conception, création de sites web et d’application mobiles.",
+
+    "Possède des compétences en développement front-end, back-end, ainsi qu’en design graphique et en UX/UI.",
+    
+    "Maîtrise des technologies telles que HTML/CSS, Javascript, React, NodeJS, postgreSQL et des outils graphique comme Photoshop et Illustrator.", 
+
+    "Passionné par l’innovation, ouvert et enthousiaste d'apprendre de nouveaux langages et technologies pour améliorer mes compétences en développement."]
+  },
+  {
+    "id": 4,
+    "title": "Graphiste",
+    "color": "#FF3679",
+    "description": ["Développeur full stack et graphiste expérimenté dans la conception, création de sites web et d’application mobiles.",
+
+    "Possède des compétences en développement front-end, back-end, ainsi qu’en design graphique et en UX/UI.",
+    
+    "Maîtrise des technologies telles que HTML/CSS, Javascript, React, NodeJS, postgreSQL et des outils graphique comme Photoshop et Illustrator.", 
+
+    "Passionné par l’innovation, ouvert et enthousiaste d'apprendre de nouveaux langages et technologies pour améliorer mes compétences en développement."]
+  }
+]

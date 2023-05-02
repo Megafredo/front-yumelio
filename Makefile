@@ -1,0 +1,12 @@
+COMPONENT_NAME ?= $(shell bash -c 'read -p "Component name: " component_name; echo $$component_name')
+
+#& Variables
+THIS_COMPONENT := ${COMPONENT_NAME}
+export COMPONENT_NAME_VARIABLE_SHELL=${THIS_COMPONENT}
+
+component: 
+	mkdir ./src/Components/${THIS_COMPONENT}
+	mkdir	./src/Components/${THIS_COMPONENT}/Svg
+	mkdir	./src/Components/${THIS_COMPONENT}/Types
+	mkdir	./src/Components/${THIS_COMPONENT}/Styles
+	sh ./script.sh

@@ -7,8 +7,8 @@ import { motion } from 'framer-motion';
 
 //& Imports Components
 import { animateTypeSpring } from '../../Utils/Animations';
-import { ReactComponent as LogoSVG } from './Logo_v2.svg';
-import { ReactComponent as VisualKodingSVG } from './VisualKoding.svg';
+import { ReactComponent as LogoSVG } from './Svg/Logo_v2.svg';
+import { ReactComponent as VisualKodingSVG } from './Svg/VisualKoding.svg';
 
 // (nameKey, axis, valueAxisInitial, valueAxisAnimate)
 const logoOptions = animateTypeSpring('logo', 'x', 0, 0);

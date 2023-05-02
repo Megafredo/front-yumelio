@@ -51,10 +51,12 @@ const Layout = () => {
       let x = event.clientX;
       let y = event.clientY;
 
-      dispatch(mousePosition({ x, y }));
-      // dispatch(magneticCursor());
-      dispatch(parallaxEffectOnMouseMove());
-      dispatch(customCursor());
+      if (mediaScreen === 'desktop') {
+        dispatch(mousePosition({ x, y }));
+        // dispatch(magneticCursor());
+        dispatch(parallaxEffectOnMouseMove());
+        dispatch(customCursor());
+      }
     };
 
     window.addEventListener('mousemove', handleMove);

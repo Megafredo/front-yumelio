@@ -11,7 +11,7 @@ import { createSlice } from '@reduxjs/toolkit';
 */
 
 //~ Default Variables
-const DESKTOP_MIN_SIZE = 769;
+const DESKTOP_MIN_SIZE = 990;
 const MOBILE_MAX_SIZE = 624;
 
 //~ Initial state

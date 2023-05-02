@@ -1,0 +1,132 @@
+.container__work {
+  // width: 100%;
+  // height: auto;
+  width: 80%;
+  margin: 0 auto;
+
+  &__section {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__info {
+      height: auto;
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      &__title {
+        width: 30%;
+        &--fullstack,
+        &--frontend,
+        &--backend,
+        &--graphiste {
+          padding: 2rem 0;
+          height: 10rem;
+          margin: 0 auto;
+          vertical-align: middle;
+          width: 100%;
+        }
+      }
+
+      &__description {
+        max-width: 20rem;
+        width: 50%;
+        padding: 2rem;
+        & span {
+          // letter-spacing: 0.06rem;
+          line-height: 1.4rem;
+          font-size: 1rem;
+          width: 100%;
+          font-weight: 600;
+        }
+      }
+
+      &.flex-row-reverse {
+        flex-flow: row-reverse;
+      }
+    }
+
+    &__graphic {
+      width: 50%;
+      // background-color: blue;
+      margin: 10rem 0;
+
+      & .test {
+        object-fit: cover;
+        min-width: 100%;
+        max-height: 495px;
+        width: 50%;
+ 
+      }
+    }
+
+    // &__info {
+    //   height: auto;
+    //   width: 50%;
+    //   display: flex;
+    //   flex-wrap: wrap;
+
+    //   &__title {
+    //     width: 30%;
+
+    //     &--fullstack,
+    //     &--frontend,
+    //     &--backend,
+    //     &--graphiste{
+    //       padding: 2rem 0;
+    //       height: 10rem;
+    //       margin: 0 auto;
+    //       vertical-align: middle;
+    //       width: 100%;
+    //     }
+    // //   }
+
+    //   &__description {
+    //     width: 50%;
+    //     padding: 2rem;
+    //     & span {
+    //       font-size: 0.85rem;
+    //       width: 100%;
+    //       font-weight: 600;
+    //     }
+    //   }
+    // }
+    // &__graphic {
+    //   height: 20rem;
+    //   width: 50%;
+    //   margin: 0 auto;
+    //   position: relative;
+    //   max-width: 35rem;
+
+    //   & .test {
+    //     width: 50%;
+    //   }
+
+    //   &__grid {
+    //   }
+    //   &__background {
+    //     margin: 0 auto;
+    //     width: 50%;
+    //   }
+    //   &__name {
+    //   }
+    // }
+  }
+}
+
+.media {
+  &--mobile, &--tablet {
+    .container__work {
+      &__section {
+        flex-flow: column-reverse;
+        &__info {
+          width: 100%;
+        }
+        &__graphic {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
