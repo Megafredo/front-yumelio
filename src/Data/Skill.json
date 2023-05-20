@@ -5,7 +5,7 @@
     "titleBackground": "hobbies soft skill",
     "skills": [],
     "gap": [],
-    "color": "#BED62D",
+    "color": "#BCE100",
     "logotypes": []
   },
   {
@@ -40,7 +40,7 @@
     "id": 3,
     "title": "Back-End",
     "titleBackground": "developpeur back-end",
-    "color": "#4A63F4",
+    "color": "#6A2AFF",
     "skills": ["nodejs", "sqitch", "void", "express", "sql", "postgresql", "mongodb", "graphql", "void"],
     "gap": ["express", "sql", "postgresql"],
     "logotypes": [
@@ -94,7 +94,7 @@
     "id": 5,
     "title": "Technologies Diverses",
     "titleBackground": "Technologies Diverses",
-    "skills": ["github", "git", "void", "void", "docker", "void", "typescrypt", "void", "void"],
+    "skills": ["git", "github", "void", "void", "docker", "void", "typescrypt", "void", "void"],
     "gap": ["docker"],
     "color": "#FF8A33",
     "logotypes": [

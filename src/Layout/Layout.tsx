@@ -51,18 +51,18 @@ const Layout = () => {
       let x = event.clientX;
       let y = event.clientY;
 
-      if (mediaScreen === 'desktop') {
-        dispatch(mousePosition({ x, y }));
-        // dispatch(magneticCursor());
-        dispatch(parallaxEffectOnMouseMove());
-        dispatch(customCursor());
-      }
+      dispatch(mousePosition({ x, y }));
+      // dispatch(magneticCursor());
+      dispatch(parallaxEffectOnMouseMove());
+      dispatch(customCursor());
     };
-
-    window.addEventListener('mousemove', handleMove);
-    return () => {
-      window.removeEventListener('mousemove', handleMove);
-    };
+    
+    if (mediaScreen === 'desktop') {
+      window.addEventListener('mousemove', handleMove);
+      return () => {
+        window.removeEventListener('mousemove', handleMove);
+      };
+    }
   }, []);
 
   return (

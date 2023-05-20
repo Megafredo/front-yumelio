@@ -1,4 +1,7 @@
-@use '../../Assets/sass/vars';
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+@use './theme.scss';
 
 .logo {
   transition: all 0.35s ease-in-out;

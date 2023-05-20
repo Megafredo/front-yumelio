@@ -1,0 +1,69 @@
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+
+//! THEMIFY
+
+//& ----------------- Theme Navbar
+$themeNavbar: (
+  light: (
+    link: vars.$secondary-color-04,
+    link-underline: vars.$primary-color-04,
+    link-hover: vars.$primary-color-03,
+    link-active: vars.$primary-color-03,
+    link-active-underline: vars.$primary-color-04,
+
+    mobile-link: vars.$secondary-color-04,
+    mobile-link-hover: vars.$primary-color-03,
+    mobile-link-active: vars.$primary-color-03,
+  ),
+  dark: (
+    link: vars.$logo-tertiary-color,
+    link-underline: vars.$primary-color-04,
+    link-hover: vars.$primary-color-01,
+    link-active: vars.$primary-color-01,
+    link-active-underline: vars.$primary-color-04,
+
+    mobile-link: vars.$secondary-color-04,
+    mobile-link-hover: vars.$primary-color-03,
+    mobile-link-active: vars.$primary-color-03,
+  ),
+);
+
+//~ ---------------------------------------------- Theme Navbar
+@include mixins.themify($themeNavbar) {
+  .navbar {
+    &__item {
+      color: mixins.themed('link');
+      &--active {
+        color: mixins.themed('link-active');
+      }
+    }
+
+    & li a {
+      &::after {
+        background-color: mixins.themed('link-underline');
+      }
+      &:hover {
+        color: mixins.themed('link-hover');
+      }
+    }
+  }
+
+  .media--mobile {
+    .navbar {
+      &__item {
+        color: mixins.themed('mobile-link');
+
+        &--active {
+          color: mixins.themed('mobile-link-active');
+        }
+      }
+      & li a {
+        &:hover {
+          color: mixins.themed('mobile-link-hover');
+        }
+      }
+    }
+  }
+}

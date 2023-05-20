@@ -71,6 +71,8 @@ export const cursorSlice = createSlice({
       const cursorInner: Element | any = document.querySelector('.inner');
       const cursorOuter: Element | any = document.querySelector('.outer');
 
+      if (cursorInner && cursorOuter) {
+        
       const posX = state.x;
       const posY = state.y;
 
@@ -91,6 +93,8 @@ export const cursorSlice = createSlice({
           fill: 'forwards',
         }
       );
+      }
+
 
       const cursorPointer = document.querySelectorAll(`[data-cursor-pointer="active"]`);
 

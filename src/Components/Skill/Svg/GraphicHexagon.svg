@@ -13,7 +13,7 @@
       }
 
       .graphic-hexagon-4 {
-        clip-path: url(#clippath);
+        clip-path: url(#clippath-graphic-hexagon);
       }
 
       .graphic-hexagon-5 {
@@ -22,7 +22,7 @@
 
     </style>
 
-    <clipPath id="clippath">
+    <clipPath id="clippath-graphic-hexagon">
       <rect class="graphic-hexagon-5" width="100" height="100"/>
     </clipPath>
 

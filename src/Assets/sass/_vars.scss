@@ -13,25 +13,32 @@
 $font-Nunito: 'Nunito', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 $font-Nunito-Italic: 'Nunito-Italic', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
+
 //~ ----------------- Colors charts
 
-// $primary-color-01: #f8fbff;
 $primary-color-01: #f8fbff;
-$primary-color-02: #8309ff;
+$primary-color-02: #6A2AFF;
 $primary-color-03: #242c3f;
-$primary-color-04: #bed62d;
+$primary-color-04: #BCE100;
 
 $secondary-color-01: #f92663;
 $secondary-color-02: #50d6ff;
 $secondary-color-03: #ff7733;
 $secondary-color-04: #737373;
 $secondary-color-05: #222435;
+$secondary-color-06: #b9bec9;
 
 $logo-primary-color: #f4f4f4;
 $logo-secondary-color: #cad6dd;
 $logo-tertiary-color: #b0babf;
 
-//~ Box shadows
+$section-color-01: #BCE100;
+$section-color-02: #78cec2;
+$section-color-03: #7900ff;
+$section-color-04: #e33480;
+
+
+//~ ----------------- Box shadows
 
 //^ Base
 $box-shadow-v1: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -82,107 +89,4 @@ $menu-burger-sun-shadow: inset 0 0 0 1rem $primary-color-01,
 // DIAGONAL ELEMENT => BAS-DROITE
 0.8rem 0.8rem 0rem var(--diagonal) $primary-color-01,  
 0.85rem 0.85rem 0rem var(--diagonal) $primary-color-01,  
-0.9rem 0.9rem 0rem var(--diagonal) $primary-color-01; 
-
-//~ Drop shadow
-
-//& ----------------- Theme Global
-$themeSite: (
-  light: (
-    background: $primary-color-01,
-    title: $primary-color-03,
-    text: $primary-color-03,
-    // link: $secondary-color-01,
-    spinner: $primary-color-02,
-    background-footer: $primary-color-02,
-    available-background: $primary-color-02,
-    available-text: $primary-color-01,
-
-    svg-gate-stroke: $primary-color-03,
-    svg-surface-fill: $primary-color-03,
-    parallax-scroller-text: $primary-color-03,
-    technologies-list: $primary-color-03,
-    reveal-text-list: $primary-color-01,
-    skills-hexagon-fill: $primary-color-03,
-  ),
-  dark: (
-    background: $primary-color-03,
-    title: $primary-color-01,
-    text: $primary-color-01,
-    // link: $secondary-color-03,
-    spinner: $primary-color-04,
-    background-footer: $primary-color-02,
-    available-background: $primary-color-02,
-    available-text: $primary-color-01,
-
-    svg-gate-stroke: $primary-color-01,
-    svg-surface-fill: $primary-color-01,
-    parallax-scroller-text: $primary-color-01,
-    technologies-list: $primary-color-01,
-    reveal-text-list: $primary-color-03,
-    skills-hexagon-fill: $secondary-color-05,
-    skills-hexagon-title: $primary-color-01,
-  ),
-);
-
-//& ----------------- Theme Logo
-$themeLogo: (
-  light: (
-    core: $primary-color-04,
-    fragment-high: $logo-primary-color,
-    fragment-left: $logo-secondary-color,
-    fragment-right: $logo-tertiary-color,
-    background: $primary-color-03,
-    name: $primary-color-03,
-  ),
-  dark: (
-    core: $primary-color-04,
-    fragment-high: $logo-primary-color,
-    fragment-left: $logo-secondary-color,
-    fragment-right: $logo-tertiary-color,
-    background: $primary-color-03,
-    name: $primary-color-01,
-  ),
-);
-
-//& ----------------- Theme Buttons
-$themeBtn: (
-  light: (
-    burger-rods: $primary-color-03,
-    checked-rods: $primary-color-01,
-    background: $primary-color-03,
-    border: $primary-color-03,
-  ),
-  dark: (
-    burger-rods: $primary-color-01,
-    checked-rods: $primary-color-03,
-    background: $primary-color-03,
-    border: $primary-color-03,
-  ),
-);
-
-//& ----------------- Theme Navbar
-$themeNavbar: (
-  light: (
-    link: $secondary-color-04,
-    link-underline: $primary-color-04,
-    link-hover: $primary-color-03,
-    link-active: $primary-color-03,
-    link-active-underline: $primary-color-04,
-
-    mobile-link: $secondary-color-04,
-    mobile-link-hover: $primary-color-03,
-    mobile-link-active: $primary-color-03,
-  ),
-  dark: (
-    link: $logo-tertiary-color,
-    link-underline: $primary-color-04,
-    link-hover: $primary-color-01,
-    link-active: $primary-color-01,
-    link-active-underline: $primary-color-04,
-
-    mobile-link: $secondary-color-04,
-    mobile-link-hover: $primary-color-03,
-    mobile-link-active: $primary-color-03,
-  ),
-);
+0.9rem 0.9rem 0rem var(--diagonal) $primary-color-01;

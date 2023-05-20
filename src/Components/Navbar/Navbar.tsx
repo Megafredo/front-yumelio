@@ -1,5 +1,5 @@
 //& Import Scss
-import './Navbar.scss';
+import './Styles/Navbar.scss';
 
 //& Imports Modules
 import { NavLink } from 'react-router-dom';

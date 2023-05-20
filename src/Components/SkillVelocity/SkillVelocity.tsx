@@ -21,7 +21,7 @@ const SkillVelocity = ({ children, baseVelocity = 100 }: ParallaxProps) => {
     const { scrollY } = useScroll();
     const scrollVelocity = useVelocity(scrollY);
     const smoothVelocity = useSpring(scrollVelocity, {
-      damping: 50,
+      damping: 150,
       stiffness: 400
     });
     const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
@@ -37,7 +37,7 @@ const SkillVelocity = ({ children, baseVelocity = 100 }: ParallaxProps) => {
 
     const directionFactor = useRef<number>(1);
     useAnimationFrame((t, delta) => {
-      let moveBy = directionFactor.current * baseVelocity * (delta / 2000);
+      let moveBy = directionFactor.current * baseVelocity * (delta / 4000);
 
       /**
        * This is what changes the direction of the scroll once we
@@ -59,6 +59,10 @@ const SkillVelocity = ({ children, baseVelocity = 100 }: ParallaxProps) => {
     <>
       <div className="parallax">
         <motion.div className="scroller" style={{ x }}>
+          <span>{children} </span>
+          <span>{children} </span>
+          <span>{children} </span>
+          <span>{children} </span>
           <span>{children} </span>
           <span>{children} </span>
           <span>{children} </span>

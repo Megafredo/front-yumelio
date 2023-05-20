@@ -5,7 +5,7 @@ import HomeData from '../../Data/Home.json';
 
 interface HomeData {
   id: number;
-  title: string;
+  title: object;
   description: Array<string>;
 }
 

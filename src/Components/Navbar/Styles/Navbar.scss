@@ -1,4 +1,7 @@
-@use '../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+@use './theme.scss';
 
 nav {
   user-select: none;
@@ -49,7 +52,7 @@ ul {
 
 .media {
   &--mobile {
-    nav {
+    .navbar {
       position: absolute;
       right: 10.5%;
       & ul {
@@ -65,7 +68,7 @@ ul {
   }
 
   &--tablet {
-    nav {
+    .navbar {
       justify-content: right;
       & ul {
         top: 1.4rem;
@@ -81,7 +84,7 @@ ul {
   }
 
   &--desktop {
-    nav {
+    .navbar {
       justify-content: center;
      & ul {
         top: -0.2rem;

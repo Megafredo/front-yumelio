@@ -1,4 +1,7 @@
-@use '../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+@use './theme.scss';
 
 @mixin rods($top, $time) {
   width: 2rem;
@@ -73,6 +76,9 @@
    .menu{
     margin-right: 1rem;
     height: 2.5rem;
+    & label {
+      color: vars.$primary-color-01;
+    }
     &__burger{
       &__rods {
         background-color: vars.$primary-color-01;

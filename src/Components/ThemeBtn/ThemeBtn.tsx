@@ -1,5 +1,5 @@
 //& Import SCSS
-import './ThemeBtn.scss';
+import './Styles/ThemeBtn.scss';
 
 //& Import modules
 import { useSelector, useDispatch } from 'react-redux';
@@ -21,7 +21,7 @@ const ThemeBtn = () => {
   return (
     <>
       <motion.div className="theme" {...themeOptions} data-cursor-pointer="active">
-        <input id="theme" className="theme__button" type="checkbox" onClick={() => dispatch(toggleTheme())} role="checkbox" defaultChecked={mode === 'dark' ? true : false}></input>
+        <input name="theme" id="theme" className="theme__button" type="checkbox" onClick={() => dispatch(toggleTheme())} role="checkbox" defaultChecked={mode === 'dark' ? true : false}></input>
         <label htmlFor="theme">{titleMode}</label>
       </motion.div>
     </>

@@ -1,0 +1,26 @@
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+
+//! THEMIFY
+
+$themeSidebar: (
+  light: (
+    background: vars.$primary-color-03,
+  ),
+  dark: (
+    background: vars.$primary-color-01,
+  ),
+);
+
+//~ ---------------------------------------------- Theme Site
+@include mixins.themify($themeSidebar) {
+  .sidebar {
+    &__fullstack,
+    &__frontend,
+    &__backend,
+    &__webdesigner {
+      background-color: mixins.themed('background');
+    }
+  }
+}

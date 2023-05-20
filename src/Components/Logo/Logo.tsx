@@ -1,5 +1,5 @@
 //& Import SCSS
-import './Logo.scss';
+import './Styles/Logo.scss';
 
 //& Imports Modules
 import { useNavigate } from 'react-router-dom';

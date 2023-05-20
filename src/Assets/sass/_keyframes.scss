@@ -1,3 +1,5 @@
+@use './vars.scss';
+
 // @keyframes bounce-in {
 //   0% {
 //     transform: scale3d(1, 1, 1);
@@ -28,7 +30,7 @@
   }
 
   100% {
-    fill: #bed62d;
+    fill: vars.$primary-color-04;
   }
 }
 
@@ -38,6 +40,6 @@
   }
 
   100% {
-    fill: #242c3f;
+    fill: vars.$primary-color-03;
   }
 }

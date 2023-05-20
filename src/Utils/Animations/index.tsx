@@ -49,54 +49,53 @@ export function whileInViewTranslateWithRotate(axis: string, valueAxisInitial: n
       opacity: 1,
       transition: {
         duration: 1,
-        ease: "easeInOut",
+        ease: 'easeInOut',
       },
     },
   };
 }
 
-export function whileInViewHexagonTranslate(axis:string, valueAxisInitial:number) {
+export function whileInViewHexagonTranslate(axis: string, valueAxisInitial: number) {
   return {
     initial: {
       scale: 0,
       rotate: 90,
-      [axis]:valueAxisInitial,
+      [axis]: valueAxisInitial,
     },
     whileInView: {
       scale: 1,
-      [axis]:0,
+      [axis]: 0,
       transition: {
         duration: 1,
         ease: [0, 0.71, 0.2, 1.01],
         scale: {
-          type: "spring",
+          type: 'spring',
           damping: 12,
           stiffness: 100,
-          restDelta: 0.001
-        }
+          restDelta: 0.001,
+        },
       },
     },
   };
 }
 
-export function whileInViewTranslateText(axis:string, valueAxisInitial:number) {
+export function whileInViewTranslateText(axis: string, valueAxisInitial: number) {
   return {
     initial: {
-      [axis]:valueAxisInitial,
+      [axis]: valueAxisInitial,
     },
     whileInView: {
       [axis]: 0,
       transition: {
-        delay:0.15,
+        delay: 0.15,
         duration: 1,
         ease: [0, 0.71, 0.2, 1.01],
-        
       },
     },
   };
 }
 
-export function whileInViewRevealBackground(axis:string, valueAxisWhileInView:number) {
+export function whileInViewRevealBackground(axis: string, valueAxisWhileInView: number) {
   return {
     initial: {
       [axis]: 0,
@@ -104,7 +103,7 @@ export function whileInViewRevealBackground(axis:string, valueAxisWhileInView:nu
     whileInView: {
       [axis]: valueAxisWhileInView,
       transition: {
-        delay:0.15,
+        delay: 0.15,
         duration: 0.5,
         ease: [0.8, 0.71, 0.2, 1.01],
       },
@@ -112,33 +111,33 @@ export function whileInViewRevealBackground(axis:string, valueAxisWhileInView:nu
   };
 }
 
-export function whileInViewRevealSelector(axis:string, valueAxisWhileInView:number) {
+export function whileInViewRevealSelector(axis: string, valueAxisWhileInView: number) {
   return {
     initial: {
-      scale:1,
-      [axis]:0,
+      scale: 1,
+      [axis]: 0,
     },
     whileInView: {
-      scale:0,
-      [axis]:valueAxisWhileInView,
+      scale: 0,
+      [axis]: valueAxisWhileInView,
       transition: {
         duration: 5,
         ease: [0, 0.71, 0.2, 1.01],
         scale: {
-          type: "spring",
+          type: 'spring',
           damping: 12,
           stiffness: 100,
-          restDelta: 0.001
-        }
+          restDelta: 0.001,
+        },
       },
     },
   };
 }
 
-export function whileInViewTranslateAndScale(axis:string, valueAxisInitial:number) {
+export function whileInViewTranslateAndScale(axis: string, valueAxisInitial: number) {
   return {
     initial: {
-      scale:0,
+      scale: 0,
       [axis]: valueAxisInitial,
     },
     whileInView: {
@@ -148,16 +147,15 @@ export function whileInViewTranslateAndScale(axis:string, valueAxisInitial:numbe
         duration: 0.5,
         ease: [0, 0.71, 0.2, 1.01],
         scale: {
-          type: "spring",
+          type: 'spring',
           damping: 12,
           stiffness: 100,
-          restDelta: 0.001
-        }
+          restDelta: 0.001,
+        },
       },
     },
   };
 }
-
 
 //Todo : A refacto !
 export function animateParent(nameKey: string) {

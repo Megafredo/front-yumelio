@@ -1,6 +1,7 @@
-@use '../../Assets/sass/mixins';
-@use '../../Assets/sass/vars';
-@use '../../Assets/sass/keyframes';
+@use '../../../Assets/sass/mixins';
+@use '../../../Assets/sass/vars';
+@use '../../../Assets/sass/keyframes';
+@use './theme.scss';
 
 .skills__categorie {
   margin: 2rem auto;
@@ -62,15 +63,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 6rem;
+  // margin-bottom: 6rem;
   // width: 50%;
 }
 
-
-.reverse-row{
+.reverse-row {
   flex-flow: row-reverse;
 }
-
 
 .skills__container__list {
   font-size: 1.5rem;
@@ -245,14 +244,12 @@
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  top: -3rem;
-  
+
   &__soft-skill,
   &__hobbies {
     width: 100%;
   }
 }
-
 
 // .parent {
 //   @for $i from 1 through 20 {
@@ -349,11 +346,12 @@
 //   }
 // }
 
-.zone{
+.zone {
   display: none;
 }
 
-.soft-skill__green-area, .hobbies__green-area {
+.soft-skill__green-area,
+.hobbies__green-area {
   // line-animate($dasharray, $dashoffset, $anim-name, $anim-duration, $anim-delay, $anim-mode)
   @include mixins.line-animate(420px, 420px, (line-dasharray, filling), (1.5s, 0.5s), (0.5s, 2s), forwards);
   opacity: 0.65;
@@ -415,7 +413,7 @@
 //       height: auto;
 
 //       &__svg{
-        
+
 //       &__soft-skill,
 //       &__hobbies {
 //         width: 85%;
@@ -448,6 +446,58 @@
 //   }
 // }
 
+.testgrid {
+  position: relative;
+  height: 10rem;
+  width: 80%;
+  margin: 0 auto 15rem auto;
+
+  &--left{
+    position: relative;
+    left: -3rem;
+  }
+}
+
+.svg {
+  &__icons-graphic {
+
+    &--background {
+      z-index: 1;
+      width: 35%;
+      min-width: 400px;
+      max-width: 400px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -15%);
+      margin: 0 auto;
+    }
+
+    &__front-end,
+    &__back-end,
+    &__designer,
+    &__other,
+    &__search {
+      width: 30%;
+      min-width: 350px;
+      max-width: 350px;
+      position: relative;
+      top: -2.5rem;
+      z-index: 2;
+    }
+
+    // &__front-end,
+    // &__designer,
+    // &__search {
+    //   left: 2rem;
+    // }
+
+    // &__back-end,
+    // &__other {
+    //   left: -2rem;
+    // }
+  }
+}
+
 
 @media screen and (max-width: 990px) {
   .skills__big__hexagon {
@@ -456,16 +506,15 @@
   .hexagon__container {
     height: auto;
 
-    &__svg{
-      
-    &__soft-skill,
-    &__hobbies {
-      width: 85%;
+    &__svg {
+      &__soft-skill,
+      &__hobbies {
+        width: 85%;
+      }
     }
   }
-  }
 
-  .reverse-row{
+  .reverse-row {
     flex-flow: row-reverse;
   }
 
@@ -480,7 +529,7 @@
     top: -3rem;
     // transform: scale(0.5);
     .skills__container {
-      height: 10rem;
+      height: 16rem;
     }
   }
   .skills__categorie {
@@ -490,5 +539,42 @@
 
   .skills__container__list {
     transform: scale(0.8);
+  }
+
+  .svg {
+    &__icons-graphic {
+      &--background {
+        width: 80%;
+        min-width: 300px;
+        max-width: 300px;
+        position: absolute;
+        transform: translate(-50%, 10%);
+        margin: 0 auto;
+      }
+      &__front-end,
+      &__back-end,
+      &__designer,
+      &__other,
+      &__search {
+        width: 50%;
+        min-width: 280px;
+        max-width: 300px;
+        position: relative;
+        left: 0rem;
+        top: 2rem;
+      }
+    }
+  }
+
+  .testgrid {
+    position: relative;
+    height: 10rem;
+    width: 80%;
+    margin: 0 auto 12rem auto;
+  
+    &--left{
+      position: relative;
+      left: 0rem;
+    }
   }
 }

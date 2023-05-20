@@ -45,7 +45,7 @@
 
       .hobbies__lozenge-background, 
       .hobbies__word--selected{
-        fill: #bed62d;
+        fill: #BCE100;
       }
 
       .hobbies__green-area {

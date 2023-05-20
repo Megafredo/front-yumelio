@@ -1,5 +1,5 @@
 //& Import SCSS
-import './MenuBurger.scss';
+import './Styles/MenuBurger.scss';
 
 //& Import Modules
 import { useSelector, useDispatch } from 'react-redux';

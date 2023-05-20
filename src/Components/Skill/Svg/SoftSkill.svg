@@ -43,7 +43,7 @@
 
       .soft-skill__lozenge-background, 
       .soft-skill__word--selected{
-        fill: #bed62d;
+        fill: #BCE100;
       }
 
       .soft-skill__green-area {

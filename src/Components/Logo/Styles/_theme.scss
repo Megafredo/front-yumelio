@@ -1,0 +1,58 @@
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+
+//& ----------------- Theme Logo
+$themeLogo: (
+  light: (
+    core: vars.$primary-color-04,
+    fragment-high: vars.$logo-primary-color,
+    fragment-left: vars.$logo-secondary-color,
+    fragment-right: vars.$logo-tertiary-color,
+    background: vars.$primary-color-03,
+    name: vars.$primary-color-03,
+  ),
+  dark: (
+    core: vars.$primary-color-04,
+    fragment-high: vars.$logo-primary-color,
+    fragment-left: vars.$logo-secondary-color,
+    fragment-right: vars.$logo-tertiary-color,
+    background: vars.$primary-color-03,
+    name: vars.$primary-color-01,
+  ),
+);
+
+//~ ---------------------------------------------- Mixins THEMIFY
+@include mixins.themify($themeLogo) {
+  .logo__svg {
+    &__background {
+      fill: mixins.themed('background');
+    }
+
+    //& Groupement de fragments en haut du logo
+    &__zone__top {
+      fill: mixins.themed('fragment-high');
+    }
+
+    &__zone__bottom {
+      &--right {
+        fill: mixins.themed('fragment-right');
+      }
+      &--left {
+        fill: mixins.themed('fragment-left');
+      }
+    }
+
+    &__zone__circle {
+      &--left,
+      &--right,
+      &--top {
+        fill: mixins.themed('core');
+      }
+    }
+
+    .logo__link__name {
+      color: mixins.themed('name');
+    }
+  }
+}

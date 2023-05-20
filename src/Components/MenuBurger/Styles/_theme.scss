@@ -1,0 +1,40 @@
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+
+//& ----------------- Theme Buttons
+$themeMenuBurger: (
+  light: (
+    label-text: vars.$primary-color-03,
+    burger-rods: vars.$primary-color-03,
+    checked-rods: vars.$primary-color-01,
+  ),
+  dark: (
+    label-text: vars.$primary-color-01,
+    burger-rods: vars.$primary-color-01,
+    checked-rods: vars.$primary-color-03,
+  ),
+);
+
+//~ ----------------------------------------------
+@include mixins.themify($themeMenuBurger) {
+  .menu {
+    & label {
+      color: mixins.themed('label-text');
+    }
+
+    &__burger {
+      &:checked + &__rods {
+        background-color: mixins.themed('checked-rods');
+      }
+
+      &__rods {
+        background-color: mixins.themed('burger-rods');
+        &::before,
+        &::after {
+          background-color: mixins.themed('burger-rods');
+        }
+      }
+    }
+  }
+}

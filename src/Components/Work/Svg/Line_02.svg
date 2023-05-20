@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="line-02" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 788.08 800.26">
+  <defs>
+    <style>
+      .line-02 {
+        fill: none;
+        stroke: url(#linearGradient-line-02);
+        stroke-dasharray: 15 15;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 3.5px;
+      }
+    </style>
+    <linearGradient id="linearGradient-line-02" class="linearGradient-line-02" x1="0" y1="400.13" x2="788.08" y2="400.13" gradientUnits="userSpaceOnUse">
+      <stop offset=".5" />
+      <stop offset=".7" />
+      <stop offset=".8" />
+    </linearGradient>
+  </defs>
+  <g>
+    <path class="line-02" d="m756.21,572.65c18.01,42.24,44.92,100.9,21.51,154.22-1.96,4.47-9.26,21.87-26.48,37.13-37.16,32.92-96.47,39.88-140.3,32.16-104.32-18.37-100.25-116.27-180.91-128.63-63.02-9.66-121.94,35.89-164.85,65.77-34.52,24.03-72.36,61.02-121.91,63.31-56.3,2.6-94.79-39.23-115.84-75.3C2.19,678.07,2.78,629.17,1.57,582.56c-1.12-43.22.41-86.53,5.92-129.55,11.14-87.13,38.32-160.37,96.49-235.13,8.96-11.51,18-22.99,27.04-34.46,8.3-10.54,14.29-18.13,14.94-18.96C192.5,105.46,228.54,18.56,279.21,3.38c55.82-16.73,78.43,68.85,188,96,98.91,24.51,156.57-28.61,193.33,8,30.37,30.25-3.39,71.36.67,166.27,3.62,84.74,35.1,158.54,95,299Z"/>
+  </g>
+</svg>

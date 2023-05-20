@@ -1,4 +1,7 @@
-@use '../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+@use './theme.scss';
 
 .theme {
   margin: 0;
@@ -46,18 +49,19 @@
     .theme {
       height: 2.5rem;
       &__button {
-        box-shadow: inset 0.7rem -0.4rem 0 -0.2rem vars.$primary-color-02;
+        box-shadow: inset 0.7rem -0.4rem 0 -0.2rem vars.$primary-color-03;
         border: 0.3rem solid vars.$primary-color-01;
         background-color: vars.$primary-color-01;
 
         &:checked {
-          border: 0.3rem solid vars.$primary-color-02;
+          border: 0.3rem solid vars.$primary-color-03;
           box-shadow: vars.$menu-burger-sun-shadow;
         }
       }
+      & label {
+        color: vars.$primary-color-01;
+      }
     }
-    label {
-      color: vars.$primary-color-01;
-    }
+   
   }
 }

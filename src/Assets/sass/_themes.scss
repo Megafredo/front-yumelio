@@ -1,10 +1,48 @@
 @use './mixins.scss';
 @use './vars.scss';
 
-//! THEMIFY
+
+//& ----------------- Theme Global
+$themeSite: (
+  light: (
+    background: vars.$primary-color-01,
+    title: vars.$primary-color-03,
+    text: vars.$primary-color-03,
+    // link: $secondary-color-01,
+    spinner: vars.$primary-color-02,
+    background-footer: vars.$primary-color-02,
+    available-background: vars.$primary-color-03,
+    available-text: vars.$primary-color-01,
+
+    svg-gate-stroke: vars.$primary-color-03,
+    svg-surface-fill: vars.$primary-color-03,
+    parallax-scroller-text: vars.$primary-color-03,
+    technologies-list: vars.$primary-color-03,
+    reveal-text-list: vars.$primary-color-01,
+    skills-hexagon-fill: vars.$primary-color-03,
+  ),
+  dark: (
+    background: vars.$primary-color-03,
+    title: vars.$primary-color-01,
+    text: vars.$primary-color-01,
+    // link: $secondary-color-03,
+    spinner: vars.$primary-color-04,
+    background-footer: vars.$primary-color-02,
+    available-background: vars.$primary-color-04,
+    available-text: vars.$primary-color-01,
+
+    svg-gate-stroke: vars.$primary-color-01,
+    svg-surface-fill: vars.$primary-color-01,
+    parallax-scroller-text: vars.$primary-color-01,
+    technologies-list: vars.$primary-color-01,
+    reveal-text-list: vars.$primary-color-03,
+    skills-hexagon-fill: vars.$secondary-color-05,
+    skills-hexagon-title: vars.$primary-color-01,
+  ),
+);
 
 //~ ---------------------------------------------- Theme Site
-@include mixins.themify(vars.$themeSite) {
+@include mixins.themify($themeSite) {
   background-color: mixins.themed('background');
 
   h1,
@@ -20,9 +58,7 @@
     color: mixins.themed('text');
   }
 
-  label {
-    color: mixins.themed('text');
-  }
+ 
 
   .header {
     background-color: mixins.themed('background');
@@ -51,124 +87,5 @@
 
   .spinner {
     stroke: mixins.themed('spinner');
-  }
-
-  .parallax {
-    & .scroller {
-      color: mixins.themed('parallax-scroller-text');
-    }
-  }
-
-  .skills__container__list {
-    &__item__align {
-      &--start, &--end {
-        color: mixins.themed('technologies-list');
-      }
-    }
-    & .reveal-bg {
-      background-color: mixins.themed('reveal-text-list');
-    }
-  }
-
-  .soft-skill__hexagon-background, .hobbies__hexagon-background{
-     fill: mixins.themed('skills-hexagon-fill');
-  }
-  .soft-skill__word, .hobbies__word{
-    fill: mixins.themed('skills-hexagon-title');
-  }
-}
-
-//~ ---------------------------------------------- Theme Logo
-@include mixins.themify(vars.$themeLogo) {
-  .logo__svg {
-    &__background {
-      fill: mixins.themed('background');
-    }
-
-    //& Groupement de fragments en haut du logo
-    &__zone__top {
-      fill: mixins.themed('fragment-high');
-    }
-
-    &__zone__bottom {
-      &--right {
-        fill: mixins.themed('fragment-right');
-      }
-      &--left {
-        fill: mixins.themed('fragment-left');
-      }
-    }
-
-    &__zone__circle {
-      &--left,
-      &--right,
-      &--top {
-        fill: mixins.themed('core');
-      }
-    }
-
-    .logo__link__name {
-      color: mixins.themed('name');
-    }
-  }
-}
-
-//~ ---------------------------------------------- Theme Btn
-@include mixins.themify(vars.$themeBtn) {
-  .menu__burger {
-    &:checked + &__rods {
-      background-color: mixins.themed('checked-rods');
-    }
-
-    &__rods {
-      background-color: mixins.themed('burger-rods');
-      &::before,
-      &::after {
-        background-color: mixins.themed('burger-rods');
-      }
-    }
-  }
-
-  .theme__button {
-    background-color: mixins.themed('background');
-    border: solid 0.3rem mixins.themed('border');
-  }
-}
-
-//~ ---------------------------------------------- Theme Navbar
-@include mixins.themify(vars.$themeNavbar) {
-  .navbar {
-    &__item {
-      color: mixins.themed('link');
-      &--active {
-        color: mixins.themed('link-active');
-      }
-    }
-
-    & li a {
-      &::after {
-        background-color: mixins.themed('link-underline');
-      }
-      &:hover {
-        color: mixins.themed('link-hover');
-      }
-    }
-  }
-
-  .media--mobile {
-    .navbar {
-      &__item {
-        color: mixins.themed('mobile-link');
-
-        &--active {
-          color: mixins.themed('mobile-link-active');
-        }
-      }
-      & li a {
-        &:hover {
-          color: mixins.themed('mobile-link-hover');
-        }
-      }
-    }
   }
 }
