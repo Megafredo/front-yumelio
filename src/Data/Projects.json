@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "FrontEnd",
+    "color": "#3ECEC3"
+  },
+  {
+    "id": 2,
+    "title": "BackEnd",
+    "color": "#6A2AFF"
+  },
+  {
+    "id": 3,
+    "title": "Graphiste",
+    "color": "#FF3679"
+  },
+  {
+    "id": 4,
+    "title": "Autres",
+    "color": "#FF8A33"
+  }
+]

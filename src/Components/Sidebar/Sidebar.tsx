@@ -5,13 +5,10 @@ import './Styles/Sidebar.scss';
 import { motion } from 'framer-motion';
 import { Link, Element, Events, animateScroll as scroll } from 'react-scroll';
 
-//& Imports Components
-
-//& Import Interfaces
+//& Import Types
 import { SidebarProps } from './Types';
 
-
-const Sidebar = ({offsetValueFullstack,offsetValueFrontend,offsetValueBackend,offsetValueWebdesigner}:SidebarProps) => {
+const Sidebar = ({ offsetValueFullstack, offsetValueFrontend, offsetValueBackend, offsetValueWebdesigner }: SidebarProps) => {
   return (
     <motion.nav className="sidebar">
       <Link activeClass={`sidebar__fullstack--active sidebar__color__fullstack`} to="fullstack" spy={true} smooth={true} offset={offsetValueFullstack} duration={50}>

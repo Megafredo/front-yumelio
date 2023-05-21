@@ -8,17 +8,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 //& Imports Components
 import { Router } from '../../Routes/Routes';
-import { animateWithExit, animateChildren, animateParent } from '../../Utils/Animations';
+import { animateChildren, animateParent } from '../../Utils/Animations';
 
-// (nameKey, axis, valueAxisInitial, valueAxisAnimate, exitAxis, valueExitAxis)
-const navbarOptions = animateWithExit('navbar', 'y', 20, 0, 'y', -20);
+//& Animations
 const navbarParentOptions = animateParent('navbar');
 const navBarChildrenOptions = animateChildren();
 
+//& Types
+import { RootState } from '../../Store';
 
 const Navbar = () => {
-  const { mode } = useSelector((state: any) => state.navBarSlice);
-  const { mediaScreen } = useSelector((state: any) => state.mediaSlice);
+  const { mode } = useSelector((state: RootState) => state.navBarSlice);
+  const { mediaScreen } = useSelector((state: RootState) => state.mediaSlice);
 
   return (
     <nav className="navbar">

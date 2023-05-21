@@ -27,15 +27,17 @@ $themeContact: (
     }
 
     & .word-alsace {
+      transition: all 0.4s ease-in-out;
       fill: mixins.themed('alsace-title-fill');
     }
 
     & .alsace-region {
+      transition: all 0.4s ease-in-out;
       fill: mixins.themed('alsace-region-fill');
     }
   }
 
-  .media--mobile, 
+  .media--mobile,
   .media--tablet {
     & .word-alsace {
       fill: mixins.themed('alsace-title-mobile-fill');

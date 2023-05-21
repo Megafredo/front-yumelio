@@ -1,15 +1,13 @@
 //~ Import Module
 import { createSlice } from '@reduxjs/toolkit';
 
-
 //~ Initial state
 const initialState = {
   boolean: false,
-  mode: "inactive"
+  mode: 'inactive',
 };
 
-
-//~ Exports 
+//~ Exports
 export const navBarSlice = createSlice({
   name: 'navBarSlice',
 
@@ -18,7 +16,7 @@ export const navBarSlice = createSlice({
   reducers: {
     toggleMenuBurger: (state) => {
       state.boolean = !state.boolean;
-      state.boolean === true ? state.mode = 'active' : state.mode = 'inactive';
+      state.boolean === true ? (state.mode = 'active') : (state.mode = 'inactive');
     },
   },
 });

@@ -7,21 +7,15 @@ import { Link } from 'react-router-dom';
 
 //& Imports Components
 import { validate } from '../../Utils/Ajv/contactSchema';
-import { ReactComponent as GridSVG } from '../../Assets/img/Grid.svg';
-import { ReactComponent as GitHubSVG } from './Svg/Logo-github.svg';
-import { ReactComponent as LinkedinSVG } from './Svg/Logo-linkedin.svg';
-import { ReactComponent as VisualKodingSVG } from './Svg/Logo-visualkoding.svg';
-import { ReactComponent as AlsaceSVG } from './Svg/Alsace.svg';
+import * as Svg from './Svg';
 
 //& Import Interfaces
 import { MessageState, FormData } from './Types';
 
-
 const Contact = () => {
-
   const LINK_GITHUB = 'https://github.com/Megafredo';
   const LINK_LINKEDIN = 'https://linkedin.com/';
-  
+
   const [messages, setMessages] = useState<MessageState[]>([]);
   const [formData, setFormData] = useState<FormData>({
     'first-name': '',
@@ -29,7 +23,6 @@ const Contact = () => {
     subject: '',
     message: '',
   });
-  
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -40,8 +33,7 @@ const Contact = () => {
     const isValid = validate(formData);
 
     if (!isValid) {
-      const errorMessages: MessageState[] = validate.errors?.map((error) => ({ message: error.message ?? '',
-      type: 'error',})) || [];
+      const errorMessages: MessageState[] = validate.errors?.map((error) => ({ message: error.message ?? '', type: 'error' })) || [];
       setMessages(errorMessages);
       return;
     }
@@ -56,7 +48,7 @@ ${firstName} ${lastName}`);
     const mailtoLink = `mailto:megafredo@hotmail.com?subject=${mySubject}&body=${myBody}`;
     window.location.href = mailtoLink;
 
-    const valideMessages: MessageState[] =  [{message: "Votre message a été préparé pour l'envoi avec succès.", type: "success"}]
+    const valideMessages: MessageState[] = [{ message: "Votre message a été préparé pour l'envoi avec succès.", type: 'success' }];
     setMessages(valideMessages);
 
     setFormData({
@@ -77,39 +69,41 @@ ${firstName} ${lastName}`);
         </div>
 
         <div className="contact__container__zone">
-          <GridSVG className="contact__container__zone__svg-grid" />
+          <Svg.Grid className="contact__container__zone__svg-grid" />
           <div className="contact__container__zone__link">
-            <Link to="/" data-cursor-pointer="active"><VisualKodingSVG /></Link>
-            <a href={LINK_GITHUB} target="_blank" rel="noopener noreferrer" data-cursor-pointer="active"><GitHubSVG /></a>
-            <a href={LINK_LINKEDIN} target="_blank" rel="noopener noreferrer" data-cursor-pointer="active"><LinkedinSVG /></a>
+            <Link to="/" data-cursor-pointer="active">
+              <Svg.VisualKoding />
+            </Link>
+            <a href={LINK_GITHUB} target="_blank" rel="noopener noreferrer" data-cursor-pointer="active">
+              <Svg.GitHub />
+            </a>
+            <a href={LINK_LINKEDIN} target="_blank" rel="noopener noreferrer" data-cursor-pointer="active">
+              <Svg.Linkedin />
+            </a>
           </div>
           <div className="contact__container__zone__form">
-          
             <form onSubmit={handleSubmit}>
-             
-                <input type="text" id="first-name" name="first-name" value={formData['first-name']} onChange={handleChange} placeholder="Prénom" minLength={2} required />
-                <label htmlFor="first-name">Prénom</label>
-        
-                <input type="text" id="last-name" name="last-name" value={formData['last-name']} onChange={handleChange} placeholder="Nom" minLength={2} required />
-                <label htmlFor="last-name">Nom</label>
-              
-                <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="Objet" minLength={2} required />
-                <label htmlFor="subject">Objet</label>
-           
-                <textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Entrez votre message" minLength={10} required />
-                <label htmlFor="message">Message</label>
-        
+              <input type="text" id="first-name" name="first-name" value={formData['first-name']} onChange={handleChange} placeholder="Prénom" minLength={2} required />
+              <label htmlFor="first-name">Prénom</label>
+
+              <input type="text" id="last-name" name="last-name" value={formData['last-name']} onChange={handleChange} placeholder="Nom" minLength={2} required />
+              <label htmlFor="last-name">Nom</label>
+
+              <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="Objet" minLength={2} required />
+              <label htmlFor="subject">Objet</label>
+
+              <textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Entrez votre message" minLength={10} required />
+              <label htmlFor="message">Message</label>
+
               <button type="submit" data-cursor-pointer="active">
                 Valider
               </button>
-
             </form>
-              {messages.map((element, index) => (
-                <div className={element.type === 'error' ? "contact__container__zone__error" : "contact__container__zone__success"} key={index}>
-                  {element.message}
-                </div>
-              ))}
-            
+            {messages.map((element, index) => (
+              <div className={element.type === 'error' ? 'contact__container__zone__error' : 'contact__container__zone__success'} key={index}>
+                {element.message}
+              </div>
+            ))}
           </div>
 
           <div className="contact__container__zone__text">
@@ -119,10 +113,9 @@ ${firstName} ${lastName}`);
               <p>Si tu as des questions, des projets intéressants à discuter ou si tu veux simplement échanger des idées, n'hésite pas à me contacter.</p>
               <p>Je suis toujours ouvert aux nouvelles opportunités de collaboration passionnantes.</p>
             </span>
-
           </div>
           <div className="contact__container__zone__svg-alsace">
-            <AlsaceSVG />
+            <Svg.Alsace />
           </div>
         </div>
       </div>

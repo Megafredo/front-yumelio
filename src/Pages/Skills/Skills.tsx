@@ -6,25 +6,13 @@ import Skill from '../../Components/Skill/Skill';
 
 import skillData from '../../Data/Skill.json';
 
-interface SkillData {
-  id: number;
-  title: string;
-  titleBackground: string;
-  skills: Array<string>;
-  gap: Array<string>;
-  color: string;
-}
-
 const Skills = () => {
-  
   return (
-
     <section className="skills">
-      {skillData.map((data: SkillData) => (
+      {skillData.map((data) => (
         <Skill key={data.id} {...data} />
       ))}
     </section>
-
   );
 };
 

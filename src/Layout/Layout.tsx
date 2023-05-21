@@ -1,25 +1,27 @@
+//& Import SCSS
+import './Layout.scss';
+
 //& Import Module
 import { Outlet } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
 //& Imports Components
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
-// import { Spinner } from '../Components';
 import { Spinner } from '../Components';
+// import { setTargetScrollY } from '../Utils/Scroll';
 import { setTargetScreen } from '../Store/Reducers/Media';
 import { setTargetScrollY } from '../Store/Reducers/Scroll';
 import { mousePosition, parallaxEffectOnMouseMove, customCursor } from '../Store/Reducers/Cursor';
-
-// import { setTargetScrollY } from '../Utils/Scroll';
 import Cursor from '../Components/Cursor/Cursor';
-//& Import SCSS
-import './Layout.scss';
-import { useEffect } from 'react';
+
+//& Imports Types
+import { RootState } from '../Store';
 
 const Layout = () => {
-  const { mode } = useSelector((state: any) => state.themeSlice);
-  const { mediaScreen } = useSelector((state: any) => state.mediaSlice);
+  const { mode } = useSelector((state: RootState) => state.themeSlice);
+  const { mediaScreen } = useSelector((state: RootState) => state.mediaSlice);
 
   const dispatch = useDispatch();
 
@@ -37,7 +39,7 @@ const Layout = () => {
   //? ADDEVENTLISTENER SCROLL
   useEffect(() => {
     const handleScroll = () => {
-      dispatch((setTargetScrollY()));
+      dispatch(setTargetScrollY());
     };
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -47,7 +49,7 @@ const Layout = () => {
 
   //? ONMOUSEMOVE EFFECT
   useEffect(() => {
-    const handleMove = (event: any) => {
+    const handleMove = (event: MouseEvent) => {
       let x = event.clientX;
       let y = event.clientY;
 
@@ -56,7 +58,7 @@ const Layout = () => {
       dispatch(parallaxEffectOnMouseMove());
       dispatch(customCursor());
     };
-    
+
     if (mediaScreen === 'desktop') {
       window.addEventListener('mousemove', handleMove);
       return () => {
@@ -66,7 +68,6 @@ const Layout = () => {
   }, []);
 
   return (
-    
     <div className={`layout theme--${mode}`}>
       <Cursor />
       <Header />
@@ -76,8 +77,7 @@ const Layout = () => {
         <Outlet />
       </main>
       <Footer />
-      </div>
-
+    </div>
   );
 };
 

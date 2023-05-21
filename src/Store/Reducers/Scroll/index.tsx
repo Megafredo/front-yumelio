@@ -1,7 +1,6 @@
 //~ Import Module
 import { createSlice } from '@reduxjs/toolkit';
 
-
 //~ Initial state
 const initialState = {
   x: 0,
@@ -24,7 +23,7 @@ export const scrollSlice = createSlice({
       };
 
       //& SCROLL ANIMATE
-      const scrollAnimate = (dataElement: any, getScrollTransformValue: any) => {
+      const scrollAnimate = (dataElement: HTMLElement, getScrollTransformValue: Record<string, number>) => {
         const { r: rotateValue, s: scaleValue, tx: translateXValue, ty: translateYValue } = getScrollTransformValue;
 
         const { top, left, bottom, right } = dataElement.getBoundingClientRect();
@@ -33,7 +32,7 @@ export const scrollSlice = createSlice({
 
         //? Attention dans le cas ou une partie de l'élément dépasse le viewport celle-ci peut éventuellement empêcher le fonctionnement du isInViewport
         if (isInViewport) {
-          dataElement.style.opacity = 1;
+          dataElement.style.opacity = '1';
           dataElement.style.transform = 'rotate(0deg) scale(1) translate(0px)';
 
           // dataElement.style.animation = 'bounce-in 0.75s ease';
@@ -43,24 +42,17 @@ export const scrollSlice = createSlice({
         }
 
         if (!isInViewport) {
-          dataElement.style.opacity = 0;
+          dataElement.style.opacity = '0';
           dataElement.style.transform = `rotate(${rotateValue}deg) scale(${scaleValue}) translate(${translateXValue}px, ${translateYValue}px)`;
         }
       };
 
-      const allDataScrollTransform = Array.from(document.querySelectorAll(`[data-scroll-transform]`) as NodeListOf<Element>);
+      const allDataScrollTransform: HTMLElement[] = Array.from(document.querySelectorAll(`[data-scroll-transform]`));
 
-      allDataScrollTransform.forEach((dataElement: any) => {
-        const getScrollTransformValue = JSON.parse(dataElement.dataset.scrollTransform);
-
+      allDataScrollTransform.forEach((dataElement) => {
+        const getScrollTransformValue = JSON.parse(dataElement.dataset.scrollTransform || '{}') as Record<string, number>;
         if (allDataScrollTransform) scrollAnimate(dataElement, getScrollTransformValue);
       });
-
-      //& SCROLL ANIMATE
-      const scrollParalaxText = (dataElement: any, getScrollTransformValue: any) => { 
-
-      }
-
     },
   },
 });

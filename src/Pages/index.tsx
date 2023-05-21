@@ -6,5 +6,4 @@ import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Login from './Login/Login';
 
-export { NoPage, Home, Skills, Projects, Contact, Login};
-
+export { NoPage, Home, Skills, Projects, Contact, Login };

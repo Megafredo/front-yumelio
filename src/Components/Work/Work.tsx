@@ -10,42 +10,18 @@ import { Link, Element, Events, animateScroll as scroll } from 'react-scroll';
 
 //& Imports Components
 import { Sidebar } from '../../Components';
-import { ReactComponent as HexaGraphicSVG } from './Svg/HexaGraphic.svg';
+import * as Svg from './img/svg';
+import * as leaf from './img/png';
 
-import { ReactComponent as Line1SVG } from './Svg/Line_01.svg';
-import { ReactComponent as Line2SVG } from './Svg/Line_02.svg';
-import { ReactComponent as Line3SVG } from './Svg/Line_03.svg';
-import { ReactComponent as Line4SVG } from './Svg/Line_04.svg';
-import { ReactComponent as Cross } from './Svg/Cross.svg';
-import { ReactComponent as ProfileSVG } from '../../Assets/img/iconsGraphic/Profile.svg';
-import { ReactComponent as FrontEndSVG } from '../../Assets/img/iconsGraphic/FrontEnd.svg';
-import { ReactComponent as BackEndSVG } from '../../Assets/img/iconsGraphic/BackEnd.svg';
-import { ReactComponent as WebdesignerSVG } from '../../Assets/img/iconsGraphic/Designer.svg';
-
-import { leafAnimateInfinite } from '../../Utils/Animations';
-
-import LeafBlur01 from '../../Assets/img/leafs/leaf-blur-01.png';
-import LeafBlur02 from '../../Assets/img/leafs/leaf-blur-02.png';
-import LeafBlur03 from '../../Assets/img/leafs/leaf-blur-03.png';
-
-import LeafNett01 from '../../Assets/img/leafs/leaf-nett-01.png';
-import LeafNett02 from '../../Assets/img/leafs/leaf-nett-02.png';
-import LeafNett03 from '../../Assets/img/leafs/leaf-nett-03.png';
-import LeafNett04 from '../../Assets/img/leafs/leaf-nett-04.png';
-
-//(nameKey, (xAxisInitialValue, yAxisInitialValue), (xAxisAnimateValue, yAxisAnimateValue), delay)
-const leafAnimate01 = leafAnimateInfinite('leaf__nett01', 0, 4, 4, 0, 0);
-const leafAnimate02 = leafAnimateInfinite('leaf__nett02', 0, 4, 4, 0, 0.25);
-const leafAnimate03 = leafAnimateInfinite('leaf__nett03', 0, 4, 4, 0, 0.35);
-const leafAnimate04 = leafAnimateInfinite('leaf__nett04', 0, 4, 4, 0, 0.55);
+//& Imports Types
+import { WorkTypes } from './Types';
+import { RootState } from '../../Store';
 
 //& Animations
-import { whileInViewTranslateWithRotate, whileInViewHexagonTranslate, whileInViewRevealBackground, whileInViewTranslateText, whileInViewRevealSelector, whileInViewTranslateAndScale } from '../../Utils/Animations';
+import * as animate from '../../Utils/Animations/animate';
 
-const animateSkillSmallNumberTop = whileInViewTranslateAndScale('y', 100);
-
-const Work = ({ id, title, subtitle, color, description }: any) => {
-  const { mediaScreen } = useSelector((state: any) => state.mediaSlice);
+const Work = ({ id, title, subtitle, color, description }: WorkTypes) => {
+  const { mediaScreen } = useSelector((state: RootState) => state.mediaSlice);
 
   const [reverse, setReverse] = useState(false);
   const isEven = (id: number) => id % 2 === 0;
@@ -71,7 +47,7 @@ const Work = ({ id, title, subtitle, color, description }: any) => {
   const sectionSubtitleSVG = (titleName: string) => {
     if (subtitle.secondLine === `${titleName}`) {
       return (
-        <motion.span className="container__work__section__info__subtitle--number" style={{ left: `${mediaScreen === 'desktop' ? '2rem' : '1rem'}` }} {...animateSkillSmallNumberTop}>
+        <motion.span className="container__work__section__info__subtitle--number" style={{ left: `${mediaScreen === 'desktop' ? '2rem' : '1rem'}` }} {...animate.skillSmallNumberTop}>
           <p>0{id}</p>
           <motion.span className="container__work__section__info__subtitle--after" style={{ backgroundColor: `${color}` }}></motion.span>
           <span>
@@ -90,29 +66,29 @@ const Work = ({ id, title, subtitle, color, description }: any) => {
       <div className="container__work__section__graphic">
         <Element name={title.secondLine.toLowerCase()} className="section">
           <div className={`container__work__section__graphic__zone--${title.secondLine.toLowerCase()}`}>
-            <HexaGraphicSVG style={{ fill: `${color}` }} />
+            <Svg.HexaGraphic style={{ fill: `${color}` }} />
             {title.secondLine === 'FULLSTACK' && (
               <>
-                <ProfileSVG className="container__work__section__graphic__profile" />
-                <img className="container__work__section__graphic__leaf__blur" data-parallax-axis="0.04" alt="A single green leaf that is blurred 01" src={LeafBlur01} />
-                <img className="container__work__section__graphic__leaf__blur" data-parallax-axis="-0.04" alt="A single green leaf that is blurred 02" src={LeafBlur02} />
-                <img className="container__work__section__graphic__leaf__blur" data-parallax-axis="0.08" alt="A single green leaf that is blurred 03" src={LeafBlur03} />
+                <Svg.Profile className="container__work__section__graphic__profile" />
+                <img className="container__work__section__graphic__leaf__blur" data-parallax-axis="0.04" alt="A single green leaf that is blurred 01" src={leaf.blur01} />
+                <img className="container__work__section__graphic__leaf__blur" data-parallax-axis="-0.04" alt="A single green leaf that is blurred 02" src={leaf.blur02} />
+                <img className="container__work__section__graphic__leaf__blur" data-parallax-axis="0.08" alt="A single green leaf that is blurred 03" src={leaf.blur03} />
               </>
             )}
-            {title.secondLine === 'FRONTEND' && <FrontEndSVG className="container__work__section__graphic__frontend" />}
-            {title.secondLine === 'BACKEND' && <BackEndSVG className="container__work__section__graphic__backend" />}
-            {title.secondLine === 'WEBDESIGNER' && <WebdesignerSVG className="container__work__section__graphic__webdesigner" />}
-            <motion.img className="container__work__section__graphic__leaf__nett" alt="A simple green leaf that is nett 01" src={LeafNett01} {...leafAnimate01} />
-            <motion.img className="container__work__section__graphic__leaf__nett" alt="A simple green leaf that is nett 02" src={LeafNett02} {...leafAnimate02} />
-            <motion.img className="container__work__section__graphic__leaf__nett" alt="A simple green leaf that is nett 03" src={LeafNett03} {...leafAnimate03} />
-            <motion.img className="container__work__section__graphic__leaf__nett" alt="A simple green leaf that is nett 04" src={LeafNett04} {...leafAnimate04} />
-            {title.secondLine === 'FULLSTACK' && <Line1SVG />}
-            {title.secondLine === 'FRONTEND' && <Line2SVG />}
-            {title.secondLine === 'BACKEND' && <Line3SVG />}
-            {title.secondLine === 'WEBDESIGNER' && <Line4SVG />}
-            <Cross />
-            <Cross />
-            <Cross />
+            {title.secondLine === 'FRONTEND' && <Svg.FrontEnd className="container__work__section__graphic__frontend" />}
+            {title.secondLine === 'BACKEND' && <Svg.BackEnd className="container__work__section__graphic__backend" />}
+            {title.secondLine === 'WEBDESIGNER' && <Svg.Webdesigner className="container__work__section__graphic__webdesigner" />}
+            <motion.img className="container__work__section__graphic__leaf__nett" alt="A simple green leaf that is nett 01" src={leaf.nett01} {...animate.leaf01} />
+            <motion.img className="container__work__section__graphic__leaf__nett" alt="A simple green leaf that is nett 02" src={leaf.nett02} {...animate.leaf02} />
+            <motion.img className="container__work__section__graphic__leaf__nett" alt="A simple green leaf that is nett 03" src={leaf.nett03} {...animate.leaf03} />
+            <motion.img className="container__work__section__graphic__leaf__nett" alt="A simple green leaf that is nett 04" src={leaf.nett04} {...animate.leaf04} />
+            {title.secondLine === 'FULLSTACK' && <Svg.Line1 />}
+            {title.secondLine === 'FRONTEND' && <Svg.Line2 />}
+            {title.secondLine === 'BACKEND' && <Svg.Line3 />}
+            {title.secondLine === 'WEBDESIGNER' && <Svg.Line4 />}
+            <Svg.Cross />
+            <Svg.Cross />
+            <Svg.Cross />
           </div>
         </Element>
       </div>
@@ -153,7 +129,7 @@ const Work = ({ id, title, subtitle, color, description }: any) => {
               </motion.span>
 
               <span>
-                {description.map((element: any) => (
+                {description.map((element) => (
                   <p key={uuidv4()}>
                     {element}
                     <br />

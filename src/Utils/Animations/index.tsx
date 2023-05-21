@@ -26,7 +26,7 @@ export function animateWithExit(nameKey: string, axis: string, valueAxisInitial:
   };
 }
 
-export function leafAnimateInfinite(nameKey: string, xAxisInitialValue: number, yAxisInitialValue: number, xAxisAnimateValue: number, yAxisAnimateValue: number, delay: number) {
+export function leafInfinite(nameKey: string, xAxisInitialValue: number, yAxisInitialValue: number, xAxisAnimateValue: number, yAxisAnimateValue: number, delay: number) {
   const repeatTypeValue: 'reverse' = 'reverse';
 
   return {
@@ -37,7 +37,7 @@ export function leafAnimateInfinite(nameKey: string, xAxisInitialValue: number, 
   };
 }
 
-export function whileInViewTranslateWithRotate(axis: string, valueAxisInitial: number, valueAxisWhileInViewl: number, valueRotate: number = 0) {
+export function translateWithRotate(axis: string, valueAxisInitial: number, valueAxisWhileInViewl: number, valueRotate: number = 0) {
   return {
     initial: {
       [axis]: valueAxisInitial,
@@ -55,7 +55,7 @@ export function whileInViewTranslateWithRotate(axis: string, valueAxisInitial: n
   };
 }
 
-export function whileInViewHexagonTranslate(axis: string, valueAxisInitial: number) {
+export function hexagonTranslate(axis: string, valueAxisInitial: number) {
   return {
     initial: {
       scale: 0,
@@ -79,7 +79,7 @@ export function whileInViewHexagonTranslate(axis: string, valueAxisInitial: numb
   };
 }
 
-export function whileInViewTranslateText(axis: string, valueAxisInitial: number) {
+export function translateText(axis: string, valueAxisInitial: number) {
   return {
     initial: {
       [axis]: valueAxisInitial,
@@ -95,7 +95,7 @@ export function whileInViewTranslateText(axis: string, valueAxisInitial: number)
   };
 }
 
-export function whileInViewRevealBackground(axis: string, valueAxisWhileInView: number) {
+export function revealBackground(axis: string, valueAxisWhileInView: number) {
   return {
     initial: {
       [axis]: 0,
@@ -111,7 +111,7 @@ export function whileInViewRevealBackground(axis: string, valueAxisWhileInView: 
   };
 }
 
-export function whileInViewRevealSelector(axis: string, valueAxisWhileInView: number) {
+export function revealSelector(axis: string, valueAxisWhileInView: number) {
   return {
     initial: {
       scale: 1,
@@ -134,7 +134,7 @@ export function whileInViewRevealSelector(axis: string, valueAxisWhileInView: nu
   };
 }
 
-export function whileInViewTranslateAndScale(axis: string, valueAxisInitial: number) {
+export function translateAndScale(axis: string, valueAxisInitial: number) {
   return {
     initial: {
       scale: 0,

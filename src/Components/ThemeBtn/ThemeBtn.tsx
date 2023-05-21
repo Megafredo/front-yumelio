@@ -8,14 +8,17 @@ import { motion } from 'framer-motion';
 //& Imports components
 import { toggleTheme } from '../../Store/Reducers/Theme';
 import { animateTypeSpring } from '../../Utils/Animations';
-import { ThemeState } from '../../Types/GlobalTypes';
 
+//& Imports Types
+import { RootState } from '../../Store';
+
+//& Animations
 // (nameKey, axis, valueAxisInitial, valueAxisAnimate)
 const themeOptions = animateTypeSpring('theme', 'x', 0, 0);
 
 const ThemeBtn = () => {
   const dispatch = useDispatch();
-  const { mode }: { mode: string } = useSelector((state: ThemeState) => state.themeSlice);
+  const { mode }: { mode: string } = useSelector((state: RootState) => state.themeSlice);
   const titleMode = mode === 'light' ? 'Dark' : 'Light';
 
   return (

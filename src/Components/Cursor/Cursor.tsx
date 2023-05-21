@@ -3,10 +3,12 @@ import './Cursor.scss';
 
 //& Imports Modules
 import { useSelector } from 'react-redux';
-//& Imports Components
+
+//& Types
+import { RootState } from '../../Store';
 
 const Cursor = () => {
-  const { mediaScreen } = useSelector((state: any) => state.mediaSlice);
+  const { mediaScreen } = useSelector((state: RootState) => state.mediaSlice);
   return (
     <>
       {mediaScreen === 'desktop' && (

@@ -2,7 +2,7 @@
 
 {
   echo "//& Import Scss
-import './Styles';
+import './Styles/$COMPONENT_NAME_VARIABLE_SHELL.scss';
 
 //& Imports Modules
 
@@ -24,7 +24,7 @@ export default $COMPONENT_NAME_VARIABLE_SHELL;
 @use '../../../Assets/sass/animations.scss';
 @use './theme.scss';
 " 
-} > ./src/Components/$COMPONENT_NAME_VARIABLE_SHELL/Styles/index.scss
+} > ./src/Components/$COMPONENT_NAME_VARIABLE_SHELL/Styles/$COMPONENT_NAME_VARIABLE_SHELL.scss
 
 {
   echo "@use '../../../Assets/sass/mixins.scss';
