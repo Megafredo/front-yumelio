@@ -1,0 +1,59 @@
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+
+//! THEMIFY
+
+$themeSkill: (
+  light: (
+    parallax-scroller-text: vars.$primary-color-03,
+    technologies-list: vars.$primary-color-03,
+    reveal-text-list: vars.$primary-color-01,
+    skills-hexagon-fill: vars.$primary-color-03,
+    grid-color: vars.$primary-color-03,
+  ),
+  dark: (
+    parallax-scroller-text: vars.$primary-color-01,
+    technologies-list: vars.$primary-color-01,
+    reveal-text-list: vars.$primary-color-03,
+    skills-hexagon-fill: vars.$secondary-color-05,
+    skills-hexagon-title: vars.$primary-color-01,
+    grid-color: vars.$primary-color-01,
+  ),
+);
+
+//~ ---------------------------------------------- Theme Skill
+@include mixins.themify($themeSkill) {
+  .parallax {
+    & .scroller {
+      color: mixins.themed('parallax-scroller-text');
+    }
+  }
+
+  .skills__container__list {
+    &__item__align {
+      &--start,
+      &--end {
+        color: mixins.themed('technologies-list');
+      }
+    }
+    & .reveal-bg {
+      transition: background-color 0.4s ease-in-out;
+      background-color: mixins.themed('reveal-text-list');
+    }
+  }
+
+  .soft-skill__hexagon-background,
+  .hobbies__hexagon-background {
+    fill: mixins.themed('skills-hexagon-fill');
+  }
+
+  .soft-skill__word,
+  .hobbies__word {
+    fill: mixins.themed('skills-hexagon-title');
+  }
+
+  .grid-4 {
+    stroke: mixins.themed('grid-color');
+  }
+}

@@ -1,0 +1,34 @@
+@use './vars.scss';
+
+//~ ------------------------ THEMIFY
+@mixin themify($themes) {
+  @each $name, $values in $themes {
+    .theme--#{$name} {
+      -webkit-transition: all 0.4s ease-out;
+      -moz-transition: all 0.4s ease-out;
+      -o-transition: all 0.4s ease-out;
+      transition: all 0.4s ease-in-out;
+      $data-map: $values !global;
+      @content;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($data-map, $key);
+}
+
+
+//~ ------------------------ ANIMATE SVG LINE
+@mixin line-animate($dasharray, $dashoffset, $anim-name, $anim-duration, $anim-delay, $anim-mode) {
+  stroke-dasharray: $dasharray;
+  stroke-dashoffset: $dashoffset;
+  fill: transparent;
+
+  animation-name: $anim-name;
+  animation-duration: $anim-duration;
+  animation-delay: $anim-delay;
+  animation-timing-function: linear;
+  animation-fill-mode: $anim-mode;
+}
+

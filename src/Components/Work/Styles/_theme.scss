@@ -1,0 +1,113 @@
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+
+//! THEMIFY
+
+  //& ----------------- Theme Work
+  $themeWork: (
+    light: (
+      background: vars.$primary-color-03,
+      grid: vars.$primary-color-03,
+      cross: vars.$primary-color-03,
+
+      line-01-start: vars.$section-color-01,
+      line-01-center: vars.$section-color-01,
+      line-01-end: vars.$primary-color-01,
+   
+      line-02-start: vars.$primary-color-01,
+      line-02-center: vars.$section-color-02,
+      line-02-end: vars.$section-color-02,
+
+      line-03-start: vars.$section-color-03,
+      line-03-center: vars.$section-color-03,
+      line-03-end: vars.$primary-color-01,
+
+      line-04-start: vars.$primary-color-01,
+      line-04-center: vars.$section-color-04,
+      line-04-end: vars.$section-color-04,
+
+    ),
+    dark: (
+      background: vars.$secondary-color-05,
+      grid: vars.$primary-color-01,
+      cross: vars.$primary-color-01,
+
+      line-01-start: vars.$section-color-01,
+      line-01-center: vars.$section-color-01,
+      line-01-end: vars.$primary-color-03,
+     
+      line-02-start: vars.$primary-color-03,
+      line-02-center: vars.$section-color-02,
+      line-02-end: vars.$section-color-02,
+
+      line-03-start: vars.$section-color-03,
+      line-03-center: vars.$section-color-03,
+      line-03-end: vars.$primary-color-03,
+
+      line-04-start: vars.$primary-color-03,
+      line-04-center: vars.$section-color-04,
+      line-04-end: vars.$section-color-04,
+    ),
+  );
+
+
+//~ ---------------------------------------------- Theme Site
+@include mixins.themify($themeWork) {
+  .hexa-graphic-background {
+    fill: mixins.themed('background');
+  }
+
+  .hexa-graphic-grid {
+    stroke: mixins.themed('grid');
+  }
+
+  .cross {
+    transition: all 0.4s ease-in-out;
+    fill: mixins.themed('cross');
+  }
+
+  .linearGradient-line-01 stop:first-child {
+    stop-color: mixins.themed('line-01-start');
+  }
+  .linearGradient-line-01 stop {
+    stop-color: mixins.themed('line-01-center');
+  }
+  .linearGradient-line-01 stop:last-child {
+    transition: all 0.4s ease-in-out;
+    stop-color: mixins.themed('line-01-end');
+  }
+
+  .linearGradient-line-02 stop:first-child {
+    transition: all 0.4s ease-in-out;
+    stop-color: mixins.themed('line-02-start');
+  }
+  .linearGradient-line-02 stop {
+    stop-color: mixins.themed('line-02-center');
+  }
+  .linearGradient-line-02 stop:last-child {
+    stop-color: mixins.themed('line-02-end');
+  }
+
+  .linearGradient-line-03 stop:first-child {
+    stop-color: mixins.themed('line-03-start');
+  }
+  .linearGradient-line-03 stop {
+    stop-color: mixins.themed('line-03-center');
+  }
+  .linearGradient-line-03 stop:last-child {
+    transition: all 0.4s ease-in-out;
+    stop-color: mixins.themed('line-03-end');
+  }
+
+  .linearGradient-line-04 stop:first-child {
+    transition: all 0.4s ease-in-out;
+    stop-color: mixins.themed('line-04-start');
+  }
+  .linearGradient-line-04 stop {
+    stop-color: mixins.themed('line-04-center');
+  }
+  .linearGradient-line-04 stop:last-child {
+    stop-color: mixins.themed('line-04-end');
+  }
+}

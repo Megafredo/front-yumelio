@@ -1,0 +1,346 @@
+@use '../../../Assets/sass/mixins';
+@use '../../../Assets/sass/vars';
+@use '../../../Assets/sass/keyframes';
+@use './theme.scss';
+
+.global__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.reverse-row {
+  flex-flow: row-reverse;
+}
+
+.skills__container__list {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 2rem 10rem;
+
+  &__item__align {
+    font-weight: 800;
+
+    &--start,
+    &--end {
+      letter-spacing: 0.1rem;
+      line-height: 2rem;
+      position: relative;
+    }
+
+    &--start {
+      text-align: start;
+    }
+    &--end {
+      text-align: end;
+    }
+  }
+}
+
+.reveal-bg {
+  position: absolute;
+  background-color: vars.$primary-color-01;
+  height: 100%;
+  width: 100%;
+  left: 0;
+}
+
+.selector-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+}
+
+.skills__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.graphic-hexagon {
+  width: 6.5rem;
+  height: 10rem;
+}
+
+.skills__big__hexagon {
+  z-index: 2;
+  width: 6.5rem;
+  height: 10rem;
+  transform: rotate(90deg);
+  border-radius: 1rem;
+  margin-bottom: 6rem;
+
+  &__left {
+    position: relative;
+    top: -3.1rem;
+    left: -2.7rem;
+  }
+
+  &__right {
+    position: relative;
+    top: -3.1rem;
+    left: 23.8rem;
+  }
+
+  &__number {
+    font-size: 1.5rem;
+    font-weight: 900;
+    position: relative;
+    z-index: 100;
+
+    &__after {
+      position: absolute;
+      width: 100%;
+      height: 0.5rem;
+      left: 0;
+      border-radius: 10rem;
+    }
+  }
+
+  &__after,
+  &__before {
+    width: 6.5rem;
+    height: 10rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: inherit;
+  }
+
+  &__before {
+    transform: rotate(60deg);
+  }
+
+  &__after {
+    transform: rotate(-60deg);
+  }
+}
+
+.skills__grid {
+  display: grid;
+  grid-gap: 0.2rem;
+  width: 22rem;
+  grid-template-areas:
+    '1 2 3'
+    '4 5 6'
+    '7 8 9';
+
+  &__hexagon {
+    margin: 0 auto;
+
+    &__icon {
+      width: 3.7rem;
+      height: 6rem;
+      transform: rotate(90deg);
+      border-radius: 0.5rem;
+
+      &__after,
+      &__before {
+        width: 3.8rem;
+        height: 6rem;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: inherit;
+      }
+
+      &__before {
+        transform: rotate(60deg);
+      }
+
+      &__after {
+        transform: rotate(-60deg);
+      }
+
+      & img {
+        // width: 3.7rem;
+        // height: 7.4rem;
+        // position: relative;
+        // top: -8px;
+
+        // width: 3.7rem;
+        // height: 6rem;
+        // transform: rotate(-30deg) scale(0.7);
+        // transform: rotate(-30deg);
+        // object-fit: none;
+        // overflow: visible;
+        // object-fit: cover;
+
+    width: 6.72rem;
+    position: relative;
+    top: -4.6px;
+    transform: rotate(-30deg);
+    object-fit: none;
+    overflow: visible;
+    object-fit: cover;
+    left: -22.1px;
+      }
+    }
+
+    .gap {
+      position: relative;
+      left: -3.7rem;
+    }
+
+    .void {
+      opacity: 0;
+    }
+  }
+}
+
+.hexagon__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+
+  &__soft-skill,
+  &__hobbies {
+    width: 100%;
+  }
+}
+
+.zone {
+  display: none;
+}
+
+.soft-skill__green-area,
+.hobbies__green-area {
+  // line-animate($dasharray, $dashoffset, $anim-name, $anim-duration, $anim-delay, $anim-mode)
+  @include mixins.line-animate(420px, 420px, (line-dasharray, filling), (1.5s, 0.5s), (0.5s, 2s), forwards);
+  opacity: 0.65;
+  stroke-width: 1;
+  stroke: #bed62d;
+}
+
+.square-animation {
+  @include mixins.line-animate(450px, 450px, (line-dasharray, filling), (2.5s, 0.5s), (0.1s, 1.5s), forwards);
+  stroke-width: 1;
+}
+
+.svg__wrapper {
+  position: relative;
+  height: 10rem;
+  width: 80%;
+  margin: 0 auto 15rem auto;
+
+  &--left {
+    position: relative;
+    left: -3rem;
+  }
+}
+
+.svg {
+  &__icons-graphic {
+    &--background {
+      z-index: 1;
+      width: 35%;
+      min-width: 400px;
+      max-width: 400px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -15%);
+      margin: 0 auto;
+    }
+
+    &__front-end,
+    &__back-end,
+    &__designer,
+    &__other,
+    &__search {
+      width: 30%;
+      min-width: 350px;
+      max-width: 350px;
+      position: relative;
+      top: -2.5rem;
+      z-index: 2;
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .skills__big__hexagon {
+    display: none;
+  }
+  .hexagon__container {
+    height: auto;
+
+    &__svg {
+      &__soft-skill,
+      &__hobbies {
+        width: 85%;
+      }
+    }
+  }
+
+  .reverse-row {
+    flex-flow: row-reverse;
+  }
+
+  .skills__grid {
+    transform: scale(0.8);
+    position: relative;
+    left: 2.4rem;
+  }
+
+  .global__container {
+    position: relative;
+    top: -3rem;
+    // transform: scale(0.5);
+    .skills__container {
+      height: 16rem;
+    }
+  }
+  .skills__categorie {
+    margin: 2rem auto 2rem auto;
+    width: 89%;
+  }
+
+  .skills__container__list {
+    transform: scale(0.8);
+  }
+
+  .svg {
+    &__icons-graphic {
+      &--background {
+        width: 80%;
+        min-width: 300px;
+        max-width: 300px;
+        position: absolute;
+        transform: translate(-50%, 10%);
+        margin: 0 auto;
+      }
+      &__front-end,
+      &__back-end,
+      &__designer,
+      &__other,
+      &__search {
+        width: 50%;
+        min-width: 280px;
+        max-width: 300px;
+        position: relative;
+        left: 0rem;
+        top: 2rem;
+      }
+    }
+  }
+
+  .svg__wrapper {
+    position: relative;
+    height: 10rem;
+    width: 80%;
+    margin: 0 auto 12rem auto;
+
+    &--left {
+      position: relative;
+      left: 0rem;
+    }
+  }
+}

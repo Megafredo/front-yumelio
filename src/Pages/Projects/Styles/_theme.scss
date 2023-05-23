@@ -1,0 +1,23 @@
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+
+//& ----------------- Theme Projects
+$themeProjects: (
+  light: (
+
+  ),
+  dark: (
+
+  ),
+);
+
+//~ ---------------------------------------------- Theme Site
+@include mixins.themify($themeProjects) {
+
+
+  // .media--mobile,
+  // .media--tablet {
+   
+  // }
+}

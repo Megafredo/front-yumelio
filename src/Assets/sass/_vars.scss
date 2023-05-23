@@ -1,0 +1,92 @@
+//~ ----------------- Fonts families
+
+@font-face {
+  font-family: 'Nunito';
+  src: local('Nunito-VariableFont_wght'), url('../fonts/Nunito-VariableFont_wght.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Nunito-Italic';
+  src: local('Nunito-Italic-VariableFont_wght'), url('../fonts/Nunito-Italic-VariableFont_wght.woff2') format('woff2');
+}
+
+$font-Nunito: 'Nunito', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$font-Nunito-Italic: 'Nunito-Italic', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+//~ ----------------- Colors charts
+
+$primary-color-01: #f8fbff;
+$primary-color-02: #6A2AFF;
+$primary-color-03: #242c3f;
+$primary-color-04: #BCE100;
+
+$secondary-color-01: #f92663;
+$secondary-color-02: #50d6ff;
+$secondary-color-03: #ff7733;
+$secondary-color-04: #737373;
+$secondary-color-05: #222435;
+$secondary-color-06: #b9bec9;
+
+$logo-primary-color: #f4f4f4;
+$logo-secondary-color: #cad6dd;
+$logo-tertiary-color: #b0babf;
+
+$section-color-01: #BCE100;
+$section-color-02: #78cec2;
+$section-color-03: #7900ff;
+$section-color-04: #e33480;
+
+
+//~ ----------------- Box shadows
+
+//^ Base
+$box-shadow-v1: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+//^ MenuBurger
+$menu-burger-sun-shadow: inset 0 0 0 1rem $primary-color-01,
+0 0 0 0rem $primary-color-03,
+
+// VERTICAL ELEMENT => HAUT
+0rem -1.1rem 0rem var(--orthogonal) $primary-color-01,
+0rem -1.2rem 0rem var(--orthogonal) $primary-color-01,
+0rem -1.3rem 0rem var(--orthogonal) $primary-color-01,
+0rem -1.4rem 0rem var(--orthogonal) $primary-color-01,
+
+// VERTICAL ELEMENT => BAS
+0rem 1.1rem 0rem var(--orthogonal) $primary-color-01,
+0rem 1.2rem 0rem var(--orthogonal) $primary-color-01,
+0rem 1.3rem 0rem var(--orthogonal) $primary-color-01,
+0rem 1.4rem 0rem var(--orthogonal) $primary-color-01,
+
+// HORIZONTAL ELEMENT => GAUCHE
+-1.1rem 0rem 0rem var(--orthogonal) $primary-color-01,
+-1.2rem 0rem 0rem var(--orthogonal) $primary-color-01,
+-1.3rem 0rem 0rem var(--orthogonal) $primary-color-01,
+-1.4rem 0rem 0rem var(--orthogonal) $primary-color-01,
+
+// HORIZONTAL ELEMENT => DROITE
+1.1rem 0rem 0rem var(--orthogonal) $primary-color-01,
+1.2rem 0rem 0rem var(--orthogonal) $primary-color-01,
+1.3rem 0rem 0rem var(--orthogonal) $primary-color-01,
+1.4rem 0rem 0rem var(--orthogonal) $primary-color-01,
+
+// DIAGONAL ELEMENT => HAUT-GAUCHE
+-0.8rem -0.8rem 0rem var(--diagonal) $primary-color-01,  
+-0.85rem -0.85rem 0rem var(--diagonal) $primary-color-01,  
+-0.9rem -0.9rem 0rem var(--diagonal) $primary-color-01,  
+
+// DIAGONAL ELEMENT => BAS-GAUCHE
+-0.8rem 0.8rem 0rem var(--diagonal) $primary-color-01,  
+-0.85rem 0.85rem 0rem var(--diagonal) $primary-color-01,  
+-0.9rem 0.9rem 0rem var(--diagonal) $primary-color-01,  
+
+// DIAGONAL ELEMENT => HAUT-DROITE
+0.8rem -0.8rem 0rem var(--diagonal) $primary-color-01,  
+0.85rem -0.85rem 0rem var(--diagonal) $primary-color-01,  
+0.9rem -0.9rem 0rem var(--diagonal) $primary-color-01,  
+
+// DIAGONAL ELEMENT => BAS-DROITE
+0.8rem 0.8rem 0rem var(--diagonal) $primary-color-01,  
+0.85rem 0.85rem 0rem var(--diagonal) $primary-color-01,  
+0.9rem 0.9rem 0rem var(--diagonal) $primary-color-01;

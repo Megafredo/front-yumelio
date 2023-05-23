@@ -14,10 +14,14 @@ npm i react react-dom react-scripts react-router-dom
 ```
 npm i @reduxjs/toolkit react-redux
 ```
+- i18n
+```
+npm install react-i18next i18next
+```
 
 - Autres
 ```
-npm i --save-dev sass typescript
+npm i --save-dev sass typescript gh-pages @types/react-dom
 ```
 
 [Accueil](../README.md)

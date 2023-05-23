@@ -1,0 +1,91 @@
+@use './mixins.scss';
+@use './vars.scss';
+
+
+//& ----------------- Theme Global
+$themeSite: (
+  light: (
+    background: vars.$primary-color-01,
+    title: vars.$primary-color-03,
+    text: vars.$primary-color-03,
+    // link: $secondary-color-01,
+    spinner: vars.$primary-color-02,
+    background-footer: vars.$primary-color-02,
+    available-background: vars.$primary-color-03,
+    available-text: vars.$primary-color-01,
+
+    svg-gate-stroke: vars.$primary-color-03,
+    svg-surface-fill: vars.$primary-color-03,
+    parallax-scroller-text: vars.$primary-color-03,
+    technologies-list: vars.$primary-color-03,
+    reveal-text-list: vars.$primary-color-01,
+    skills-hexagon-fill: vars.$primary-color-03,
+  ),
+  dark: (
+    background: vars.$primary-color-03,
+    title: vars.$primary-color-01,
+    text: vars.$primary-color-01,
+    // link: $secondary-color-03,
+    spinner: vars.$primary-color-04,
+    background-footer: vars.$primary-color-02,
+    available-background: vars.$primary-color-04,
+    available-text: vars.$primary-color-01,
+
+    svg-gate-stroke: vars.$primary-color-01,
+    svg-surface-fill: vars.$primary-color-01,
+    parallax-scroller-text: vars.$primary-color-01,
+    technologies-list: vars.$primary-color-01,
+    reveal-text-list: vars.$primary-color-03,
+    skills-hexagon-fill: vars.$secondary-color-05,
+    skills-hexagon-title: vars.$primary-color-01,
+  ),
+);
+
+//~ ---------------------------------------------- Theme Site
+@include mixins.themify($themeSite) {
+  background-color: mixins.themed('background');
+
+  h1,
+  h2 {
+    color: mixins.themed('title');
+  }
+
+  a {
+    color: mixins.themed('link');
+  }
+
+  p {
+    color: mixins.themed('text');
+  }
+
+ 
+
+  .header {
+    background-color: mixins.themed('background');
+
+    &__available {
+      background-color: mixins.themed('available-background');
+    }
+    & p {
+      color: mixins.themed('available-text');
+      background-color: mixins.themed('available-background');
+    }
+  }
+
+  .gate-1 {
+    transition: all 0.25s ease-in-out;
+    stroke: mixins.themed('svg-gate-stroke');
+  }
+  .surface-1 {
+    transition: all 0.25s ease-in-out;
+    fill: mixins.themed('svg-surface-fill');
+  }
+
+  .footer {
+    background-color: mixins.themed('background');
+  }
+
+  .spinner {
+    stroke: mixins.themed('spinner');
+  }
+}

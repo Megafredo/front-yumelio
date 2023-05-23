@@ -1,0 +1,55 @@
+@use '../../Assets/sass/vars.scss';
+
+.header {
+  // user-select: none;
+  // height: 10rem;
+
+  &__available {
+    height: 0.5rem;
+  }
+
+  & p {
+    font-size: 0.7rem;
+    text-align: center;
+    margin: 0 auto;
+    width: 5.5rem;
+    height: 1.4rem;
+    line-height: 1.3rem;
+  }
+
+  &__container {
+    height: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+
+    &__logo {
+      display: grid;
+      justify-content: center;
+    }
+    
+    &__menu {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transform: scale(0.6);
+    }
+
+  }
+}
+
+.media {
+  &--mobile {
+    .header {
+      &__container {
+        background-color: vars.$primary-color-03;
+        height: 4.5rem;
+        &__menu{
+          flex-direction:row;
+        }
+
+      }
+    }
+  }
+}

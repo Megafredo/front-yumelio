@@ -1,0 +1,46 @@
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+
+//& ----------------- Theme Work
+$themeContact: (
+  light: (
+    link-background: vars.$primary-color-03,
+    link-shadow: vars.$box-shadow-v1,
+    alsace-title-fill: vars.$primary-color-03,
+    alsace-region-fill: vars.$primary-color-03,
+  ),
+  dark: (
+    link-background: vars.$secondary-color-05,
+    alsace-title-fill: vars.$primary-color-01,
+    alsace-title-mobile-fill: vars.$primary-color-03,
+    alsace-region-fill: vars.$primary-color-01,
+  ),
+);
+
+//~ ---------------------------------------------- Theme Site
+@include mixins.themify($themeContact) {
+  .contact__container__zone {
+    &__link {
+      background-color: mixins.themed('link-background');
+      box-shadow: mixins.themed('link-shadow');
+    }
+
+    & .word-alsace {
+      transition: all 0.4s ease-in-out;
+      fill: mixins.themed('alsace-title-fill');
+    }
+
+    & .alsace-region {
+      transition: all 0.4s ease-in-out;
+      fill: mixins.themed('alsace-region-fill');
+    }
+  }
+
+  .media--mobile,
+  .media--tablet {
+    & .word-alsace {
+      fill: mixins.themed('alsace-title-mobile-fill');
+    }
+  }
+}

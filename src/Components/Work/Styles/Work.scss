@@ -1,0 +1,443 @@
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+@use './theme.scss';
+
+.container__work {
+  // width: 100%;
+  // height: auto;
+  width: 70%;
+  margin: 0 auto;
+
+  &__section {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    &__info {
+      height: auto;
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      &__title {
+        &--firstLine {
+          margin-bottom: 0.5rem;
+          font-size: 1.3rem;
+          font-weight: 600;
+        }
+
+        &--secondLine {
+          font-size: 2.6rem;
+          font-weight: 800;
+        }
+
+        &--separator {
+          width: 100%;
+          height: 3px;
+          margin: 2rem 0;
+          border-radius: 50px;
+        }
+      }
+
+      &__subtitle {
+        width: 20%;
+
+        &--number {
+          font-size: 1.5rem;
+          font-weight: 900;
+          position: relative;
+
+          & span {
+            display: flex;
+            font-size: 1.2rem;
+            font-weight: 900;
+          }
+        }
+
+        &--after {
+          position: absolute;
+          width: 30px;
+          height: 0.5rem;
+          left: 0;
+          border-radius: 10rem;
+        }
+
+        &--first-line {
+          writing-mode: vertical-rl;
+          margin: 2rem 0;
+          transform: rotate(180deg);
+        }
+        &--second-line {
+          writing-mode: vertical-rl;
+          margin: 2rem 0;
+          transform: rotate(180deg);
+        }
+      }
+
+      &__description {
+        max-width: 20rem;
+        width: 90%;
+        padding: 1rem;
+
+        & span {
+          line-height: 1.4rem;
+          font-size: 0.9rem;
+          width: 100%;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__graphic {
+      width: 50%;
+      // background-color: blue;
+      margin: 10rem 0;
+  
+      align-items: center;
+      display: grid;
+
+      &__profile {
+        position: absolute;
+        top: 24%;
+        left: 27.5%;
+        width: 45%;
+        z-index: 2;
+      }
+
+      &__frontend,
+      &__backend,
+      &__webdesigner {
+        position: absolute;
+        top: 15%;
+        left: 19.9%;
+        width: 60%;
+        z-index: 2;
+      }
+
+      &__leaf__blur,
+      &__leaf__nett {
+        position: absolute;
+        z-index: 3;
+        max-width: 50%;
+        user-select: none;
+      }
+
+      &__zone {
+        &--fullstack,
+        &--frontend,
+        &--backend,
+        &--webdesigner {
+          position: relative;
+          min-width: 260px;
+          max-width: 700px;
+        }
+
+        &--fullstack {
+          // LeafBlur01
+          & > *:nth-child(3) {
+            width: 30%;
+            top: 60%;
+            left: 50%;
+          }
+          // LeafBlur02
+          & > *:nth-child(4) {
+            width: 30%;
+            top: 60%;
+            left: 10%;
+          }
+          // LeafBlur03
+          & > *:nth-child(5) {
+            width: 30%;
+            top: 5%;
+            left: 5%;
+          }
+          // LeafNett01
+          & > *:nth-child(6) {
+            width: 10%;
+            top: 27%;
+            left: 23%;
+            z-index: 2;
+          }
+          // LeafNett02
+          & > *:nth-child(7) {
+            width: 10%;
+            top: 35%;
+            left: 20%;
+            z-index: 2;
+          }
+          // LeafNett03
+          & > *:nth-child(8) {
+            width: 12%;
+            top: 45%;
+            left: 70%;
+            z-index: 2;
+          }
+          // LeafNett04
+          & > *:nth-child(9) {
+            width: 12%;
+            top: 70%;
+            left: 45%;
+            z-index: 2;
+          }
+        
+          // Line
+          & > *:nth-child(10) {
+            position: absolute;
+            width: 150%;
+            top: -15.5%;
+            left: 45%;
+            z-index: 1;
+          }
+            // Cross01
+            & > *:nth-child(11) {
+              position: absolute;
+              width: 5%;
+              top: 15.2%;
+              left: 67.8%;
+            }
+            // Cross02
+            & > *:nth-child(12) {
+              position: absolute;
+              width: 4%;
+              top: 79.5%;
+              left: 32.9%;
+            }
+            // Cross03
+            & > *:nth-child(13) {
+              position: absolute;
+              width: 3%;
+              top: 31%;
+              left: 16.7%;
+            }
+        }
+
+        &--frontend {
+          // LeafNett01
+          & > *:nth-child(3) {
+            width: 10%;
+            top: 27%;
+            left: 23%;
+            z-index: 2;
+          }
+          // LeafNett02
+          & > *:nth-child(4) {
+            width: 10%;
+            top: 35%;
+            left: 20%;
+            z-index: 2;
+          }
+          // LeafNett03
+          & > *:nth-child(5) {
+            width: 12%;
+            top: 45%;
+            left: 70%;
+            z-index: 2;
+          }
+          // LeafNett04
+          & > *:nth-child(6) {
+            width: 12%;
+            top: 70%;
+            left: 45%;
+            z-index: 2;
+          }
+          
+          // Line
+          & > *:nth-child(7) {
+            position: absolute;
+            width: 100%;
+            top: -5.5%;
+            left: -35%;
+            z-index: 1;
+          }
+          // Cross01
+          & > *:nth-child(8) {
+            position: absolute;
+            width: 5%;
+            top: 15.5%;
+            left: 28%;
+          }
+          // Cross02
+          & > *:nth-child(9) {
+            position: absolute;
+            width: 4%;
+            top: 63%;
+            left: 80.5%;
+          }
+          // Cross03
+          & > *:nth-child(10) {
+            position: absolute;
+            width: 3%;
+            top: 88%;
+            left: 38.5%;
+          }
+        }
+
+        &--backend {
+          & > *:nth-child(3) {
+            width: 10%;
+            top: 27%;
+            left: 23%;
+            z-index: 2;
+          }
+          // LeafNett02
+          & > *:nth-child(4) {
+            width: 10%;
+            top: 35%;
+            left: 20%;
+            z-index: 2;
+          }
+          // LeafNett03
+          & > *:nth-child(5) {
+            width: 12%;
+            top: 45%;
+            left: 70%;
+            z-index: 2;
+          }
+          // LeafNett04
+          & > *:nth-child(6) {
+            width: 12%;
+            top: 70%;
+            left: 45%;
+            z-index: 2;
+          }
+          // Line
+          & > *:nth-child(7) {
+            position: absolute;
+            width: 120%;
+            top: 0%;
+            left: 40%;
+            z-index: 1;
+          }
+             // Cross01
+             & > *:nth-child(8) {
+              position: absolute;
+              width: 5%;
+              top: 75%;
+              left: 14.5%;
+            }
+            // Cross02
+            & > *:nth-child(9) {
+              position: absolute;
+              width: 4%;
+              top: 8.5%;
+              left: 63.5%;
+            }
+            // Cross03
+            & > *:nth-child(10) {
+              position: absolute;
+              width: 3%;
+              top: 66%;
+              left: 85.8%;
+            }
+        }
+
+        &--webdesigner {
+          & > *:nth-child(3) {
+            width: 10%;
+            top: 27%;
+            left: 23%;
+            z-index: 2;
+          }
+          // LeafNett02
+          & > *:nth-child(4) {
+            width: 10%;
+            top: 35%;
+            left: 20%;
+            z-index: 2;
+          }
+          // LeafNett03
+          & > *:nth-child(5) {
+            width: 12%;
+            top: 45%;
+            left: 70%;
+            z-index: 2;
+          }
+          // LeafNett04
+          & > *:nth-child(6) {
+            width: 12%;
+            top: 70%;
+            left: 45%;
+            z-index: 2;
+          }
+          
+          // Line
+          & > *:nth-child(7) {
+            position: absolute;
+            width: 120%;
+            top: 0%;
+            left: -55%;
+            z-index: 1;
+          }
+
+          // Cross01
+          & > *:nth-child(8) {
+            position: absolute;
+            width: 5%;
+            top: 70.5%;
+            left: 76%;
+          }
+          // Cross02
+          & > *:nth-child(9) {
+            position: absolute;
+            width: 4%;
+            top: 36.5%;
+            left: 8%;
+          }
+          // Cross03
+          & > *:nth-child(10) {
+            position: absolute;
+            width: 3%;
+            top: 13.5%;
+            left: 73.2%;
+          }
+        }
+      }
+    }
+
+    &.flex-row-reverse {
+      flex-flow: row-reverse;
+    }
+    &.flex-column-reverse {
+      flex-flow: column-reverse;
+    }
+  }
+}
+
+.global-hexa-graphic{
+  z-index: 2;
+  position: relative;
+}
+
+.cross{
+  z-index: 2;
+  position: relative;
+}
+
+.media {
+  &--mobile,
+  &--tablet {
+    .container__work {
+      &__section {
+        &__info {
+          width: 100%;
+
+          &__title {
+            &--secondLine {
+              font-size: 2rem;
+            }
+          }
+
+          &__description {
+            width: 80%;
+          }
+        }
+        &__graphic {
+          width: 100%;
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+}

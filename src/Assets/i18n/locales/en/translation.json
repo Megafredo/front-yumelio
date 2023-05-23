@@ -1,0 +1,12 @@
+{
+  "route_name_home": "Home",
+  "route_name_skills": "Skills",
+  "route_name_projects": "Projects",
+  "route_name_contact": "Contact",
+  "route_name_login": "Login",
+
+  "home_h1": "Full stack Developer",
+  "home_description": "Full stack developer and graphic designer experienced in designing, creating websites and mobile applications. Has skills in front-end, back-end development, as well as graphic design and UX/UI. Mastery of technologies such as HTML/CSS, Javascript, React, NodeJS, PostgreSQL and graphic tools such as Photoshop and Illustrator.",
+  "available": "Open to work",
+  "footer_copyright": "All rights reserved"
+}

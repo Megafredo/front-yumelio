@@ -1,0 +1,55 @@
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+@use './theme.scss';
+
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 6%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  a {
+    transition: all 0.4s ease-in-out;
+  }
+
+  &__fullstack,
+  &__frontend,
+  &__backend,
+  &__webdesigner {
+    width: 0.35rem;
+    height: 3.5rem;
+    border-radius: 120rem;
+    opacity: 0.02;
+    background-color: #242c3f;
+    transform: scaleY(0.8);
+    
+    &--active {
+      margin: 1rem 0;
+      opacity: 1;
+      border-radius: 150rem;
+      transform: scaleY(0.8);
+      transition: all 0.25s ease-in-out;
+    }
+
+  }
+
+  &__color {
+    &__fullstack {
+      background-color: vars.$section-color-01;
+    }
+    &__frontend {
+      background-color: vars.$section-color-02;
+    }
+    &__backend {
+      background-color: vars.$section-color-03;
+    }
+    &__webdesigner {
+      background-color: vars.$section-color-04;
+    }
+  }
+
+}
+
+

@@ -1,0 +1,39 @@
+@use './mixins.scss';
+@use './vars.scss';
+@use './keyframes.scss';
+@use './themes.scss';
+@use './reset.scss';
+
+:root {
+  font-family: vars.$font-Nunito;
+  background-color: vars.$primary-color-01;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  margin: 0;
+  // user-select: none;
+  cursor: url(../img/customCursorDefault.svg) 4 4, auto;
+
+
+  // hide scrollbar and keep functionnality
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::selection {
+    background-color: vars.$primary-color-04;
+  }
+}
+
+label {
+  width: 3rem;
+  font-family: vars.$font-Nunito;
+  font-weight: 900;
+  user-select: none;
+  height: 2.95rem;
+  line-height: 2.35rem;
+  margin-left: 1rem;
+  cursor: none;
+}

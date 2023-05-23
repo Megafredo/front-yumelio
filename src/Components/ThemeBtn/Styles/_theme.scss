@@ -1,0 +1,32 @@
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+
+//! THEMIFY
+
+//& ----------------- Theme Buttons
+$themeBtn: (
+  light: (
+    label-text: vars.$primary-color-03,
+    background: vars.$primary-color-03,
+    border: vars.$primary-color-03,
+  ),
+  dark: (
+    label-text: vars.$primary-color-01,
+    background: vars.$primary-color-03,
+    border: vars.$primary-color-03,
+  ),
+);
+
+//~ ----------------------------------------------
+@include mixins.themify($themeBtn) {
+  .theme {
+    &__button {
+      background-color: mixins.themed('background');
+      border: solid 0.3rem mixins.themed('border');
+    }
+    & label {
+      color: mixins.themed('label-text');
+    }
+  }
+}

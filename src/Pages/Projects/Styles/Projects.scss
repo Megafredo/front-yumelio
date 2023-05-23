@@ -1,0 +1,55 @@
+// @use '../../../Assets/sass/mixins.scss';
+// @use '../../../Assets/sass/vars.scss';
+// @use '../../../Assets/sass/keyframes.scss';
+// @use './theme.scss';
+
+
+// .project {
+//   display: inline-flex;
+//   flex-wrap: wrap;
+//   gap: 2rem;
+// }
+
+// .projects > div {
+//   width: 50%;
+//   margin: 1rem auto;
+// }
+
+// .testScroll {
+//   background-color: vars.$primary-color-02;
+//   height: 6rem;
+//   transition: all 0.25s ease-in-out;
+// }
+
+// .buttons {
+//   font-weight: 600;
+//   color: rgb(255, 255, 255);
+//   text-align: center;
+//   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//   user-select: none;
+//   justify-content: center;
+//   position: relative;
+//   background-color: azure;
+//   height: 5rem;
+//   line-height: 4rem;
+//   width: 25rem;
+//   margin: 0.8rem auto;
+//   border-radius: 0.5rem;
+//   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+//   transition: all 0.25s linear;
+//   overflow: hidden;
+// }
+
+// .color-01 {
+//   background: linear-gradient(90deg, #ec5c1a, #f6ce61);
+// }
+// .color-02 {
+//   background: linear-gradient(90deg, #1a75ec, #61ecf6);
+// }
+// .color-03 {
+//   background: linear-gradient(90deg, #00c583, #52ff95);
+// }
+// .color-04 {
+//   background: linear-gradient(90deg, #4b39ec, #1022c2);
+// }
+
