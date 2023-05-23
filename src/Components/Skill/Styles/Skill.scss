@@ -160,13 +160,27 @@
       }
 
       & img {
-        width: 3.7rem;
-        height: 6rem;
+        // width: 3.7rem;
+        // height: 7.4rem;
+        // position: relative;
+        // top: -8px;
+
+        // width: 3.7rem;
+        // height: 6rem;
         // transform: rotate(-30deg) scale(0.7);
-        transform: rotate(-30deg);
-        object-fit: none;
-        overflow: visible;
-        object-fit: cover;
+        // transform: rotate(-30deg);
+        // object-fit: none;
+        // overflow: visible;
+        // object-fit: cover;
+
+    width: 6.72rem;
+    position: relative;
+    top: -4.6px;
+    transform: rotate(-30deg);
+    object-fit: none;
+    overflow: visible;
+    object-fit: cover;
+    left: -22.1px;
       }
     }
 

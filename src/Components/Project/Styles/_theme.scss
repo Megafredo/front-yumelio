@@ -5,19 +5,23 @@
 //& ----------------- Theme Projects
 $themeProject: (
   light: (
-
+    button-github: vars.$primary-color-03,
   ),
   dark: (
-
+    button-github: vars.$secondary-color-05,
   ),
 );
 
 //~ ---------------------------------------------- Theme Site
 @include mixins.themify($themeProject) {
-
+  .project__container__global {
+    &__link {
+      background-color: mixins.themed('button-github');
+    }
+  }
 
   // .media--mobile,
   // .media--tablet {
-   
+
   // }
 }

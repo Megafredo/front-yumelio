@@ -22,7 +22,6 @@ import * as animate from '../../Utils/Animations/animate';
 
 const Skill = ({ id, title, titleBackground, skills, gap, color, logotypes }: SkillData) => {
   const backgroundColor = { backgroundColor: `${color}` };
-  const borderColor = { borderColor: `${color}` };
 
   const { mediaScreen } = useSelector((state: RootState) => state.mediaSlice);
 
