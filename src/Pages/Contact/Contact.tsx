@@ -71,14 +71,14 @@ ${firstName} ${lastName}`);
         <div className="contact__container__zone">
           <Svg.Grid className="contact__container__zone__svg-grid" />
           <div className="contact__container__zone__link">
-            <Link to="/" data-cursor-pointer="active">
-              <Svg.VisualKoding />
+            <Link to="/" title="Cliquez ici pour retourner à la page d'accueil" data-cursor-pointer="active">
+              <Svg.VisualKoding aria-label="Logo de VisualKoding" />
             </Link>
-            <a href={LINK_GITHUB} target="_blank" rel="noopener noreferrer" data-cursor-pointer="active">
-              <Svg.GitHub />
+            <a href={LINK_GITHUB} title="Cliquez ici pour accéder à la page GitHub" target="_blank" rel="noopener noreferrer" data-cursor-pointer="active">
+              <Svg.GitHub aria-label="Logo de GitHub" />
             </a>
-            <a href={LINK_LINKEDIN} target="_blank" rel="noopener noreferrer" data-cursor-pointer="active">
-              <Svg.Linkedin />
+            <a href={LINK_LINKEDIN} title="Cliquez ici pour accéder à la page Linkedin" target="_blank" rel="noopener noreferrer" data-cursor-pointer="active">
+              <Svg.Linkedin aria-label="Logo de Linkedin"/>
             </a>
           </div>
           <div className="contact__container__zone__form">

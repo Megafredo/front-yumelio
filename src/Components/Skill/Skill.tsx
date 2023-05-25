@@ -123,7 +123,7 @@ const Skill = ({ id, title, titleBackground, skills, gap, color, logotypes }: Sk
                       >
                         <span className="skills__grid__hexagon__icon__before" style={backgroundColor}></span>
                         <span className="skills__grid__hexagon__icon__after" style={backgroundColor}>
-                          <img src={logotypes[index] ?? ''} alt="logo"></img>
+                          <img src={logotypes[index] ?? ''} alt={`logo ${skills[index]}`}></img>
                         </span>
                       </motion.div>
                     </div>

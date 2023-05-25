@@ -31,6 +31,7 @@ const Work = ({ id, title, subtitle, color, description }: WorkTypes) => {
   }, [id]);
 
   const sidebarOptionDesktop = {
+    to:title.secondLine.toLowerCase(),
     offsetValueFullstack: -400,
     offsetValueFrontend: -300,
     offsetValueBackend: -400,
@@ -38,6 +39,7 @@ const Work = ({ id, title, subtitle, color, description }: WorkTypes) => {
   };
 
   const sidebarOptionMobile = {
+    to:title.secondLine.toLowerCase(),
     offsetValueFullstack: -100,
     offsetValueFrontend: -25,
     offsetValueBackend: -25,
@@ -101,7 +103,7 @@ const Work = ({ id, title, subtitle, color, description }: WorkTypes) => {
         <div className={`container__work__section  ${mediaScreen !== 'desktop' && !reverse && 'flex-column-reverse'}`}>
           {reverse && sectionGraphicSVG()}
 
-          {mediaScreen !== 'mobile' ? <Sidebar {...sidebarOptionDesktop} /> : <Sidebar {...sidebarOptionMobile} />}
+          {mediaScreen !== 'mobile' ? <Sidebar  {...sidebarOptionDesktop} /> : <Sidebar {...sidebarOptionMobile} />}
 
           <div className={`container__work__section__info`}>
             <div className="container__work__section__info__subtitle">{sectionSubtitleSVG(subtitle.secondLine)}</div>
