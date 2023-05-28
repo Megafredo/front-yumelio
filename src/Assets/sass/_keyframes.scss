@@ -18,6 +18,22 @@
 //   }
 // }
 
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 1100;
+    fill-opacity: 0;
+    
+  }
+  80%{
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
 @keyframes line-dasharray {
   to {
     stroke-dashoffset: 0;

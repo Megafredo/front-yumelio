@@ -3,6 +3,25 @@
 @use '../../../Assets/sass/keyframes';
 @use './theme.scss';
 
+
+.alsace-2 {
+  // line-animate($dasharray, $dashoffset, $anim-name, $anim-duration, $anim-delay, $anim-mode)
+  @include mixins.line-animate(420px, 420px, (line-dasharray, filling), (1.5s, 0.5s), (0.9s, 2s), forwards);
+  opacity: 1;
+  stroke-width: 1.5;
+}
+
+.alsace-region {
+  stroke-dasharray: 1100;
+  stroke-dashoffset: 1100;
+  stroke-width: 0.5;
+  fill: transparent;
+  fill-opacity: 0;
+
+  animation: draw 2s linear forwards;
+  animation-delay: .45s;
+}
+
 .contact__container {
   width: 100%;
 

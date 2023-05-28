@@ -9,12 +9,14 @@ $themeContact: (
     link-shadow: vars.$box-shadow-v1,
     alsace-title-fill: vars.$primary-color-03,
     alsace-region-fill: vars.$primary-color-03,
+    alsace-region-stroke: vars.$primary-color-03,
   ),
   dark: (
     link-background: vars.$secondary-color-05,
     alsace-title-fill: vars.$primary-color-01,
     alsace-title-mobile-fill: vars.$primary-color-03,
     alsace-region-fill: vars.$primary-color-01,
+    alsace-region-stroke: vars.$primary-color-01,
   ),
 );
 
@@ -34,6 +36,7 @@ $themeContact: (
     & .alsace-region {
       transition: all 0.4s ease-in-out;
       fill: mixins.themed('alsace-region-fill');
+      stroke:mixins.themed('alsace-region-stroke');
     }
   }
 

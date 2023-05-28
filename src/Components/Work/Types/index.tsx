@@ -3,11 +3,11 @@ export interface WorkTypes {
   title: {
     firstLine: string;
     secondLine: string;
-  },
+  };
   subtitle: {
     firstLine: string;
     secondLine: string;
-  },
-  color: string,
-  description: Array<string>;
-}
+  };
+  color: string;
+  description: string[];
+}[];

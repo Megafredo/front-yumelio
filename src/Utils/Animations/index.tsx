@@ -1,22 +1,24 @@
-export function animateWithoutExit(nameKey: string, axis: string, valueAxisInitial: number, valueAxisAnimate: number) {
+import { easeIn } from 'framer-motion';
+
+export const animateWithoutExit = (nameKey: string, axis: string, valueAxisInitial: number, valueAxisAnimate: number) => {
   return {
     key: nameKey,
     initial: { [axis]: valueAxisInitial, opacity: 0 },
     animate: { [axis]: valueAxisAnimate, opacity: 1 },
     transition: { type: 'spring', stiffness: 40, duration: 0, ease: 'easeIn' },
   };
-}
+};
 
-export function animateTypeSpring(nameKey: string, axis: string, valueAxisInitial: number, valueAxisAnimate: number) {
+export const animateTypeSpring = (nameKey: string, axis: string, valueAxisInitial: number, valueAxisAnimate: number) => {
   return {
     key: nameKey,
     initial: { [axis]: valueAxisInitial, opacity: 0, scale: 0.1 },
     animate: { [axis]: valueAxisAnimate, opacity: 1, scale: 1 },
     transition: { type: 'spring', stiffness: 200, duration: 0.35, ease: 'easeIn' },
   };
-}
+};
 
-export function animateWithExit(nameKey: string, axis: string, valueAxisInitial: number, valueAxisAnimate: number, exitAxis: string, valueExitAxis: number) {
+export const animateWithExit = (nameKey: string, axis: string, valueAxisInitial: number, valueAxisAnimate: number, exitAxis: string, valueExitAxis: number) => {
   return {
     key: nameKey,
     initial: { [axis]: valueAxisInitial, opacity: 0 },
@@ -24,9 +26,9 @@ export function animateWithExit(nameKey: string, axis: string, valueAxisInitial:
     exit: { [exitAxis]: valueExitAxis, opacity: 0 },
     transition: { duration: 0.25, ease: 'easeIn' },
   };
-}
+};
 
-export function leafInfinite(nameKey: string, xAxisInitialValue: number, yAxisInitialValue: number, xAxisAnimateValue: number, yAxisAnimateValue: number, delay: number) {
+export const leafInfinite = (nameKey: string, xAxisInitialValue: number, yAxisInitialValue: number, xAxisAnimateValue: number, yAxisAnimateValue: number, delay: number) => {
   const repeatTypeValue: 'reverse' = 'reverse';
 
   return {
@@ -35,9 +37,9 @@ export function leafInfinite(nameKey: string, xAxisInitialValue: number, yAxisIn
     animate: { x: xAxisAnimateValue, y: yAxisAnimateValue },
     transition: { delay: delay, duration: 1.8, ease: 'easeIn', repeat: Infinity, repeatType: repeatTypeValue },
   };
-}
+};
 
-export function translateWithRotate(axis: string, valueAxisInitial: number, valueAxisWhileInViewl: number, valueRotate: number = 0) {
+export const translateWithRotate = (axis: string, valueAxisInitial: number, valueAxisWhileInViewl: number, valueRotate: number = 0) => {
   return {
     initial: {
       [axis]: valueAxisInitial,
@@ -53,9 +55,27 @@ export function translateWithRotate(axis: string, valueAxisInitial: number, valu
       },
     },
   };
-}
+};
 
-export function hexagonTranslate(axis: string, valueAxisInitial: number) {
+export const translateWhileInView = (axis: string, valueAxisInitial: number, valueAxisWhileInViewl: number, valueDelay: number) => {
+  return {
+    initial: {
+      [axis]: valueAxisInitial,
+      opacity: 0,
+    },
+    whileInView: {
+      [axis]: valueAxisWhileInViewl,
+      opacity: 1,
+      transition: {
+        delay: valueDelay,
+        duration: 1,
+        ease: [0, 0.71, 0.2, 1.01],
+      },
+    },
+  };
+};
+
+export const hexagonTranslate = (axis: string, valueAxisInitial: number) => {
   return {
     initial: {
       scale: 0,
@@ -77,9 +97,9 @@ export function hexagonTranslate(axis: string, valueAxisInitial: number) {
       },
     },
   };
-}
+};
 
-export function translateText(axis: string, valueAxisInitial: number) {
+export const translateText = (axis: string, valueAxisInitial: number) => {
   return {
     initial: {
       [axis]: valueAxisInitial,
@@ -93,9 +113,9 @@ export function translateText(axis: string, valueAxisInitial: number) {
       },
     },
   };
-}
+};
 
-export function revealBackground(axis: string, valueAxisWhileInView: number) {
+export const revealBackground = (axis: string, valueAxisWhileInView: number) => {
   return {
     initial: {
       [axis]: 0,
@@ -109,9 +129,9 @@ export function revealBackground(axis: string, valueAxisWhileInView: number) {
       },
     },
   };
-}
+};
 
-export function revealSelector(axis: string, valueAxisWhileInView: number) {
+export const revealSelector = (axis: string, valueAxisWhileInView: number) => {
   return {
     initial: {
       scale: 1,
@@ -132,9 +152,9 @@ export function revealSelector(axis: string, valueAxisWhileInView: number) {
       },
     },
   };
-}
+};
 
-export function translateAndScale(axis: string, valueAxisInitial: number) {
+export const translateAndScale = (axis: string, valueAxisInitial: number) => {
   return {
     initial: {
       scale: 0,
@@ -155,10 +175,10 @@ export function translateAndScale(axis: string, valueAxisInitial: number) {
       },
     },
   };
-}
+};
 
 //Todo : A refacto !
-export function animateParent(nameKey: string) {
+export const animateParent = (nameKey: string) => {
   return {
     hidden: {
       key: nameKey,
@@ -180,9 +200,9 @@ export function animateParent(nameKey: string) {
       transition: { duration: 0.25, ease: 'easeIn' },
     },
   };
-}
+};
 
-export function animateChildren() {
+export const animateChildren = () => {
   return {
     hidden: {
       y: -20,
@@ -195,4 +215,185 @@ export function animateChildren() {
       transition: { ease: 'easeInOut' },
     },
   };
-}
+};
+
+export const translateScaleDuration = (axis: string, valueAxisInitial: number, valueDuration: number) => {
+  return {
+    initial: {
+      scale: 0,
+      [axis]: valueAxisInitial,
+    },
+    whileInView: {
+      [axis]: 0,
+      scale: 1,
+      transition: {
+        duration: valueDuration,
+        ease: [0, 0.71, 0.2, 1.01],
+        scale: {
+          type: 'spring',
+          damping: 10,
+          stiffness: 200,
+          restDelta: 0.001,
+        },
+      },
+    },
+  };
+};
+
+export const translateDurationRotate = (axis: string, valueAxisInitial: number, valueDuration: number, valueRotate: number) => {
+  return {
+    initial: {
+      rotate: valueRotate,
+      [axis]: valueAxisInitial,
+    },
+    whileInView: {
+      [axis]: 0,
+      transition: {
+        duration: valueDuration,
+        ease: [0, 0.71, 0.2, 1.01],
+      },
+    },
+  };
+};
+
+export const simpleTranslation = (axis: string, valueAxisInitial: number, zIndex: number, delay: number, duration: number) => {
+  return {
+    initial: {
+      opacity: 0,
+      [axis]: valueAxisInitial,
+    },
+    animate: {
+      opacity: 1,
+      [axis]: 0,
+      zIndex: zIndex,
+    },
+    transition: {
+      ease: [0, 0.71, 0.2, 1.01],
+      delay: delay,
+      duration: duration,
+    },
+  };
+};
+
+export const socialNetwork = (delay: number, duration: number) => {
+  return {
+    initial: {
+      opacity: 0,
+      scale: 0,
+    },
+    animate: {
+      opacity: 1,
+      scale: 1,
+    },
+    transition: {
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: 'spring',
+        damping: 10,
+        stiffness: 300,
+        restDelta: 0.001,
+      },
+      delay: delay,
+      duration: duration,
+    },
+  };
+};
+
+export const simpleScale = () => {
+  return {
+    initial: {
+      opacity: 0,
+      scale: 0,
+    },
+    whileInView: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        ease: [0, 0.71, 0.2, 1.01],
+        scale: {
+          type: 'spring',
+          damping: 15,
+          stiffness: 300,
+          restDelta: 0.001,
+        },
+        delay: 0.25,
+      },
+    },
+  };
+};
+
+export const whileInViewTranslation = (axis: string, valueAxisInitial: number, delay: number, duration: number) => {
+  return {
+    initial: {
+      opacity: 0,
+      [axis]: valueAxisInitial,
+    },
+    whileInView: {
+      opacity: 1,
+      [axis]: 0,
+      transition: {
+        ease: [0, 0.71, 0.2, 1.01],
+        delay: delay,
+        duration: duration,
+      },
+    },
+  };
+};
+
+
+export const scaleBounce = (zIndex: number, valueDelay: number) => {
+  return {
+    initial: {
+      opacity: 0,
+      scale: 0,
+      zIndex: zIndex,
+    },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      zIndex: 1,
+      transition: {
+        ease: [0, 0.71, 0.2, 1.01],
+        scale: {
+          type: 'spring',
+          damping: 10,
+          stiffness: 300,
+          restDelta: 0.001,
+        },
+        delay: valueDelay,
+        duration: 0.25,
+      },
+    },
+  };
+};
+
+
+export const translateBounce = (axis: string, valueAxisInitial: number, zIndex: number, valueDelay: number) => {
+  return {
+    initial: {
+      opacity: 1,
+      scale:0,
+      zIndex: zIndex,
+      [axis]: valueAxisInitial,
+    },
+    whileInView: {
+      opacity: 1,
+      scale:1,
+      [axis]: 0,
+      zIndex: zIndex,
+      transition: {
+        ease: [0, 0.71, 0.2, 1.01],
+        scale: {
+          type: 'spring',
+          damping: 50,
+          stiffness: 600,
+          restDelta: 0.001,
+        },
+        delay: valueDelay,
+        duration: 1,
+      },
+    },
+  };
+};
+
+

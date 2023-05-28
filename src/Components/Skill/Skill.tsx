@@ -139,6 +139,8 @@ const Skill = ({ id, title, titleBackground, skills, gap, color, logotypes }: Sk
                 {title === 'Graphiste' && <Svg.Designer className="svg__icons-graphic__designer" />}
                 {title === 'Technologies Diverses' && <Svg.Other className="svg__icons-graphic__other" />}
                 {title === 'Veille Informatique' && <Svg.Search className="svg__icons-graphic__search" />}
+
+
                 <Svg.Grid className="svg__icons-graphic--background" />
               </motion.div>
             </div>

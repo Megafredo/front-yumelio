@@ -9,6 +9,7 @@ export interface ProjectsData {
     "link-demo": string;
     "link-swaggerdocs": string;
     description: string;
+    "image-mockup":string,
     "name-logotypes": Array<string>;
     logotypes: Array<string>;
   }[];

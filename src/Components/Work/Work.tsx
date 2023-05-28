@@ -31,7 +31,7 @@ const Work = ({ id, title, subtitle, color, description }: WorkTypes) => {
   }, [id]);
 
   const sidebarOptionDesktop = {
-    to:title.secondLine.toLowerCase(),
+    to: title.secondLine.toLowerCase(),
     offsetValueFullstack: -400,
     offsetValueFrontend: -300,
     offsetValueBackend: -400,
@@ -39,7 +39,7 @@ const Work = ({ id, title, subtitle, color, description }: WorkTypes) => {
   };
 
   const sidebarOptionMobile = {
-    to:title.secondLine.toLowerCase(),
+    to: title.secondLine.toLowerCase(),
     offsetValueFullstack: -100,
     offsetValueFrontend: -25,
     offsetValueBackend: -25,
@@ -49,16 +49,18 @@ const Work = ({ id, title, subtitle, color, description }: WorkTypes) => {
   const sectionSubtitleSVG = (titleName: string) => {
     if (subtitle.secondLine === `${titleName}`) {
       return (
-        <motion.span className="container__work__section__info__subtitle--number" style={{ left: `${mediaScreen === 'desktop' ? '2rem' : '1rem'}` }} {...animate.skillSmallNumberTop}>
-          <p>0{id}</p>
-          <motion.span className="container__work__section__info__subtitle--after" style={{ backgroundColor: `${color}` }}></motion.span>
-          <span>
-            <p className="container__work__section__info__subtitle--first-line">{subtitle.firstLine}</p>
-            <p className="container__work__section__info__subtitle--second-line" style={{ color: color }}>
+        <span className="container__work__section__info__subtitle--number" style={{ left: `${mediaScreen === 'desktop' ? '2rem' : '1rem'}` }}>
+          <motion.p {...animate.subtitleNumber}>0{id}</motion.p>
+          <motion.span className="container__work__section__info__subtitle--after" style={{ backgroundColor: `${color}` }} {...animate.subtitleSeparator}></motion.span>
+          <motion.span>
+            <motion.p className="container__work__section__info__subtitle--first-line" {...animate.subtitleFirstLine}>
+              {subtitle.firstLine}
+            </motion.p>
+            <motion.p className="container__work__section__info__subtitle--second-line" {...animate.subtitleSecondtLine} style={{ color: color }}>
               {subtitle.secondLine}
-            </p>
-          </span>
-        </motion.span>
+            </motion.p>
+          </motion.span>
+        </span>
       );
     }
   };
@@ -88,9 +90,15 @@ const Work = ({ id, title, subtitle, color, description }: WorkTypes) => {
             {title.secondLine === 'FRONTEND' && <Svg.Line2 />}
             {title.secondLine === 'BACKEND' && <Svg.Line3 />}
             {title.secondLine === 'WEBDESIGNER' && <Svg.Line4 />}
-            <Svg.Cross />
-            <Svg.Cross />
-            <Svg.Cross />
+            <motion.div {...animate.smallCross}>
+              <Svg.Cross />
+            </motion.div>
+            <motion.div {...animate.mediumCross}>
+              <Svg.Cross />
+            </motion.div>
+            <motion.div {...animate.largerCross}>
+              <Svg.Cross />
+            </motion.div>
           </div>
         </Element>
       </div>
@@ -103,32 +111,36 @@ const Work = ({ id, title, subtitle, color, description }: WorkTypes) => {
         <div className={`container__work__section  ${mediaScreen !== 'desktop' && !reverse && 'flex-column-reverse'}`}>
           {reverse && sectionGraphicSVG()}
 
-          {mediaScreen !== 'mobile' ? <Sidebar  {...sidebarOptionDesktop} /> : <Sidebar {...sidebarOptionMobile} />}
+          {mediaScreen !== 'mobile' ? <Sidebar {...sidebarOptionDesktop} /> : <Sidebar {...sidebarOptionMobile} />}
 
           <div className={`container__work__section__info`}>
             <div className="container__work__section__info__subtitle">{sectionSubtitleSVG(subtitle.secondLine)}</div>
 
             <div className="container__work__section__info__description">
-              <motion.span className="container__work__section__info__title">
+              <span className="container__work__section__info__title">
                 {title.secondLine === 'FULLSTACK' && (
                   <>
-                    <h1 className="container__work__section__info__title--firstLine" style={{ color: `${color}` }}>
+                    <motion.h1 className="container__work__section__info__title--firstLine" style={{ color: `${color}` }} {...animate.effectCross}>
                       {title.firstLine}
-                    </h1>
-                    <h1 className="container__work__section__info__title--secondLine">{title.secondLine}</h1>
-                    <div className="container__work__section__info__title--separator" style={{ backgroundColor: `${color}` }}></div>
+                    </motion.h1>
+                    <motion.h1 className="container__work__section__info__title--secondLine" {...animate.effectTitle}>
+                      {title.secondLine}
+                    </motion.h1>
+                    <motion.div className="container__work__section__info__title--separator" style={{ backgroundColor: `${color}` }} {...animate.effectSeparator}></motion.div>
                   </>
                 )}
                 {title.secondLine !== 'FULLSTACK' && (
                   <>
-                    <h2 className="container__work__section__info__title--firstLine" style={{ color: `${color}` }}>
+                    <motion.h2 className="container__work__section__info__title--firstLine" style={{ color: `${color}` }} {...animate.effectCross}>
                       {title.firstLine}
-                    </h2>
-                    <h2 className="container__work__section__info__title--secondLine">{title.secondLine}</h2>
-                    <div className="container__work__section__info__title--separator" style={{ backgroundColor: `${color}` }}></div>
+                    </motion.h2>
+                    <motion.h2 className="container__work__section__info__title--secondLine" {...animate.effectTitle}>
+                      {title.secondLine}
+                    </motion.h2>
+                    <motion.div className="container__work__section__info__title--separator" style={{ backgroundColor: `${color}` }} {...animate.effectSeparator}></motion.div>
                   </>
                 )}
-              </motion.span>
+              </span>
 
               <span>
                 {description.map((element) => (

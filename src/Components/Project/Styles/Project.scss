@@ -50,42 +50,45 @@
       align-items: center;
 
       &__wrapper {
+        position: relative;
         width: 100%;
         height: 25rem;
         z-index: 2;
+
         &__hexagraphic {
           height: 25rem;
           width: 100%;
+        }
+
+        &__desktop {
+          width: 300px;
+          height: 250px;
+          position: absolute;
+          margin: 0 auto;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          flex-direction: column;
+
           &__mockup {
-            width: 100%;
-            height: 25rem;
+            position: relative;
+            width: 300px;
+          }
 
-            &__desktop {
-              z-index: 3;
-              position: absolute;
-              max-height: 15rem;
-              top: -8%;
-              left: 25.5%;
-              transform: translate(-50%,50%);
-            }
+          &__image {
+            position: relative;
+            width: 400px;
+            height: 296px;
+            left: -2.79rem;
+            top: -16.6rem;
+          }
 
-            &__reflect {
-              z-index: 5;
-              position: absolute;
-              max-height: 11.9rem;
-              top: 3%;
-              left: 25.9%;
-              transform: translate(-50%,50%);
-            }
-
-            &__portfolio {
-              z-index: 4;
-              position: absolute;
-              max-height: 13.2rem;
-              top: 0%;
-              left: 26.2%;
-              transform: translate(-50%,50%);
-            }
+          &__reflect {
+            position: relative;
+            width: 290px;
+            top: -32.4rem;
+            left: 0.8rem;
           }
         }
       }
@@ -175,6 +178,7 @@
             height: 10%;
             width: 100%;
             user-select: none;
+           
 
             & p {
               font-size: 1.5rem;
@@ -189,9 +193,11 @@
             width: 100%;
 
             & p {
+              line-height: 1.1rem;
+              font-size: 1rem;
               font-weight: 600;
               padding: 1rem;
-              // color: vars.$primary-color-03;
+              color: vars.$primary-color-01;
             }
             & a {
               font-weight: 700;
@@ -241,6 +247,8 @@
       flex-direction: column-reverse;
       &__link {
         z-index: 5;
+        width: 7rem;
+        text-align: center;
       }
       &__left {
         width: 100%;
@@ -248,52 +256,32 @@
         z-index: 2;
 
         &__wrapper {
-          width: 100%;
-          height: 25rem;
-          z-index: 2;
-
           &__hexagraphic {
             width: 100%;
             height: 24rem;
-            z-index: 2;
+          }
+
+          &__desktop {
+            width: 220px;
+            height: 200px;
 
             &__mockup {
-          
-              &__desktop {
-              
-                z-index: 3;
-                position: absolute;
-                min-height: 14.3rem;
-                max-height: 14.3rem;
-                top: 41.5%;
-                left: 51%;
-              }
-  
-              &__reflect {
-                z-index: 5;
-                position: absolute;
-                min-height: 11rem;
-                max-height: 11rem;
-                top: 47.8%;
-                left: 52.5%;
-              }
-  
-              &__portfolio {
-                z-index: 4;
-                position: absolute;
-                min-height: 12.6rem;
-                max-height: 12.6rem;
-                top: 45.7%;
-                left: 53.5%;
+              position: relative;
+              width: 220px;
+            }
 
-                // z-index: 4;
-                // position: absolute;
-                // min-height: 12rem;
-                // /* max-height: 12.6rem; */
-                // top: 46.5%;
-                // left: 52.1%;
+            &__image {
+              position: relative;
+              width: 290px;
+              top: -12.2rem;
+              left: -1.93rem;
+            }
 
-              }
+            &__reflect {
+              position: relative;
+              width: 203px;
+              top: -23.8rem;
+              left: 1rem;
             }
           }
         }
@@ -326,9 +314,17 @@
             }
           }
           &__info {
+         
             &__description {
               & p {
                 font-size: 0.8rem;
+              }
+              & a {
+                margin: 0rem 1rem 0.5rem 1rem;
+                display: flex;
+                &:hover {
+                  border: none;
+                }
               }
             }
             &__title {
@@ -343,7 +339,6 @@
             }
           }
         }
-        // background-color: blue;
       }
     }
   }
