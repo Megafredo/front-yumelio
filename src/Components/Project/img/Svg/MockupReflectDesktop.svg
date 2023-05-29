@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330.23 219.77">
+  <defs>
+    <style>
+      .mockup-reflect-1 {
+        fill: #d3dbdd;
+        opacity: .3;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1-2" data-name="Calque 1">
+    <path class="mockup-reflect-1" d="m.95,3.86l326.01,215.54c1.56,1.03,3.58-.32,3.23-2.16-13.05-67.79-26.1-135.59-39.15-203.38-.18-.96-1-1.67-1.98-1.71C193.45,8.11,97.82,4.06,2.2,0,.07-.09-.83,2.69.95,3.86Z"/>
+  </g>
+</svg>

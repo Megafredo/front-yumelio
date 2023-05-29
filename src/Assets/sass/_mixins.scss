@@ -32,3 +32,10 @@
   animation-fill-mode: $anim-mode;
 }
 
+//~ ------- Refacto
+@mixin positioning($maxWidth, $posTop, $posLeft){
+  max-width: $maxWidth;
+  top: $posTop;
+  left: $posLeft;	
+}
+

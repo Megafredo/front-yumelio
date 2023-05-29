@@ -20,8 +20,8 @@ const Logo = () => {
   return (
     <>
       <motion.div className="logo" data-cursor-pointer="active">
-        <motion.button className="logo__link" tabIndex={0} role="button" onClick={redirectHome} {...logoOptions}>
-          <LogoSVG />
+        <motion.button  title="VisualKoding" className="logo__link" tabIndex={0} role="button" onClick={redirectHome} {...logoOptions}>
+          <LogoSVG aria-label="Logo de VisualKoding" />
           {/* <span className="logo__link__name">VisualKoding</span> */}
           {/* <VisualKodingSVG/> */}
         </motion.button>

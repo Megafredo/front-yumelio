@@ -3,11 +3,14 @@
 @font-face {
   font-family: 'Nunito';
   src: local('Nunito-VariableFont_wght'), url('../fonts/Nunito-VariableFont_wght.woff2') format('woff2');
+  // Permet de garantir que le contenu textuel reste accessible et lisible même pendant le chargement de la police personnalisée en proposant une police de substitution.
+  font-display: optional;
 }
 
 @font-face {
   font-family: 'Nunito-Italic';
   src: local('Nunito-Italic-VariableFont_wght'), url('../fonts/Nunito-Italic-VariableFont_wght.woff2') format('woff2');
+  font-display: optional; 
 }
 
 $font-Nunito: 'Nunito', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

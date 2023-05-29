@@ -20,7 +20,7 @@
   &__webdesigner {
     width: 0.35rem;
     height: 3.5rem;
-    border-radius: 120rem;
+    border-radius: 10rem;
     opacity: 0.02;
     background-color: #242c3f;
     transform: scaleY(0.8);
@@ -28,7 +28,7 @@
     &--active {
       margin: 1rem 0;
       opacity: 1;
-      border-radius: 150rem;
+      border-radius: 10rem;
       transform: scaleY(0.8);
       transition: all 0.25s ease-in-out;
     }
