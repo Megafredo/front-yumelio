@@ -54,8 +54,10 @@ const subtitleSeparator = animation.translateDurationRotate('x', 50, 1.50, 0);
 //& Contact
   // zoneContact(axis: string, valueAxisInitial: number, zIndex: number, delay: number, duration: number)
   const zoneContact01 = animation.simpleTranslation('x', 100, 1, 0.6, 1);
+  const zoneContact01Mobile = animation.simpleTranslation('y', 100, 1, 0.6, 1);
   const zoneContact02 = animation.simpleTranslation('y', 100, 2, 0, 1);
   const zoneContact03 = animation.simpleTranslation('x', -200, 1, 0.7, 0.6);
+  const zoneContact03Mobile = animation.simpleTranslation('y', -200, 1, 0.7, 0.6);
 
   // socialNetwork(delay: number, duration: number)
   const socialNetwork01 = animation.socialNetwork(1, 0.25);
@@ -107,8 +109,10 @@ export {
   subtitleSeparator,
   workSvg,
   zoneContact01,
+  zoneContact01Mobile,
   zoneContact02,
   zoneContact03,
+  zoneContact03Mobile,
   socialNetwork01,
   socialNetwork02,
   socialNetwork03,

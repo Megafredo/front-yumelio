@@ -4,6 +4,7 @@ import './Styles/Contact.scss';
 //& Imports Module
 import { motion } from 'framer-motion';
 import { ChangeEvent, FormEvent, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 //& Imports Components
@@ -12,6 +13,7 @@ import * as Svg from './Svg';
 
 //& Import Interfaces
 import { MessageState, FormData } from './Types';
+import { RootState } from '../../Store';
 
 //& Animations
 import * as animate from '../../Utils/Animations/animate';
@@ -19,6 +21,8 @@ import * as animate from '../../Utils/Animations/animate';
 const Contact = () => {
   const LINK_GITHUB = 'https://github.com/Megafredo';
   const LINK_LINKEDIN = 'https://linkedin.com/';
+
+  const { mediaScreen } = useSelector((state: RootState) => state.mediaSlice);
 
   const [messages, setMessages] = useState<MessageState[]>([]);
   const [formData, setFormData] = useState<FormData>({
@@ -63,8 +67,6 @@ ${firstName} ${lastName}`);
     });
   };
 
-
-
   return (
     <section className="contact">
       <div className="contact__container">
@@ -80,7 +82,7 @@ ${firstName} ${lastName}`);
 
         <div className="contact__container__zone">
           <Svg.Grid className="contact__container__zone__svg-grid" />
-          <motion.div {...animate.zoneContact01} className="contact__container__zone__link">
+          <motion.div {...(mediaScreen === 'desktop' ? animate.zoneContact01 : animate.zoneContact01Mobile)} className="contact__container__zone__link">
             <motion.div {...animate.socialNetwork01}>
               <Link to="/" title="Cliquez ici pour retourner à la page d'accueil" data-cursor-pointer="active">
                 <Svg.VisualKoding aria-label="Logo de VisualKoding" />
@@ -96,16 +98,16 @@ ${firstName} ${lastName}`);
           <motion.div {...animate.zoneContact02} className="contact__container__zone__form">
             <form onSubmit={handleSubmit}>
               <input type="text" id="first-name" name="first-name" value={formData['first-name']} onChange={handleChange} placeholder="Prénom" minLength={2} required />
-              <label htmlFor="first-name">Prénom</label>
+              <label htmlFor="first-name" data-cursor-pointer="active">Prénom</label>
 
               <input type="text" id="last-name" name="last-name" value={formData['last-name']} onChange={handleChange} placeholder="Nom" minLength={2} required />
-              <label htmlFor="last-name">Nom</label>
+              <label htmlFor="last-name" data-cursor-pointer="active">Nom</label>
 
               <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="Objet" minLength={2} required />
-              <label htmlFor="subject">Objet</label>
+              <label htmlFor="subject" data-cursor-pointer="active">Objet</label>
 
               <textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Entrez votre message" minLength={10} required />
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message" data-cursor-pointer="active">Message</label>
 
               <button type="submit" data-cursor-pointer="active">
                 Valider
@@ -118,7 +120,7 @@ ${firstName} ${lastName}`);
             ))}
           </motion.div>
 
-          <motion.div {...animate.zoneContact03} className="contact__container__zone__text">
+          <motion.div {...(mediaScreen === 'desktop' ? animate.zoneContact03 : animate.zoneContact03Mobile)} className="contact__container__zone__text">
             <h2>Vers l’Alsace et au-delà !</h2>
             <span>
               <p>Je suis ravi que tu aies visité mon portfolio. </p>
