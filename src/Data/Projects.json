@@ -10,7 +10,7 @@
         "link-github": "https://github.com/Megafredo/front-yumelio",
         "link-demo": "",
         "link-swaggerdocs":"",
-        "description": "Ce projet représente une vitrine de mes différentes compétences et de mon travail en tant que développeur et graphiste, n'hésite pas à explorer mon code pour en apprendre davantage sur ma façon de coder.",
+        "description": "Ce projet reflète mes compétences en tant que développeur et graphiste, et constitue une vitrine simple de mon travail. N'hésitez pas à explorer mon code pour découvrir ma méthodologie de programmation.",
         "image-mockup": "MockupPortfolio",
         "name-logotypes": ["html", "css", "sass", "javascript", "react", "typescript"],
         "logotypes": [
@@ -33,7 +33,7 @@
         "link-github": "https://github.com/Megafredo/o-kanban",
         "link-demo": "",
         "link-swaggerdocs":"",
-        "description": "L'application offre une vue intuitive et organisée des tâches, permettant de les suivre et de les gérer facilement. Avec des fonctionnalités telles que la création de cartes, de tag, le déplacement des tâches entre les colonnes.",
+        "description": "L'application propose une interface intuitive et organisée pour suivre et gérer les tâches facilement. Elle offre des fonctionnalités telles que la création de cartes, de tags et le déplacement des tâches entre les colonnes.",
         "image-mockup": "MockupOkanban",
         "name-logotypes": ["html", "css", "javascript"],
         "logotypes": [
@@ -57,7 +57,7 @@
         "link-github": "https://github.com/Megafredo/api-yumelio",
         "link-demo": "",
         "link-swaggerdocs": "",
-        "description": " Une API Portolio offrant des fonctionnalités telles que le versioning, utilisation de schéma avec AJV, l'authentification utilisateur JWT, un système de journalisation des erreurs, intégration de fonctions SQL pour le CRUD, Nodemailer et SwaggerDocs.",
+        "description": "Cette API Portfolio offre un ensemble de fonctionnalités, notamment le versioning, l'utilisation de schémas avec AJV, l'authentification utilisateur JWT, un système de journalisation des erreurs, l'intégration de fonctions SQL pour le CRUD, Nodemailer et SwaggerDocs.",
         "image-mockup": "MockupApi",
         "name-logotypes": ["nodejs", "express", "sqitch", "sql", "postgresql", "typescript"],
         "logotypes": [
@@ -80,7 +80,7 @@
         "link-github": "https://github.com/Megafredo/api-learnerr",
         "link-demo": "https://learnerr.yumedo.com/",
         "link-swaggerdocs": "https://api-learnerr.yumicode.net/api-docs/",
-        "description": " L’erreur, une étape de l’apprentissage, nécessaire et source d’enseignements pour tous. Voici un site dont les fonctionnalités servirons d'outils de veille et d'apprentissage au développeur.",
+        "description": "Les erreurs font partie intégrante de l'apprentissage et sont une source d'enseignement pour tous. Ce site propose des fonctionnalités qui serviront d'outils de veille et d'apprentissage pour les développeurs, en recherchant les erreurs connues.",
         "image-mockup": "MockupLearnerr",
         "name-logotypes": ["nodejs", "express", "sqitch", "sql", "postgresql"],
         "logotypes": [
@@ -108,7 +108,7 @@
         "link-github": "",
         "link-demo": "",
         "link-swaggerdocs": "",
-        "description": "Réalisation d'une charte graphique complète, comprenant un logo distinctif ainsi de carte de visite professionnelle, pour une Société en Participation (SEP) évoluant dans le domaine du développement web et des applications mobiles.",
+        "description": "Création d'une charte graphique complète comprenant un logo distinctif et des cartes de visite professionnelles pour une Société en Participation (SEP) spécialisée dans le développement web et les applications mobiles.",
         "image-mockup": "MockupYumedo",
         "name-logotypes": ["illustrator", "indesign"],
         "logotypes": [
@@ -123,7 +123,7 @@
         "link-github": "",
         "link-demo": "",
         "link-swaggerdocs": "",
-        "description": "Réalisation d'une maquette graphique ainsi que son logo pour un site de partage et d'échange, offrant un espace où vous pouvez parler librement et anonymement.",
+        "description": "Réalisation d'une maquette graphique et de son logo pour un site de partage et d'échange en ligne. Ce site offre un espace bienveillant où vous pouvez vous exprimer librement et anonymement, dans une atmosphère propice à l'échange et à la convivialité.",
         "image-mockup": "MockupForum",
         "name-logotypes": ["illustrator", "photoshop"],
         "logotypes": [
