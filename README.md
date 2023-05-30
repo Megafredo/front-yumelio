@@ -6,6 +6,7 @@
   - Redux toolkit
   - SASS
   - Typescript
+  - NodeJS
 
 ## Sommaire
 
