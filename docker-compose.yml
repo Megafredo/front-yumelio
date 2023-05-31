@@ -1,0 +1,25 @@
+version: '1'
+services:
+  front:
+    container_name: ${CONTAINER_NAME}
+    build:
+      context: .
+      args:
+        portno: ${PORT}
+    networks:
+      - frontend
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - .:/data
+    # give new name everytime change version
+    image: ${IMAGE_NAME}:${TAG}
+    restart: always
+
+volumes:
+  db-data: # names volumes can be managed easier using docker-compose
+
+networks:
+  frontend: # put the same name as NETWORK_NAME
+    name: ${NETWORK_NAME}
+    driver: bridge
