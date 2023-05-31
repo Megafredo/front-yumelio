@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="line-01" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 978.09 808.1">
+  <defs>
+    <style>
+      .line-01 {
+        fill: none;
+        stroke: url(#linearGradient-line-01);
+        stroke-dasharray: 15 12;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+    <linearGradient id="linearGradient-line-01" class="linearGradient-line-01" x1="0" y1="305.03" x2="978.09" y2="305.03" gradientUnits="userSpaceOnUse">
+      <stop offset="0"/>
+      <stop offset=".05"/>
+      <stop offset=".40"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path class="line-01" d="m23.37,229.28C-8.52,156.97-.04,125.23,12.26,109.54c34.96-44.58,121.1,14.51,245.77-20.26C363.44,59.87,367.53-.69,436.7,1.28c88.91,2.54,95.58,102.99,226.67,181.33,139.11,83.14,226.53,26.74,284,105.33,62.06,84.88,9.87,218.75-9.33,268-16.07,41.21-74.25,195.35-183.61,207.64-102.1,11.47-126.96-97.1-240.39-100.97-144.81-4.94-203.02,168.66-321.33,141.33-52.63-12.16-89.42-78.06-114.67-118.67-23.68-38.08-36.73-73.34-44.14-98.06"/>
+  </g>
+</svg>
