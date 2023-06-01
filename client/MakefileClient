@@ -1,3 +1,7 @@
+# Run non standard name for make file :
+# make -f or --file <name_makefile> <command_name>
+# Example : make -f MakefileClient component
+
 COMPONENT_NAME ?= $(shell bash -c 'read -p "Component name: " component_name; echo $$component_name')
 
 #& Variables
