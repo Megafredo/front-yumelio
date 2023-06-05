@@ -15,6 +15,7 @@ import { setTargetScreen } from '../Store/Reducers/Media';
 import { setTargetScrollY } from '../Store/Reducers/Scroll';
 import { mousePosition, parallaxEffectOnMouseMove, customCursor } from '../Store/Reducers/Cursor';
 import Cursor from '../Components/Cursor/Cursor';
+import Seo from '../Components/Seo/Seo';
 
 //& Imports Types
 import { RootState } from '../Store';
@@ -70,6 +71,7 @@ const Layout = () => {
   return (
     <div className={`layout theme--${mode}`}>
       <Cursor />
+      <Seo/>
       <Header />
       <main className={`media--${mediaScreen}`}>
         {/* <Spinner /> */}

@@ -6,8 +6,8 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { HelmetProvider } from 'react-helmet-async';
 // import { rentagenceApiSlice } from './Store/Api';
-
 
 //! Important on dois spécifier l'API
 import { ApiProvider } from '@reduxjs/toolkit/query/react';
@@ -16,15 +16,16 @@ import { ApiProvider } from '@reduxjs/toolkit/query/react';
 import { store } from './Store';
 import { App } from './App/App';
 
-
 const root = createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <StrictMode>
     <BrowserRouter>
       {/* <ApiProvider api={rentagenceApiSlice}> */}
-        <Provider store={store}>
+      <Provider store={store}>
+        <HelmetProvider>
           <App />
-        </Provider>
+        </HelmetProvider>
+      </Provider>
       {/* </ApiProvider> */}
     </BrowserRouter>
   </StrictMode>

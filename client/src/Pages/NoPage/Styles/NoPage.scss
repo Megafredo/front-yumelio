@@ -4,52 +4,43 @@
 @use './theme.scss';
 
 .nopage {
-  width: 80%;
-  margin: 0 auto;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  // transform: scale(1);
 
   &__container {
-    margin: 0 auto;
-    width: 600px;
-    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     & > *:nth-child(1n) {
-      width: 600px;
-      height: auto;
+      width: 500px;
     }
 
     &__island {
       position: absolute;
-      top: 24rem;
+      top: 20rem;
     }
 
     &__water {
-      margin: 4rem 0 0 0;
+      position: absolute;
+      top: 35rem;
     }
 
     &__number {
-      width: 600px;
-      height: 600px;
       position: absolute;
       left: 50%;
-      transform: translate(-38%, -50%);
+      transform: translate(-41%, -185%);
       display: flex;
       flex-direction: row;
 
       & > *:nth-child(1n) {
-        width: 600px;
+        width: 20%;
         margin: 0 0.5rem;
         position: relative;
-      }
-
-      &__left,
-      &__center,
-      &__right {
-        max-width: 20%;
-        top: -28rem;
       }
     }
 
@@ -58,63 +49,58 @@
       left: 50%;
       transform: translate(-38%, -50%);
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
 
       & > *:nth-child(1n) {
-        width: 500px;
-        position: relative;
+        width: 100%;
+        position: absolute;
       }
 
       &__one {
-        @include mixins.positioning(100%, -42rem, 18rem);
+        @include mixins.positioning(90%, -24rem, 15rem);
       }
 
       &__two {
-        @include mixins.positioning(75%, -36rem, -20rem);
+        @include mixins.positioning(85%, -25rem, -19rem);
       }
 
       &__three {
-        @include mixins.positioning(50%, -38rem, 16.5rem);
+        @include mixins.positioning(50%, -31rem, 14.5rem);
       }
 
       &__four {
-        @include mixins.positioning(45%, -35rem, -4rem);
+        @include mixins.positioning(45%, -31rem, -4rem);
       }
     }
 
     &__text {
-      position: relative;
-      @include mixins.positioning(50%, -40rem, 7.5rem);
+      width: 100%;
+      position: absolute;
+      @include mixins.positioning(50%, 6.5rem, 5.5rem);
     }
 
     &__moon {
-      position: relative;
-      @include mixins.positioning(28%, -56rem, 18rem);
+      width: 100%;
+      position: absolute;
+      @include mixins.positioning(28%, -5rem, 13.5rem);
     }
 
     &__butterfly {
-      width: 600px;
-      height: 600px;
+      width: 100%;
       position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-38%, -50%);
       display: flex;
       flex-direction: row;
 
       & > *:nth-child(1n) {
-        position: relative;
+        width: 100%;
+        position: absolute;
       }
 
       &__right {
-        width: 5%;
-        top: 7rem;
-        left: 24rem;
+        @include mixins.positioning(5%, -10rem, 26.5rem);
       }
       &__left {
-        width: 7%;
-        top: 6rem;
-        left: 0rem;
+        @include mixins.positioning(7%, -11rem, 3.5rem);
       }
     }
   }
@@ -123,81 +109,37 @@
 //& ---------------------------------- MEDIA QUERY
 @media screen and (max-width: 990px) {
   .nopage {
+    transform: scale(0.5);
     &__container {
-      width: 270px;
-      height: 270px;
-
-      & > *:nth-child(1n) {
-        width: 270px;
-        height: auto;
-      }
-
-      &__island {
-        top: 12rem;
-      }
-      &__water {
-        margin: 3rem 0 0 0;
-      }
-
       &__number {
-        position: absolute;
-        left: 50%;
-        transform: translate(-34%, -50%);
-        display: flex;
-        flex-direction: row;
-
-        & > *:nth-child(1n) {
-          width: 270px;
-          margin: 0 0.2rem;
-        }
-        &__left,
-        &__center,
-        &__right {
-          position: relative;
-          max-width: 20%;
-          top: -13.5rem;
-        }
-      }
-
-      &__cloud {
-        & > *:nth-child(1n) {
-          width: 100%;
-          position: relative;
-        }
-
-        &__one {
-          @include mixins.positioning(50%, -19.8rem, 8rem);
-        }
-        &__two {
-          @include mixins.positioning(60%, -18rem, -5rem);
-        }
-        &__three {
-          @include mixins.positioning(40%, -18.8rem, 8.5rem);
-        }
-        &__four {
-          @include mixins.positioning(45%, -18rem, -1rem);
-        }
+        transform: translate(-35%, -184%);
       }
 
       &__text {
-        @include mixins.positioning(50%, -19rem, 4.5rem);
+        @include mixins.positioning(50%, 6.5rem, 7.8rem);
       }
 
-      &__moon {
-        @include mixins.positioning(28%, -26.5rem, 8.4rem);
-      }
-
-      &__butterfly {
+      &__cloud {
+  
         & > *:nth-child(1n) {
-          position: relative;
-          height: auto;
+          width: 70%;
+          position: absolute;
         }
-
-        &__right {
-          @include mixins.positioning(5%, 4.2rem, 10rem);
+  
+        &__one {
+          @include mixins.positioning(65%, -24rem, 11rem);
         }
-        &__left {
-          @include mixins.positioning(7%, 3.8rem, 0.2rem);
+  
+        &__two {
+          @include mixins.positioning(65%, -24rem, -12rem);
+        }
+  
+        &__three {
+          @include mixins.positioning(50%, -31rem, 14.5rem);
+        }
+  
+        &__four {
+          @include mixins.positioning(45%, -31rem, -4rem);
         }
       }
     }

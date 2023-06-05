@@ -4,6 +4,7 @@
   "route_name_projects": "Projets",
   "route_name_contact": "Contact",
   "route_name_login": "Connexion",
+  "route_name_legal": "Mentions Légales",
 
   "home_h1": "Développeur Full stack",
   "home_description": "Développeur full stack et graphiste expérimenté dans la conception, création de sites web et d’application mobiles. Possède des compétences en développement front-end, back-end, ainsi qu’en design graphique et en UX/UI. Maîtrise des technologies telles que HTML/CSS, Javascript, React, NodeJS, PostgreSQL et des outils graphique comme Photoshop et Illustrator.",

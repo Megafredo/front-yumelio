@@ -1,0 +1,28 @@
+@use '../../../Assets/sass/mixins.scss';
+@use '../../../Assets/sass/vars.scss';
+@use '../../../Assets/sass/keyframes.scss';
+
+//! THEMIFY
+
+$themeFooter: (
+  light: (
+    link-color: vars.$primary-color-03,
+    link-color-hover: vars.$primary-color-02
+  ),
+  dark: (
+    link-color: vars.$primary-color-01,
+    link-color-hover: vars.$primary-color-04
+  ),
+);
+
+//~ ---------------------------------------------- Theme Skill
+@include mixins.themify($themeFooter) {
+  .footer {
+    & a {
+      color: mixins.themed('link-color');
+      &:hover {
+        color: mixins.themed('link-color-hover');
+      }
+    }
+  }
+}

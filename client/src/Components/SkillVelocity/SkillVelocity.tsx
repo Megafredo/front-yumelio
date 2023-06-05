@@ -9,9 +9,9 @@ import {
   useTransform,
   useMotionValue,
   useVelocity,
-  useAnimationFrame
+  useAnimationFrame,
+  wrap
 } from "framer-motion";
-import { wrap } from "@motionone/utils";
 import { useRef } from "react";
 import { ParallaxProps } from './Types';
 

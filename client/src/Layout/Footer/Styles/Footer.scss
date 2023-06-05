@@ -1,0 +1,14 @@
+@use '../../../Assets/sass/mixins';
+@use '../../../Assets/sass/vars';
+@use '../../../Assets/sass/keyframes';
+@use './theme.scss';
+
+.footer {
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  user-select: none;
+  & p {
+    font-size: 0.7rem;
+  }
+}

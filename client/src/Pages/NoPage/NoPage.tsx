@@ -26,12 +26,12 @@ const NoPage = () => {
           <Svg.NfWater data-parallax-axis="-0.004" />
         </motion.div>
 
-        <div className="nopage__container__number">
+         <div className="nopage__container__number">
           <motion.div {...scaleBounce(5, 0.5)} className="nopage__container__number__left">
             <Svg.Nf4Left data-parallax-axis="0.03" />
           </motion.div>
 
-          <motion.div {...scaleBounce(5, 0.6)} className="nopage__container__number__center">
+         <motion.div {...scaleBounce(5, 0.6)} className="nopage__container__number__center">
             <Svg.Nf0Center data-parallax-axis="0.03" />
           </motion.div>
 
@@ -40,7 +40,7 @@ const NoPage = () => {
           </motion.div>
         </div>
 
-        <div className="nopage__container__cloud">
+         <div className="nopage__container__cloud">
           <motion.div {...scaleBounce(1, 0.5)} className="nopage__container__cloud__four">
             <Svg.NfCloud4 data-parallax-axis="0.004" />
           </motion.div>
@@ -58,11 +58,11 @@ const NoPage = () => {
           </motion.div>
         </div>
 
-        <motion.div {...scaleBounce(5, 0.6)} className="nopage__container__text">
+       <motion.div {...scaleBounce(5, 0.6)} className="nopage__container__text">
           <Svg.NfText data-parallax-axis="0.04" />
         </motion.div>
 
-        <motion.div {...scaleBounce(1, 0.7)} className="nopage__container__moon">
+         <motion.div {...scaleBounce(1, 0.7)} className="nopage__container__moon">
           <Svg.NfMoon data-parallax-axis="-0.004" />
         </motion.div>
 
@@ -75,8 +75,9 @@ const NoPage = () => {
             <Svg.NfButterfly2 data-parallax-axis="-0.01" />
           </motion.div>
 
+        </div> 
 
-        </div>
+
       </div>
     </section>
   );

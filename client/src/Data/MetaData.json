@@ -1,0 +1,22 @@
+[
+  {
+    "pageName": "",
+    "seoTitle": "Développement Web & Graphisme - VisualKoding, Alsace",
+    "seoMetaContent": "Avec VisualKoding, trouvez les skills que vous recherchez pour vos projets : Développement Front-End - Back-End - Graphisme & mise en place de Software."
+  },
+  {
+    "pageName": "skills",
+    "seoTitle": "Compétences développeur Full Stack - VisualKoding",
+    "seoMetaContent": "Je maîtrise plusieurs technologies pour donner vie à vos projets dont : Javascript, TypeScript, PostgreSQL, Html, Css. Découvrez toutes mes compétences !"
+  },
+  {
+    "pageName": "projects",
+    "seoTitle": "Découvrez mes projets de développement web - VisualKoding",
+    "seoMetaContent": "Explorez des réalisations uniques dans les domaines du développement web et du webdesign : application web, API, base de donnée, charte graphique, logo."
+  },
+  {
+    "pageName": "contact",
+    "seoTitle": "Prêt à donner vie à vos projets web & design ? - VisualKoding",
+    "seoMetaContent": "Contactez-moi pour collaborer sur des projets front-end, back-end et des créations graphiques. Rencontrons-nous et concrétisons ensemble votre vision !"
+  }
+]

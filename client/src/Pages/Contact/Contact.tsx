@@ -88,10 +88,10 @@ ${firstName} ${lastName}`);
                 <Svg.VisualKoding aria-label="Logo de VisualKoding" />
               </Link>
             </motion.div>
-            <motion.a {...animate.socialNetwork02} href={LINK_GITHUB} title="Cliquez ici pour accéder à la page GitHub" target="_blank" rel="noopener noreferrer" data-cursor-pointer="active">
+            <motion.a {...animate.socialNetwork02} href={LINK_GITHUB} title="Cliquez ici pour accéder à ma page GitHub" target="_blank" rel="noopener noreferrer" data-cursor-pointer="active">
               <Svg.GitHub aria-label="Logo de GitHub" />
             </motion.a>
-            <motion.a {...animate.socialNetwork03} href={LINK_LINKEDIN} title="Cliquez ici pour accéder à la page Linkedin" target="_blank" rel="noopener noreferrer" data-cursor-pointer="active">
+            <motion.a {...animate.socialNetwork03} href={LINK_LINKEDIN} title="Cliquez ici pour accéder à ma page Linkedin" target="_blank" rel="noopener noreferrer" data-cursor-pointer="active">
               <Svg.Linkedin aria-label="Logo de Linkedin" />
             </motion.a>
           </motion.div>
@@ -123,8 +123,8 @@ ${firstName} ${lastName}`);
           <motion.div {...(mediaScreen === 'desktop' ? animate.zoneContact03 : animate.zoneContact03Mobile)} className="contact__container__zone__text">
             <h2>Vers l’Alsace et au-delà !</h2>
             <span>
-              <p>Je suis ravi que tu aies visité mon portfolio. </p>
-              <p>Si tu as des questions, des projets intéressants à discuter ou si tu veux simplement échanger des idées, n'hésite pas à me contacter.</p>
+              <p>Je suis ravi que tu aies visité mon portfolio VisualKoding. </p>
+              <p>Si tu as des questions, des projets intéressants à partager ou si tu veux simplement échanger des idées, n'hésite pas à me contacter.</p>
               <p>Je suis toujours ouvert aux nouvelles opportunités de collaboration passionnantes.</p>
             </span>
           </motion.div>

@@ -200,6 +200,8 @@
               color: vars.$primary-color-01;
             }
             & a {
+              position: relative;
+              z-index: 2;
               font-weight: 700;
               color: vars.$primary-color-01;
               text-decoration: none;

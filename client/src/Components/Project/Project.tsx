@@ -12,14 +12,14 @@ import * as Svg from './img/Svg';
 import * as Png from './img/Png';
 
 //& Imports Types
-import { ProjectsData } from './Types';
+import { ProjectsType } from './Types';
 import { RootState } from '../../Store';
 
 //& Animations
 import * as animate from '../../Utils/Animations/animate';
 import { translateBounce } from '../../Utils/Animations';
 
-const Project = ({ id, title, color, projects }: ProjectsData) => {
+const Project = ({ id, title, color, projects }: ProjectsType) => {
   const { mediaScreen } = useSelector((state: RootState) => state.mediaSlice);
 
   return (
