@@ -1,9 +1,10 @@
 //& Import SCSS
-import './Footer.scss';
+import './Styles/Footer.scss';
 
 //& Imports modules
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 //& Imports Types
 import { RootState } from '../../Store';
@@ -17,7 +18,7 @@ const Footer = () => {
   return (
     <footer className={`footer theme--${mode}`}>
       <p className="footer__copyright">
-        Copyright © {currentYear} - {t('footer_copyright')} - VisualKoding
+        Copyright © {currentYear} - {t('footer_copyright')} - VisualKoding - <Link role="link" data-cursor-pointer="active" to="/legal">Mentions Légales</Link>
       </p>
     </footer>
   );

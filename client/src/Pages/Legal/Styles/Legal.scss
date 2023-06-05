@@ -1,0 +1,31 @@
+@use '../../../Assets/sass/mixins';
+@use '../../../Assets/sass/vars';
+@use '../../../Assets/sass/keyframes';
+
+.legal {
+  width: 50%;
+  margin: 0 auto;
+
+  & h1,
+  h2 {
+    font-weight: 800;
+    margin: 2rem 0 0 0;
+  }
+  & h1 {
+    font-size: 2rem;
+  }
+  & h2 {
+    font-size: 1.5rem;
+  }
+
+  & p {
+    margin: 1rem 0;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .legal {
+    margin: 2rem;
+  }
+}

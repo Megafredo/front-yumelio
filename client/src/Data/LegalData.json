@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "title": "Mentions légales",
+    "description": [
+      "Les présentes mentions légales énoncent les conditions d'utilisation de ce site web ainsi que les informations légales et réglementaires relatives à son fonctionnement. Elles définissent également vos droits et obligations en tant qu'utilisateur du site. Veuillez lire attentivement ces mentions légales avant de naviguer sur le site ou d'utiliser ses services. En accédant à ce site, vous acceptez pleinement et sans réserve ces mentions légales."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Droit applicable et juridiction compétente :",
+    "description": [
+      "Le présent site est soumis au droit applicable français. Les présentes mentions légales sont régies par le droit français.",
+
+      "En cas de litige résultant de l'utilisation de ce site ou en relation avec celui-ci, la juridiction compétente sera celle du ressort du tribunal de MULHOUSE."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Droit applicable et juridiction compétente :",
+    "description": [
+      "Conformément à l'article n°6 de la Loi n°2004-575 du 21 Juin 2004 pour la confiance dans l'économie numérique, les responsables de ce site internet sont :",
+
+      "Responsable du site & Directeur de la publication :",
+      "- Société : M. Frédéric BASLER, alias VisualKoding",
+      "- Statut juridique : Auto-entrepreneur",
+      "- Activité Principale Exercée : Programmation Informatique",
+      "- Siège social : MULHOUSE, 68200",
+      "- E-mail : contact@visualkoding.com",
+      "- Immatriculation : Régime d'imposition - BNC (Bénéfices Non Commerciaux)",
+      "- N° SIREN : 922 745 419",
+      "- N° SIRET : 922 745 419 00015"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Hébergeur du site :",
+    "description": [
+      "Ce site utilise un nom de domaine fourni par Hostinger. Hostinger est un fournisseur de services d'enregistrement de noms de domaine réputé. Veuillez noter que l'hébergement du site est assuré sur un serveur Raspberry Pi personnel.",
+
+      "Pour plus d'informations sur les services d'enregistrement de noms de domaine fournis par Hostinger, vous pouvez consulter leur site web officiel à l'adresse suivante : www.hostinger.fr.",
+
+      "Si vous avez des questions ou des préoccupations concernant le nom de domaine utilisé par ce site, n'hésitez pas à nous contacter pour obtenir des informations supplémentaires."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Propriété intellectuelle & Copyright :",
+    "description": [
+      "Tous les contenus présents sur ce site, tels que textes, images, vidéos, graphiques, logos, icônes, clips audio, ainsi que leur agencement et leur présentation, sont la propriété intellectuelle de VisualKoding et sont protégés par les lois sur le droit d'auteur et les traités internationaux.",
+
+      "L'utilisation ou la reproduction non autorisée de ces contenus, en tout ou en partie, est strictement interdite, sauf indication contraire. Cela inclut la copie, la modification, la distribution, la diffusion, la publication ou toute autre exploitation des contenus sans l'autorisation préalable écrite de VisualKoding.",
+
+      "Dans certains cas, ce site peut utiliser des ressources provenant de banques d'images gratuites, telles que Freepik, Pixabay, etc. Ces ressources sont soumises aux conditions d'utilisation spécifiques de ces plateformes et sont fournies sous licence ou avec des autorisations appropriées. Les droits d'auteur de ces ressources restent la propriété de leurs auteurs respectifs.",
+
+      "Si vous estimez qu'un contenu présent sur ce site viole vos droits de propriété intellectuelle, veuillez nous contacter immédiatement avec les informations pertinentes, et nous prendrons les mesures nécessaires pour remédier à la situation.",
+
+      "Nous vous remercions de respecter nos droits de propriété intellectuelle ainsi que les droits des auteurs de toutes les ressources utilisées dans ce site."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Droit d'accès au données personnelles :",
+    "description": [
+      "Lors de votre visite sur notre site, certaines informations non personnelles peuvent être collectées automatiquement, telles que votre adresse IP, le navigateur utilisé, le système d'exploitation, les pages consultées et les liens cliqués. Ces données sont collectées de manière anonyme et servent uniquement à des fins statistiques et d'analyse du trafic du site afin d'améliorer nos services. Elles ne permettent pas votre identification personnelle."
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Cookies :",
+    "description": [
+      "Ce site web utilise des cookies pour améliorer votre expérience de navigation et fournir des fonctionnalités supplémentaires. Les cookies sont de petits fichiers texte stockés sur votre appareil lorsque vous visitez un site web. Ils sont largement utilisés pour permettre au site de fonctionner correctement, d'analyser le comportement des utilisateurs et de personnaliser les contenus et publicités.",
+
+      "Types de cookies utilisés :",
+
+      "Cookies essentiels : Ces cookies sont nécessaires au bon fonctionnement du site web et ne peuvent pas être désactivés dans nos systèmes. Ils sont généralement définis en réponse à des actions de votre part, telles que la connexion, le choix de la langue, les préférences de confidentialité, etc.",
+
+      "Cookies de performance et d'analyse : Ces cookies collectent des informations anonymes sur la manière dont les visiteurs utilisent notre site web, telles que les pages les plus visitées, la durée moyenne des visites, etc. Ces données sont utilisées dans le but d'améliorer le fonctionnement du site et l'expérience utilisateur, en optimisant le contenu et en résolvant d'éventuels problèmes techniques. Il est important de souligner que ces informations sont anonymes et ne permettent pas d'identifier les utilisateurs individuels. Les données collectées sont également agrégées, garantissant ainsi la confidentialité des utilisateurs. Nous nous engageons à respecter les lois et réglementations en vigueur concernant la protection des données des utilisateurs.",
+
+      "Contrôle des cookies :",
+
+      "Vous pouvez choisir d'accepter ou de refuser les cookies en modifiant les paramètres de votre navigateur. La plupart des navigateurs vous permettent de contrôler les cookies via leurs paramètres de confidentialité. Veuillez noter que le blocage des cookies peut avoir un impact sur certaines fonctionnalités du site et limiter votre expérience de navigation."
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Liens externes :",
+    "description": [
+      "Ce site peut contenir des liens vers des sites externes qui peuvent vous fournir des informations supplémentaires pertinentes ou des ressources complémentaires. Veuillez noter que ces liens sont fournis à titre de commodité et ne constituent pas une approbation ou une recommandation de ces sites ou de leur contenu.",
+
+      "Nous déclinons toute responsabilité quant au contenu, à l'exactitude, à la légalité ou à la sécurité des sites externes liés à ce site. L'accès et l'utilisation de ces sites sont entièrement à vos propres risques. Nous vous recommandons vivement de consulter les politiques de confidentialité et les conditions d'utilisation de ces sites externes avant de les utiliser.",
+
+      "Nous ne pourrons pas être tenus responsables des dommages directs, indirects, spéciaux ou consécutifs découlant de votre utilisation de ces liens ou du contenu des sites externes.",
+
+      "Si vous rencontrez des problèmes ou des préoccupations concernant un lien externe présent sur ce site, veuillez nous contacter afin que nous puissions évaluer la situation et prendre, si nécessaire, des mesures appropriées.",
+
+      "Merci de votre compréhension et de votre coopération."
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Limitation de responsabilité :",
+    "description": [
+      "Les informations et le contenu présentés sur ce site sont fournis à titre informatif uniquement. Nous nous efforçons de maintenir ces informations à jour et exactes, mais nous ne donnons aucune garantie quant à leur exhaustivité, leur pertinence, leur exactitude ou leur actualité.",
+
+      "En utilisant ce site, vous acceptez que nous ne serons pas responsables des éventuelles erreurs, omissions ou inexactitudes dans les informations fournies, ni des dommages directs, indirects, spéciaux ou consécutifs pouvant résulter de l'utilisation de ces informations.",
+      
+      "Nous déclinons toute responsabilité pour tout préjudice ou dommage causé par un virus informatique, une attaque de piratage ou toute autre technologie ou programme malveillant qui pourrait endommager votre matériel informatique, vos logiciels, vos données ou tout autre bien en raison de votre accès à ce site ou de votre téléchargement de tout contenu à partir de ce site.",
+      
+      "Nous ne pourrons pas être tenus responsables des éventuelles interruptions de service, erreurs ou dysfonctionnements techniques qui pourraient survenir sur ce site, y compris mais sans s'y limiter, les problèmes de connexion, les problèmes de serveur, les pannes de réseau ou tout autre problème technique hors de notre contrôle.",
+      
+      "Cette clause de limitation de responsabilité s'applique dans toute la mesure permise par la loi applicable. Si une partie de cette clause est jugée invalide ou inapplicable, le reste de la clause restera en vigueur."
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Signalement de contenu :",
+    "description": [
+      "Si vous trouvez un contenu sur ce site qui vous semble illicite, inapproprié ou enfreignant les droits d'auteur, veuillez nous contacter immédiatement. Nous nous engageons à traiter votre signalement avec la plus grande attention et à prendre les mesures nécessaires dans les meilleurs délais.",
+
+      "Veuillez nous fournir les informations suivantes dans votre signalement :",
+      
+      "1. Une description claire et détaillée du contenu que vous estimez être illicite ou inapproprié.",
+          
+      "2. Les raisons pour lesquelles vous estimez que le contenu est en violation des lois ou des droits d'auteur.",
+          
+      "3. Vos coordonnées de contact afin que nous puissions vous contacter si des informations supplémentaires sont nécessaires.",
+          
+      "Nous examinerons attentivement votre signalement et prendrons les mesures appropriées pour remédier à la situation dans les meilleurs délais.",
+      
+      "Merci de contribuer à maintenir l'intégrité et la qualité de notre site.",
+      
+      "Contactez-nous :",
+      
+      "- Adresse e-mail : contact@visualkoding.com"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Date de la dernière mise à jour des mentions légales :",
+    "description": [
+      "Les présentes mentions légales ont été mises à jour le 05 juin 2023 à 20h00 (heure française)].",
+      "Toute modification ultérieure sera indiquée à cette même adresse."
+    ]
+  }
+]
