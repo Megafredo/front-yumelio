@@ -9,19 +9,17 @@ import MetaData from '../../Data/MetaData.json';
 const Seo = () => {
   const location = useLocation();
   const titleLocationPage = location.pathname.slice(1);
-  const pathName = location.pathname;
+  const url = window.location.href;
+
   return (
     <>
-      {MetaData.map(
-        ({ pageName, seoTitle, seoMetaContent }): any =>
-          pageName === titleLocationPage && (
-            <Helmet key={uuidv4()}>
-              <title >{seoTitle}</title>
-              <meta name="description" content={seoMetaContent} />
-              <link rel="canonical" href={`https://www.visualkoding.com` + pathName}></link>
-            </Helmet>
-          )
-      )}
+      {MetaData.filter(({ pageName }) => pageName === titleLocationPage).map(({ seoTitle, seoMetaContent }) => (
+        <Helmet key={uuidv4()}>
+          <title>{seoTitle}</title>
+          <meta name="description" content={seoMetaContent} />
+          <link rel="canonical" href={url}></link>
+        </Helmet>
+      ))}
     </>
   );
 };

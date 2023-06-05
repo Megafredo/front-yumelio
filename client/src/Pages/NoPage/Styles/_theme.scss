@@ -16,7 +16,6 @@ $theme404: (
 
 //~ ---------------------------------------------- Theme Site
 @include mixins.themify($theme404) {
-
   .nf-circle-1,
   .nf-island-3 {
     fill: mixins.themed('fill-notfound-structure');
@@ -29,9 +28,4 @@ $theme404: (
   .nf-cloud4-2 {
     fill: mixins.themed('fill-notfound-element');
   }
- 
-  // .media--mobile,
-  // .media--tablet {
-
-  // }
 }
