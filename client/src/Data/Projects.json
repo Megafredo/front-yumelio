@@ -79,7 +79,7 @@
         "name": "API Learn(Err)",
         "link-github": "https://github.com/Megafredo/api-learnerr",
         "link-demo": "https://learnerr.yumedo.com/",
-        "link-swaggerdocs": "https://api-learnerr.yumicode.net/api-docs/",
+        "link-swaggerdocs": "https://api-learnerr.yumedo.com/api-docs/",
         "description": "Les erreurs font partie intégrante de l'apprentissage et sont une source d'enseignement pour tous. Ce site propose des fonctionnalités qui serviront d'outils de veille et d'amélioration pour les développeurs.",
         "image-mockup": "MockupLearnerr",
         "name-logotypes": ["nodejs", "express", "sqitch", "sql", "postgresql"],
